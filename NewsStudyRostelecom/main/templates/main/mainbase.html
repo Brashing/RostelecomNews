@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+{% load bootstrap5 %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
+
+<head>
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+    <title>Главная страница</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="body_wrapper">
+    <div class="center">
+        {% block header %} {% include 'main/header.html' %} {% endblock %}
+        {% block slider %} {% include 'main/slider.html' %} {% endblock %}
+        <!--        Новости-->
+        {% block footer %} {% include 'main/footer.html' %} {% endblock %}
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+<script type="text/javascript">
+    selectnav('nav', {
+        label: '-Navigation-',
+        nested: true,
+        indent: '-'
+    });
+    selectnav('f_menu', {
+        label: '-Navigation-',
+        nested: true,
+        indent: '-'
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+
+<div class="header_area">
+    <div class="logo floatleft">
+        <a href="#"><img src="{% static 'main/' %}images/logo.png" alt="Иконка"/></a>
+    </div>
+    {% block sidebar %} {% include 'main/sidebar.html' %} {% endblock %}
+    <div class="social_plus_search floatright">
+        <div class="social"></div>
+        <div class="search">
+            <form action="#" method="post" id="search_form">
+                <input type="text" value="Поиск" id="s"/>
+                <input type="submit" id="searchform" value="search"/>
+                <input type="hidden" value="post" name="post_type"/>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="main_menu_area">
+    <ul id="nav">
+        <li><a href="#">В мире</a>
+            <ul>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a>
+                    <ul>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Спорт</a></li>
+        <li><a href="#">Технологии</a>
+            <ul>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Экономика</a></li>
+        <li><a href="#">Кино</a>
+            <ul>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a>
+                    <ul>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                        <li><a href="#">Single item</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Развлечения</a></li>
+        <li><a href="#">Культура</a></li>
+        <li><a href="#">Книги</a>
+            <ul>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+                <li><a href="#">Single item</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Объявления</a></li>
+        <li><a href="#">Блог</a></li>
+    </ul>
+</div>
