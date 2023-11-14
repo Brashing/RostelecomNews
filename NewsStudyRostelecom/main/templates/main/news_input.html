@@ -6,12 +6,21 @@
         <div class="row">
             <form method="post">
                 {% csrf_token %}
-                <p><label> Название: </label><br>
-                    <input type="text" name="name" "></p><br>
+                <p><label> Название статьи: </label><br>
+                <div class="container">
+                    <div class="row">
+                        <textarea cols="150" rows="1" required="" name="name"></textarea><br>
+                    </div>
+                </div>
+                <br>
                 <p><label> Текст: </label><br>
-                    <textarea cols="150" rows="50" required=""></textarea></p><br>
-                <input class="btn-danger" type="submit" value="Опубликовать"><br>
+                <div class="container">
+                    <div class="row">
+                        <textarea cols="150" rows="50" required="" name="news"></textarea><br>
+                    </div>
+                </div>
+                <input class="btn btn-outline-danger" type="submit" value="Опубликовать"><br>
             </form>
         </div>
     </div>
-<div/>
+</div>
