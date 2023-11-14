@@ -17,173 +17,84 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
-    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <div class="main_content floatleft">
-                <div class="left_coloum floatleft">
-                    <div class="single_left_coloum_wrapper">
-                        <h2 class="title">from around the world</h2>
-                        <a class="more" href="#">more</a>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                    </div>
-                    <div class="single_left_coloum_wrapper">
-                        <h2 class="title">latest articles</h2>
-                        <a class="more" href="#">more</a>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                        <div class="single_left_coloum floatleft"><img
-                                src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet, consectetur</h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper
-                                dolor eu mattis.</p>
-                            <a class="readmore" href="#">read more</a>
-                        </div>
-                    </div>
-                    <div class="single_left_coloum_wrapper gallery">
-                        <h2 class="title">gallery</h2>
-                        <a class="more" href="#">more</a> <img src="{% static 'main/' %}images/single_featured.png"
-                                                               alt=""/> <img
-                            src="{% static 'main/' %}images/single_featured.png" alt=""/> <img
-                            src="{% static 'main/' %}images/single_featured.png" alt=""/> <img
-                            src="{% static 'main/' %}images/single_featured.png" alt=""/> <img
-                            src="{% static 'main/' %}images/single_featured.png" alt=""/> <img
-                            src="{% static 'main/' %}images/single_featured.png" alt=""/>
-                    </div>
-                    <div class="single_left_coloum_wrapper single_cat_left">
-                        <h2 class="title">tech news</h2>
-                        <a class="more" href="#">more</a>
-                        <div class="single_cat_left_content floatleft">
-                            <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor
-                                ...interdum</p>
-                            <p class="single_cat_left_content_meta">by <span>John Doe</span> | 29 comments</p>
-                        </div>
-                        <div class="single_cat_left_content floatleft">
-                            <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor
-                                ...interdum</p>
-                            <p class="single_cat_left_content_meta">by <span>John Doe</span> | 29 comments</p>
-                        </div>
-                        <div class="single_cat_left_content floatleft">
-                            <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor
-                                ...interdum</p>
-                            <p class="single_cat_left_content_meta">by <span>John Doe</span> | 29 comments</p>
-                        </div>
-                        <div class="single_cat_left_content floatleft">
-                            <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit </h3>
-                            <p>Nulla quis lorem neque, mattis venenatis lectus. In interdum ullamcorper dolor
-                                ...interdum</p>
-                            <p class="single_cat_left_content_meta">by <span>John Doe</span> | 29 comments</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="right_coloum floatright">
-                    <div class="single_right_coloum">
-                        <h2 class="title">from the desk</h2>
-                        <ul>
-                            <li>
-                                <div class="single_cat_right_content">
-                                    <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit</h3>
-                                    <p>Nulla quis lorem neque, mattis venen atis lectus. In interdum ull amcorper dolor
-                                        eu mattis.</p>
-                                    <p class="single_cat_right_content_meta"><a href="#"><span>read more</span></a> 3
-                                        hours ago</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single_cat_right_content">
-                                    <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit</h3>
-                                    <p>Nulla quis lorem neque, mattis venen atis lectus. In interdum ull amcorper dolor
-                                        eu mattis.</p>
-                                    <p class="single_cat_right_content_meta"><a href="#"><span>read more</span></a> 3
-                                        hours ago</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="single_cat_right_content">
-                                    <h3>Lorem ipsum dolor sit amet conse ctetur adipiscing elit</h3>
-                                    <p>Nulla quis lorem neque, mattis venen atis lectus. In interdum ull amcorper dolor
-                                        eu mattis.</p>
-                                    <p class="single_cat_right_content_meta"><a href="#"><span>read more</span></a> 3
-                                        hours ago</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <a class="popular_more" href="#">more</a></div>
-                    <div class="single_right_coloum">
-                        <h2 class="title">editorial</h2>
-                        <div class="single_cat_right_content editorial"><img
-                                src="{% static 'main/' %}images/editorial_img.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet con se cte tur adipiscing elit</h3>
-                        </div>
-                        <div class="single_cat_right_content editorial"><img
-                                src="{% static 'main/' %}images/editorial_img.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet con se cte tur adipiscing elit</h3>
-                        </div>
-                        <div class="single_cat_right_content editorial"><img
-                                src="{% static 'main/' %}images/editorial_img.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet con se cte tur adipiscing elit</h3>
-                        </div>
-                        <div class="single_cat_right_content editorial"><img
-                                src="{% static 'main/' %}images/editorial_img.png" alt=""/>
-                            <h3>Lorem ipsum dolor sit amet con se cte tur adipiscing elit</h3>
-                        </div>
-                    </div>
-                </div>
+            <h2 class="title">from around the world</h2>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/1_1.jpg" alt=""/>
+                <h3>Обнаружена первая в истории протозвезда, покидающая место своего рождения</h3>
+                <p>Впервые удалось наблюдать, как протозвезда делает первые шаги из газового облака, в котором она
+                    образовалась. Результат, полученный при изучении области звездообразования, позволит лучше понять
+                    механизм, приводящий к удалению звезд от места их рождения, а следовательно, и распределение звезд
+                    внутри галактик.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_1/">читать...</a>
+            </div>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/2_1.jpg" alt=""/>
+                <h3>Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на
+                    Земле</h3>
+                <p>Исследователи определили цикл продолжительностью 27,5 миллионов лет, обнаруживающий закономерность в
+                    крупных
+                    геологических событиях, происходящих на Земле, таких как извержения вулканов. Это открытие, ставшее
+                    результатом углубленного изучения геологических данных, предполагает синхронизацию земных явлений в
+                    беспрецедентном временном масштабе.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_2/">читать...</a>
+            </div>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/3_1.jpg" alt=""/>
+                <h3>Столкнется ли белый карлик с нашей Солнечной системой?</h3>
+                <p>В прошлом году астрономическое сообщество было потрясено тревожным прогнозом: белый карлик WD
+                    0810-353, плотный звездный остаток, находится на пути к возможному столкновению с нашей Солнечной
+                    системой. Эта звезда, представляющая собой последнюю стадию эволюции звезды, похожей на Солнце,
+                    наблюдалась космическим телескопом Gaia, и ее траектория, как оказалось, проходила в опасной
+                    близости от нашей системы.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_3/">читать...</a>
+            </div>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/4_1.jpg" alt=""/>
+                <h3>Телескоп "Джеймс Уэбб" обнаружил самый удаленный двойник Млечного Пути</h3>
+                <p>Группа астрономов объявила об идентификации далекой спиральной галактики, получившей название
+                    ceers-2112. По
+                    своим характеристикам она схожа с нашим Млечным Путем. В ядре этого объекта имеется полоса звезд и
+                    газа, что
+                    ранее считалось признаком зрелой галактики. В то время, когда возраст Вселенной составлял всего два
+                    миллиарда лет, ceers-2112 показывает, что такие галактики уже существовали, что ставит под сомнение
+                    существующие теоретические модели.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_4/">читать...</a>
+            </div>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/5_1.jpg" alt=""/>
+                <h3>NASA готовит к 2025 году еще один космический телескоп - SPHEREx</h3>
+                <p>К апрелю 2025 года NASA планирует запустить новый космический телескоп. Он будет называться SPHEREx
+                    (аббревиатура от Spectro-Photometer for the History of the Universe, Epoch of Reionisation and Ices
+                    Explorer) и будет наблюдать Вселенную в инфракрасном свете, двигаясь по орбите вокруг Земли.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_5/">читать...</a>
+            </div>
+            <div class="single_left_coloum floatleft"><img
+                    src="{% static 'main/' %}images/6_1.jpg" alt=""/>
+                <h3>Аппараты "Джеймс Уэбб" и "Хаббл" объединились для съемки красочного скопления галактик</h3>
+                <p>В 4,3 млрд световых лет от Земли находится MACS0416 - пара сталкивающихся галактических скоплений.
+                    Эти два особенно массивных и крупных объекта сливаются, образуя еще более крупное скопление.</p>
+                <a class="readmore" href="http://127.0.0.1:8000/news_6/">читать...</a>
             </div>
         </div>
         <div class="footer_top_area">
             <div class="inner_footer_top">
-                <div class="single_sidebar">
-                    <div class="news-letter">
-                        <h2>Sign Up for Newsletter</h2>
-                        <p>Sign up to receive our free newsletters!</p>
-                        <form action="#" method="post">
-                            <input type="text" value="Name" id="name"/>
-                            <input type="text" value="Email Address" id="email"/>
-                            <input type="submit" value="SUBMIT" id="form-submit"/>
-                        </form>
-                        <p class="news-letter-privacy">We do not spam. We value your privacy!</p>
-                    </div>
-                </div>
+                <!--                <div class="single_sidebar">-->
+                <!--                    <div class="news-letter">-->
+                <!--                        <h2>Sign Up for Newsletter</h2>-->
+                <!--                        <p>Подпишитесь на получение нашей бесплатной рассылки новостей!</p>-->
+                <!--                        <form action="#" method="post">-->
+                <!--                            <input type="text" value="Имя" id="name"/>-->
+                <!--                            <input type="text" value="Адрес электронной почты" id="email"/>-->
+                <!--                            <input type="submit" value="ПОДПИСАТЬСЯ" id="form-submit"/>-->
+                <!--                        </form>-->
+                <!--                    </div>-->
+                <!--                </div>-->
             </div>
         </div>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
@@ -209,5 +120,6 @@
         captions: true
     });
 </script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </body>
 </html>
