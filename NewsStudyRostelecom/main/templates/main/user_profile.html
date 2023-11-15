@@ -23,8 +23,6 @@
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-        {% block login %} {% include 'main/login.html' %} {% endblock %}
-        {% block registration %} {% include 'main/registration.html' %} {% endblock %}
         {% block news_input %} {% include 'main/news_input.html' %} {% endblock %}
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
@@ -35,14 +33,14 @@
 <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
 <script type="text/javascript">
     selectnav('nav', {
-        label: '-Navigation-',
+        label: 'Меню',
         nested: true,
-        indent: '-'
+        indent: ''
     });
     selectnav('f_menu', {
-        label: '-Navigation-',
+        label: 'Меню',
         nested: true,
-        indent: '-'
+        indent: ''
     });
     $('.bxslider').bxSlider({
         mode: 'fade',

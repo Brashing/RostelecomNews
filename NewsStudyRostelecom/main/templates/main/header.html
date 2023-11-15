@@ -9,7 +9,7 @@
         <div class="search">
             <form action="#" method="post" id="search_form">
                 {% csrf_token %}
-                <input type="text" value="Поиск" id="s"/>
+                <input type="text" id="s" placeholder="Поиск"/>
                 <input type="submit" id="searchform" value="search"/>
                 <input type="hidden" value="post" name="post_type"/>
             </form>

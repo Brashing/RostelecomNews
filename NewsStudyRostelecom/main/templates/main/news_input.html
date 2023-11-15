@@ -1,25 +1,41 @@
 {% load static %}
 
 <div class="content_area">
-    <h2 class="title">ДОБАВЬТЕ НОВОСТЬ</h2>
+    <h2 class="title">ПУБЛИКАЦИЯ</h2>
+    <div class="container">
+        <div class="row">
+            <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <p><label> Загрузите ваши фотографии на сервер: </label><br>
+                <div class="container">
+                    <div class="row">
+                        <p><input type="file" name="photo" multiple accept="image/*"></p>
+                        <input class="btn btn-outline-danger" type="submit" value="Отправить">
+                    </div>
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <form method="post">
                 {% csrf_token %}
-                <p><label> Название статьи: </label><br>
+                <p><label> Название статьи: </label><br></p>
                 <div class="container">
                     <div class="row">
                         <textarea cols="150" rows="1" required="" name="name"></textarea><br>
                     </div>
                 </div>
                 <br>
-                <p><label> Текст: </label><br>
+                <p><label> Содержание: </label><br></p>
                 <div class="container">
                     <div class="row">
                         <textarea cols="150" rows="50" required="" name="news"></textarea><br>
+                        <input class="btn btn-outline-danger" type="submit" value="Опубликовать"><br>
                     </div>
                 </div>
-                <input class="btn btn-outline-danger" type="submit" value="Опубликовать"><br>
+
             </form>
         </div>
     </div>

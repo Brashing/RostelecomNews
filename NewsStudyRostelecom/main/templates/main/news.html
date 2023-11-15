@@ -85,17 +85,18 @@
         </div>
         <div class="footer_top_area">
             <div class="inner_footer_top">
-                <!--                <div class="single_sidebar">-->
-                <!--                    <div class="news-letter">-->
-                <!--                        <h2>Sign Up for Newsletter</h2>-->
-                <!--                        <p>Подпишитесь на получение нашей бесплатной рассылки новостей!</p>-->
-                <!--                        <form action="#" method="post">-->
-                <!--                            <input type="text" value="Имя" id="name"/>-->
-                <!--                            <input type="text" value="Адрес электронной почты" id="email"/>-->
-                <!--                            <input type="submit" value="ПОДПИСАТЬСЯ" id="form-submit"/>-->
-                <!--                        </form>-->
-                <!--                    </div>-->
-                <!--                </div>-->
+                <div class="single_sidebar">
+                    <div class="news-letter">
+                        <h2><i class="fa-solid fa-envelope"> Подпишитесь на рассылку новостей</i></h2>
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Имя" id="name"/>
+                            <input type="text" placeholder="Адрес электронной почты" id="email"/>
+                            <a href="http://127.0.0.1:8000/"><input class="btn btn-outline-danger" type="submit"
+                                                                    value="Подписаться"></a><br>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
@@ -107,14 +108,14 @@
 <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
 <script type="text/javascript">
     selectnav('nav', {
-        label: '-Navigation-',
+        label: 'Меню',
         nested: true,
-        indent: '-'
+        indent: ''
     });
     selectnav('f_menu', {
-        label: '-Navigation-',
+        label: 'Меню',
         nested: true,
-        indent: '-'
+        indent: ''
     });
     $('.bxslider').bxSlider({
         mode: 'fade',

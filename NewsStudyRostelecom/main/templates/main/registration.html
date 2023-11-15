@@ -1,19 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load static %}
+{% load bootstrap5 %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
 
-<div class="content_area">
-    <h2 class="title">РЕГИСТРАЦИЯ</h2>
-    <div class="container">
-        <div class="row">
-            <form method="post">
-                {% csrf_token %}
-                <p><label> Логин: </label><br>
-                    <input type="text" name="login" autofocus></p><br>
-                <p><label> Пароль: </label><br>
-                    <input type="password" name="password" autocomplete="on | off"></p><br>
-                <p><label> Повторите пароль: </label><br>
-                    <input type="password" name="password" autocomplete="on | off"></p><br>
-                <input class="btn btn-outline-danger" type="submit" value="Зарегистрироваться"><br>
-            </form>
+<head>
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+    <title>Регистрация</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+</head>
+
+<body>
+<div class="body_wrapper">
+    <div class="center">
+        {% block header %} {% include 'main/header.html' %} {% endblock %}
+
+        <div class="content_area">
+            <h2 class="title">РЕГИСТРАЦИЯ</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <form method="post">
+                        {% csrf_token %}
+                        <p><label> Логин: </label><br>
+                            <input type="text" name="login" autofocus></p><br>
+                        <p><label> Пароль: </label><br>
+                            <input type="password" name="password" autocomplete="on | off"></p><br>
+                        <p><label> Повторите пароль: </label><br>
+                            <input type="password" name="password" autocomplete="on | off"></p><br>
+                        <input class="btn btn-outline-danger" type="submit" value="Зарегистрироваться"><br>
+                    </form>
+                </div>
+            </div>
+            {% block footer %} {% include 'main/footer.html' %} {% endblock %}
         </div>
     </div>
-    <div/>
+    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+    <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+    <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+    <script type="text/javascript">
+        selectnav('nav', {
+            label: 'Меню',
+            nested: true,
+            indent: ''
+        });
+        selectnav('f_menu', {
+            label: 'Меню',
+            nested: true,
+            indent: ''
+        });
+        $('.bxslider').bxSlider({
+            mode: 'fade',
+            captions: true
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</body>
+</html>
