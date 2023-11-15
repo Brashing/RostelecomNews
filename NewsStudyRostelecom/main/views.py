@@ -29,5 +29,5 @@ def user_profile(request):
     return render(request, 'main/user_profile.html')
 
 def custom_404(request, exception):
-    # return render(request, 'main/sidebar.html')
-    return HttpResponse(f'Ой, какая жалость!:{exception}')
+    return render(request, 'main/custom_404.html')
+    #return HttpResponse(f'Ой, какая жалость!:{exception}')

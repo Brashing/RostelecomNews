@@ -12,4 +12,5 @@ urlpatterns = [
     path('news_5/', views.news_5, name='news_5'),
     path('news_6/', views.news_6, name='news_6'),
     path('user_profile/', views.user_profile, name='user_profile'),
+    # path('custom_404/', views.custom_404, name='custom_404'),
 ]
