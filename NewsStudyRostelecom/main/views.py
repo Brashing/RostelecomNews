@@ -34,6 +34,9 @@ def login(request):
 def registration(request):
     return render(request, 'main/registration.html')
 
+def news_input(request):
+    return render(request, 'main/news_input.html')
+
 def custom_404(request, exception):
     return render(request, 'main/custom_404.html')
     #return HttpResponse(f'Ой, какая жалость!:{exception}')

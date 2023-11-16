@@ -8,7 +8,7 @@
 <head>
     {%bootstrap_css%}
     {%bootstrap_javascript%}
-    <title>Страница пользователя</title>
+    <title>Профиль пользователя</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
@@ -23,7 +23,29 @@
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-        {% block news_input %} {% include 'main/news_input.html' %} {% endblock %}
+        <div class="content_area">
+            <h2 class="title">НАСТРОЙКА УЧЕТНОЙ ЗАПИСИ</h2>
+            <div class="container">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="container">
+                        <div class="row">
+                            <p><label> Личные данные: </label></p><br>
+                            <p><input type="text" placeholder="ФИО" id="name"</p>
+                            <p><label> Пол: </label>
+                                <input type="radio" name="gender" value="male"> Мужской
+                                <input type="radio" name="gender" value="female"> Женский</p>
+                            <p><label>Дата рождения: </label>
+                                <input type="date" id="dateInput" required="required" min="1900-01-01"
+                                       max="2099-09-13">
+                            </p>
+                            <p><input type="text" placeholder="Адрес электронной почты" id="email"/></p>
+                            <input class="btn btn-danger" type="submit" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
 </div>
