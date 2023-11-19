@@ -31,7 +31,7 @@
                     <div class="container">
                         <div class="row">
                             <p><label> Личные данные: </label></p><br>
-                            <p><input type="text" placeholder="ФИО" id="name"</p>
+                            <p><input type="text" placeholder="Имя Фамилия" id="name"</p>
                             <p><label> Пол: </label>
                                 <input type="radio" name="gender" value="male"> Мужской
                                 <input type="radio" name="gender" value="female"> Женский</p>
@@ -40,12 +40,13 @@
                                        max="2099-09-13">
                             </p>
                             <p><input type="text" placeholder="Адрес электронной почты" id="email"/></p>
-                            <input class="btn btn-danger" type="submit" value="Отправить">
+                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <h6 class="title"></h6>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
 </div>

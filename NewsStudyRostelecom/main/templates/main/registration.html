@@ -23,7 +23,6 @@
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-
         <div class="content_area">
             <h2 class="title">РЕГИСТРАЦИЯ</h2>
             <div class="container-fluid">
@@ -36,10 +35,12 @@
                             <input type="password" name="password" autocomplete="on | off"></p><br>
                         <p><label> Повторите пароль: </label><br>
                             <input type="password" name="password" autocomplete="on | off"></p><br>
-                        <input class="btn btn-outline-danger" type="submit" value="Зарегистрироваться"><br>
+                        <a href="{% url 'user_profile' %}"><input class="btn btn-danger" type="submit"
+                                                                  value="Зарегистрироваться"><br>
                     </form>
                 </div>
             </div>
+            <p><h6 class="title"></h6></p>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}
         </div>
     </div>
