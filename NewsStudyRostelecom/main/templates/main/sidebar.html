@@ -5,12 +5,12 @@
         <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"> Главная</i></a></li>
         <li><a href="{% url 'news_index' %}"><i class="fa-solid fa-bars"> Новости</i></a></li>
 
-        <li><a href="#"><i class="fa-solid fa-user"></i></a>
+        <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"></i></a>
             <ul>
-                <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"> Профиль</i></a>
+<!--                <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"> Профиль</i></a>-->
                 <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-pen"> Создать
                     статью</i></a></li>
-                <li><a href="#"><i class="fa-solid fa-door-open"> Выход</i></a></li>
+                <li><a href="{% url 'home' %}"><i class="fa-solid fa-door-open"> Выход</i></a></li>
             </ul>
         </li>
         <li><a href="#"><i class="fa-solid fa-key"></i></a>

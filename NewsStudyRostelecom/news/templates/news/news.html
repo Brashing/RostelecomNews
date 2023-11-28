@@ -23,68 +23,41 @@
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-        <div class="content_area">
-            <h2 class="title">АСТРОНОМИЯ</h2>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/1_1.jpg" alt=""/>
-                <h3>Обнаружена первая в истории протозвезда, покидающая место своего рождения</h3>
-                <p>Впервые удалось наблюдать, как протозвезда делает первые шаги из газового облака, в котором она
-                    образовалась. Результат, полученный при изучении области звездообразования, позволит лучше понять
-                    механизм, приводящий к удалению звезд от места их рождения, а следовательно, и распределение звезд
-                    внутри галактик.</p>
-                <a class="readmore" href="{% url 'news_1' %}">читать...</a>
-            </div>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/2_1.jpg" alt=""/>
-                <h3>Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на
-                    Земле</h3>
-                <p>Исследователи определили цикл продолжительностью 27,5 миллионов лет, обнаруживающий закономерность в
-                    крупных
-                    геологических событиях, происходящих на Земле, таких как извержения вулканов. Это открытие, ставшее
-                    результатом углубленного изучения геологических данных, предполагает синхронизацию земных явлений в
-                    беспрецедентном временном масштабе.</p>
-                <a class="readmore" href="{% url 'news_2' %}">читать...</a>
-            </div>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/3_1.jpg" alt=""/>
-                <h3>Столкнется ли белый карлик с нашей Солнечной системой?</h3>
-                <p>В прошлом году астрономическое сообщество было потрясено тревожным прогнозом: белый карлик WD
-                    0810-353, плотный звездный остаток, находится на пути к возможному столкновению с нашей Солнечной
-                    системой. Эта звезда, представляющая собой последнюю стадию эволюции звезды, похожей на Солнце,
-                    наблюдалась космическим телескопом Gaia, и ее траектория, как оказалось, проходила в опасной
-                    близости от нашей системы.</p>
-                <a class="readmore" href="{% url 'news_3' %}">читать...</a>
-            </div>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/4_1.jpg" alt=""/>
-                <h3>Телескоп "Джеймс Уэбб" обнаружил самый удаленный двойник Млечного Пути</h3>
-                <p>Группа астрономов объявила об идентификации далекой спиральной галактики, получившей название
-                    ceers-2112. По
-                    своим характеристикам она схожа с нашим Млечным Путем. В ядре этого объекта имеется полоса звезд и
-                    газа, что
-                    ранее считалось признаком зрелой галактики. В то время, когда возраст Вселенной составлял всего два
-                    миллиарда лет, ceers-2112 показывает, что такие галактики уже существовали, что ставит под сомнение
-                    существующие теоретические модели.</p>
-                <a class="readmore" href="{% url 'news_4' %}">читать...</a>
-            </div>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/5_1.jpg" alt=""/>
-                <h3>NASA готовит к 2025 году еще один космический телескоп - SPHEREx</h3>
-                <p>К апрелю 2025 года NASA планирует запустить новый космический телескоп. Он будет называться SPHEREx
-                    (аббревиатура от Spectro-Photometer for the History of the Universe, Epoch of Reionisation and Ices
-                    Explorer) и будет наблюдать Вселенную в инфракрасном свете, двигаясь по орбите вокруг Земли.</p>
-                <a class="readmore" href="{% url 'news_5' %}">читать...</a>
-            </div>
-            <div class="single_left_coloum floatleft"><img
-                    src="{% static 'news/' %}images/6_1.jpg" alt=""/>
-                <h3>Аппараты "Джеймс Уэбб" и "Хаббл" объединились для съемки красочного скопления галактик</h3>
-                <p>В 4,3 млрд световых лет от Земли находится MACS0416 - пара сталкивающихся галактических скоплений.
-                    Эти два особенно массивных и крупных объекта сливаются, образуя еще более крупное скопление.</p>
-                <a class="readmore" href="{% url 'news_6' %}">читать...</a>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="col-lg-3">
+                        <select class="form-control" name="author_filter">
+                            <option value="0">Все авторы</option>
+                            {% for author in author_list %}
+                            <option value="{{ author.id }}" {% if selected == author.id %} selected {% endif %}>{{ author.account.nickname }}
+                            </option>
+                            {% endfor %}
+                        </select><br>
+                        <input class="btn btn-danger" type="submit" value="Выбрать">
+                    </div>
+                </form>
             </div>
         </div>
-        <!--        <div class="footer_top_area"></div>-->
-        <p></p><h6 class="title"></h6></p>
+        <br>
+        <h6 class="title"></h6>
+        <div class="content_area">
+            <h2 class="title">АСТРОНОМИЯ</h2>
+            {% for n in news %}
+            <div class="single_left_coloum floatleft"><a href="{{ n.get_absolute_url }}"><img
+                    src="{% static 'news/' %}images/{{ n.id }}.jpg" alt=""/></a>
+                <h3>{{ n.title }}</h3><br>
+                <p>{{ n.anouncement }}</p>
+                <p><strong><i><small>{{ n.author.account.nickname }}</small></i></strong></p>
+                <p><strong><i><small>{{ n.date }}</small></i></strong></p>
+                <!--                <a class="readmore" href="{{ n.get_absolute_url }}">читать...</a>-->
+            </div>
+            {% endfor %}
+        </div>
+        <!--                <div class="footer_top_area"></div>-->
+        <h6 class="title"></h6>
         <div class="content_area">
             <div class="inner_footer_top">
                 <div class="single_sidebar">

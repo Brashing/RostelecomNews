@@ -17,14 +17,26 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
-    <script src="https://kit.fontawesome.com/b91fb3443a.js"></script>
+    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-        {% block slider %} {% include 'main/slider.html' %} {% endblock %}
+        <h1>{{ news.title }}</h1>
+        <h6 class="title"></h6>
+        <h3>Автор: {{ news.author.account.nickname }}</h3>
+        <h3>Дата публикации: {{ news.date }}</h3><br>
+        <h6 class="title"></h6>
+        <p class="lead"  align="justify">{{ news.anouncement }}</p>
+        <br>
+        <blockquote class="blockquote">
+        <p  align="justify">{{ news.text }}</p>
+        </blockquote>
+        <br>
+        <h6 class="title"></h6>
+        <h3>Источник: <a href="{{ news.source }}">{{ news.sourcename }}</a></h3><br>
+        <h6 class="title"></h6>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
 </div>
