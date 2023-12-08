@@ -2,6 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load static %}
 {% load bootstrap5 %}
+{% load crispy_forms_tags %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="ru">
 
@@ -24,46 +25,52 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title">РЕГИСТРАЦИЯ</h2>
-            <div class="container-fluid">
-                <div class="row">
-                    <form method="post">
-                        {% csrf_token %}
-                        <p><label> Логин: </label><br>
-                            <input type="text" name="login" autofocus></p><br>
-                        <p><label> Пароль: </label><br>
-                            <input type="password" name="password" autocomplete="on | off"></p><br>
-                        <p><label> Повторите пароль: </label><br>
-                            <input type="password" name="password" autocomplete="on | off"></p><br>
-                        <a href="{% url 'user_profile' %}"><input class="btn btn-danger" type="submit"
-                                                                  value="Зарегистрироваться"><br>
-                    </form>
+            <h2 class="title"></h2>
+            <div class="content_area">
+                <div class="inner_footer_top">
+                    <div class="single_sidebar">
+                        <div class="news-letter">
+                            <h2><i class="fa-solid fa-right-to-bracket"> Регистрация</i></h2><br>
+                            <div class="container-fluid>">
+                                <form method="post" class="contact-form">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <input class="btn btn-danger" type="submit" value="Зарегистрироваться">
+                                    <ol></ol>
+                                    <small class="text-muted"> Уже есть аккаунт?
+                                        <a href="{% url 'login' %}">Войти</a>
+                                    </small>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p><h6 class="title"></h6></p>
-            {% block footer %} {% include 'main/footer.html' %} {% endblock %}
         </div>
+        <p><h6 class="title"></h6></p>
+        {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
-    <script type="text/javascript">
-        selectnav('nav', {
-            label: 'Меню',
-            nested: true,
-            indent: ''
-        });
-        selectnav('f_menu', {
-            label: 'Меню',
-            nested: true,
-            indent: ''
-        });
-        $('.bxslider').bxSlider({
-            mode: 'fade',
-            captions: true
-        });
-    </script>
-    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</div>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+<script type="text/javascript">
+    selectnav('nav', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    selectnav('f_menu', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </body>
 </html>

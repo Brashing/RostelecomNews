@@ -2,23 +2,45 @@
 
 <div class="main_menu_area">
     <ul id="nav">
-        <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"> Главная</i></a></li>
-        <li><a href="{% url 'news_index' %}"><i class="fa-solid fa-bars"> Новости</i></a></li>
-
-        <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"></i></a>
+        <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"> Главная</i></a>
+            {% if user.is_staff == True %}
             <ul>
-<!--                <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"> Профиль</i></a>-->
-                <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-pen"> Создать
-                    статью</i></a></li>
-                <li><a href="{% url 'home' %}"><i class="fa-solid fa-door-open"> Выход</i></a></li>
+                <li><a href="http://127.0.0.1:8000/admin" target="_blank"><i class="fa-solid fa-user-gear"> Панель
+                    администратора</i></a></li>
+            </ul>
+            {% endif %}
+        </li>
+        <li><a href="{% url 'news_index' %}"><i class="fa-solid fa-bars"> Новости</i></a>
+            <ul>
+                <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-bars"> Подать заявку на создание новости</i></a></li>
+                <li><a href="{% url 'news_subscribe' %}"><i class="fa-solid fa-envelope"> Подписаться на рассылку
+                    новостей</i></a></li>
             </ul>
         </li>
-        <li><a href="#"><i class="fa-solid fa-key"></i></a>
+        {% if request.user.id %}
+        <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"> {{ user }}_{{ request.user.account.nickname }}</i></a>
             <ul>
-                <li><a href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"> Вход</i></a></li>
-                <li><a href="{% url 'registration' %}"><i class="fa-solid fa-user-pen">
-                    Регистрация</i></a>
-                </li>
+                {% if user.is_staff == True %}
+                <li><a href="http://127.0.0.1:8000/admin/"><i class="fa-solid fa-wand-magic-sparkles"> Создать новость в панели администратора</i></a></li>
+                {% endif %}
+                <li><a href="{% url 'logout' %}"><i class="fa-solid fa-hand-point-up"> Выйти из профиля</i></a></li>
             </ul>
+        </li>
+        {% else %}
+        <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-right-to-bracket"> Вход</i></a>
+            <ul>
+                <li><a href="{% url 'registration' %}"><i class="fa-solid fa-user-pen"> Регистрация</i></a></li>
+            </ul>
+        </li>
+        <li>
+        {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        </li>
     </ul>
 </div>

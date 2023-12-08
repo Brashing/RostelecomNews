@@ -2,6 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load static %}
 {% load bootstrap5 %}
+{% load crispy_forms_tags %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="ru">
 
@@ -24,52 +25,101 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title">НАСТРОЙКА УЧЕТНОЙ ЗАПИСИ</h2>
+            <h2 class="title">ПРОФИЛЬ ПОЛЬЗОВАТЕЛЯ: <b>{{ user.account.nickname }}</b></h2>
             <div class="container">
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="container">
-                        <div class="row">
-                            <p><label> Личные данные: </label></p><br>
-                            <p><input type="text" placeholder="Имя Фамилия" id="name"</p>
-                            <p><label> Пол: </label>
-                                <input type="radio" name="gender" value="male"> Мужской
-                                <input type="radio" name="gender" value="female"> Женский</p>
-                            <p><label>Дата рождения: </label>
-                                <input type="date" id="dateInput" required="required" min="1900-01-01"
-                                       max="2099-09-13">
-                            </p>
-                            <p><input type="text" placeholder="Адрес электронной почты" id="email"/></p>
-                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
+                <div class="row">
+                    <div class="content_area">
+                        <div class="inner_footer_top">
+                            <div class="single_sidebar">
+                                <div class="news-letter">
+                                    <h2><i class="fa-solid fa-user-check"> Создать/обновить личные данные</i></h2><br>
+                                    <div class="container-fluid>">
+                                        <form method="post">
+                                            {% csrf_token %}
+                                            {{ form.as_p }}
+                                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <h2 class="title">СПИСОК НОВОСТЕЙ ПОЛЬЗОВАТЕЛЯ: <b>{{ user.account.nickname }}</b></h2>
+                        <div class="row">
+                            {% if user.is_staff == True %}
+                            <div class="col-lg-6">
+                                <p><a href="http://127.0.0.1:8000/admin/">
+                                    <button class="btn btn-danger">Создать новость в панели администратора</button>
+                                </a></p>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% for n in articles %}
+                        <div class="row">
+                            <hr>
+                            <div class="col-lg-9">
+                                <ol>
+                                    <a href="{{ n.get_absolute_url }}"><h4><strong>{{ n.title }}</h4></strong></a>
+                                    <p align="justify">{{ n.anouncement }}</p>
+                                </ol>
+                            </div>
+                            <div class="col-lg-3">
+                                !!!!ХОЧУ ДОБАВИТЬ КНОПКУ РЕДАКТИРОВАНИЯ И УДАЛЕНИЯ НОВОСТИ!!!!
+                            </div>
+                            </hr>
+                        </div>
+                        {% endfor %}
+                        <!--                         &lt;!&ndash;Пагинатор&ndash;&gt;-->
+                        <!--                         <nav>-->
+                        <!--                            <ul>-->
+                        <!--                                {% if page_obj.has_previous %}-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>-->
+                        <!--                                </li>-->
+                        <!--                                {% endif %}-->
+
+                        <!--                                {% for p in paginator.page_range %}-->
+                        <!--                                {% if page_obj.number == p %}-->
+                        <!--                                <li>{{ p }}</li>-->
+                        <!--                                {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="?page={{ p }}">{{ p }}</a>-->
+                        <!--                                </li>-->
+                        <!--                                {% endif %}-->
+                        <!--                                {% endfor %}-->
+
+                        <!--                                {% if page_obj.has_next %}-->
+                        <!--                                <li>-->
+                        <!--                                    <a href="?page={{ page_obj.next_page_number }}">&gt;</a>-->
+                        <!--                                </li>-->
+                        <!--                                {% endif %}-->
+                        <!--                            </ul>-->
+                        <!--                        </nav>-->
+                        <h2 class="title"></h2>
                     </div>
-                </form>
+                </div>
+                {% block footer %} {% include 'main/footer.html' %} {% endblock %}
             </div>
         </div>
-        <h6 class="title"></h6>
-        {% block footer %} {% include 'main/footer.html' %} {% endblock %}
-    </div>
-</div>
-<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
-<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
-<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
-<script type="text/javascript">
-    selectnav('nav', {
-        label: 'Меню',
-        nested: true,
-        indent: ''
-    });
-    selectnav('f_menu', {
-        label: 'Меню',
-        nested: true,
-        indent: ''
-    });
-    $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: true
-    });
-</script>
-<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+        <script type="text/javascript">
+            selectnav('nav', {
+                label: 'Меню',
+                nested: true,
+                indent: ''
+            });
+            selectnav('f_menu', {
+                label: 'Меню',
+                nested: true,
+                indent: ''
+            });
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </body>
 </html>

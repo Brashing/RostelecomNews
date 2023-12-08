@@ -2,6 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load static %}
 {% load bootstrap5 %}
+{% load crispy_forms_tags %}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="ru">
 
@@ -26,77 +27,87 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <form method="post">
-                    {% csrf_token %}
-                    <div class="col-lg-3">
+                <div class="col-lg-3">
+                    <form method="post">
+                        {% csrf_token %}
                         <select class="form-control" name="author_filter">
                             <option value="0">Все авторы</option>
                             {% for author in author_list %}
-                            <option value="{{ author.id }}" {% if selected == author.id %} selected {% endif %}>{{ author.account.nickname }}
+                            <option value="{{ author.id }}" {% if selected == author.id %} selected {% endif %}>{{ author }} ({{ author.account.nickname }})
                             </option>
                             {% endfor %}
                         </select><br>
                         <input class="btn btn-danger" type="submit" value="Выбрать">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
         <br>
         <h6 class="title"></h6>
         <div class="content_area">
-            <h2 class="title">АСТРОНОМИЯ</h2>
             {% for n in news %}
-            <div class="single_left_coloum floatleft"><a href="{{ n.get_absolute_url }}"><img
+            <div class="single_cat_left_content floatleft"><div class="container-fluid"><a href="{{ n.get_absolute_url }}"><img
                     src="{% static 'news/' %}images/{{ n.id }}.jpg" alt=""/></a>
                 <h3>{{ n.title }}</h3><br>
-                <p>{{ n.anouncement }}</p>
-                <p><strong><i><small>{{ n.author.account.nickname }}</small></i></strong></p>
-                <p><strong><i><small>{{ n.date }}</small></i></strong></p>
-                <!--                <a class="readmore" href="{{ n.get_absolute_url }}">читать...</a>-->
+                <p align="justify">{{ n.anouncement }}</p>
+                <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
+                <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p></div>
             </div>
             {% endfor %}
+            <!--&lt;!&ndash;Пагинатор&ndash;&gt;-->
+            <!-- <nav>-->
+            <!--    <ul>-->
+            <!--        {% if page_obj.has_previous %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+
+            <!--        {% for p in paginator.page_range %}-->
+            <!--        {% if page_obj.number == p %}-->
+            <!--        <li>{{ p }}</li>-->
+            <!--        {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ p }}">{{ p }}</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+            <!--        {% endfor %}-->
+
+            <!--        {% if page_obj.has_next %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ page_obj.next_page_number }}">&gt;</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+            <!--    </ul>-->
+            <!--</nav>-->
         </div>
+        <br>
+
         <!--                <div class="footer_top_area"></div>-->
-        <h6 class="title"></h6>
-        <div class="content_area">
-            <div class="inner_footer_top">
-                <div class="single_sidebar">
-                    <div class="news-letter">
-                        <h2><i class="fa-solid fa-envelope"> Подпишитесь на рассылку новостей</i></h2>
-                        <form action="#" method="post">
-                            {% csrf_token %}
-                            <input type="text" placeholder="Имя" id="name"/>
-                            <input type="text" placeholder="Адрес электронной почты" id="email"/>
-                            <a href="#"><input class="btn btn-danger" type="submit"
-                                               value="Подписаться"></a><br>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <h6 class="title"></h6>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
-    <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
-    <script type="text/javascript">
-        selectnav('nav', {
-            label: 'Меню',
-            nested: true,
-            indent: ''
-        });
-        selectnav('f_menu', {
-            label: 'Меню',
-            nested: true,
-            indent: ''
-        });
-        $('.bxslider').bxSlider({
-            mode: 'fade',
-            captions: true
-        });
-    </script>
-    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</div>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+<script type="text/javascript">
+    selectnav('nav', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    selectnav('f_menu', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </body>
 </html>

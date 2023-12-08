@@ -2,22 +2,21 @@
 
 <div class="slider_area">
     <div class="content_area">
-        <h2 class="title">ПОСЛЕДНИЕ НОВОСТИ</h2>
+        <h2 class="title">ФОТОГАЛЕРЕЯ</h2>
     </div>
     <div class="slider">
         <ul class="bxslider">
-            <li><a href="{% url 'news_index' %}"><img src="{% static 'main/' %}images/1.jpg" alt=""
-                                                  title="Обнаружена первая в истории протозвезда, покидающая место своего рождения"/></a>
+            {% for n in articles %}
+            <li><a href="{{ n.get_absolute_url }}"><img src="\media\news_images\{{ n.id }}.jpg"
+                                                        style="margin:auto; height:350px; width:980px;" alt=""
+                                                        title="{{ n.title }}"/></a>
             </li>
-            <li><a href="{% url 'news_index' %}"><img src="{% static 'main/' %}images/2.jpg" alt=""
-                                                  title="Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле"/></a>
-            </li>
-            <li><a href="{% url 'news_index' %}"><img src="{% static 'main/' %}images/3.jpg" alt=""
-                                                  title="Столкнется ли белый карлик с нашей Солнечной системой?"/></a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
-    <a class="readmore" href="{% url 'news_index' %}">читать больше новостей...</a>
+    <br>
+    <div class="container"><a class="readmore" href="{% url 'news_index' %}"><input class="btn btn-danger" type="submit"
+                                                             value="К списку новостей"></a></div>
     <div class="content_area">
         <h6 class="title"></h6>
     </div>
