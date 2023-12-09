@@ -69,7 +69,7 @@ class ArticleForm(ModelForm):
         widgets = {
             'categories': Select(),
             'title': Textarea(attrs={'cols': 80, 'rows': 1}),
-            'anouncement': Textarea(attrs={'cols': 87, 'rows': 20}),
+            'anouncement': Textarea(attrs={'cols': 87, 'rows': 7}),
             'text': CKEditorWidget(),
             'source': Textarea(attrs={'cols': 88, 'rows': 1}),
             'sourcename': Textarea(attrs={'cols': 78, 'rows': 1}),

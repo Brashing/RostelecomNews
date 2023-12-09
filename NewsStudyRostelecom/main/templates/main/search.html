@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+{% load bootstrap5 %}
+{% load crispy_forms_tags %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
+
+<head>
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+    <title>Поиск</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+</head>
+
+<body>
+<div class="body_wrapper">
+    <div class="center">
+        {% block header %} {% include 'main/header.html' %} {% endblock %}
+        <br>
+        <h6 class="title"></h6>
+        <div class="content_area">
+            {% for n in news %}
+            <div class="single_cat_left_content floatleft"><div class="container-fluid"><a href="{{ n.get_absolute_url }}"><img
+                    src="\media\news_images\{{ n.id }}.jpg" style="margin:auto; height:150px; width:250px;" alt=""/></a>
+                <h3>{{ n.title }}</h3><br>
+                <p align="justify">{{ n.anouncement }}</p>
+                <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
+                <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p></div>
+            </div>
+            {% endfor %}
+            <!--&lt;!&ndash;Пагинатор&ndash;&gt;-->
+            <!-- <nav>-->
+            <!--    <ul>-->
+            <!--        {% if page_obj.has_previous %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+
+            <!--        {% for p in paginator.page_range %}-->
+            <!--        {% if page_obj.number == p %}-->
+            <!--        <li>{{ p }}</li>-->
+            <!--        {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ p }}">{{ p }}</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+            <!--        {% endfor %}-->
+
+            <!--        {% if page_obj.has_next %}-->
+            <!--        <li>-->
+            <!--            <a href="?page={{ page_obj.next_page_number }}">&gt;</a>-->
+            <!--        </li>-->
+            <!--        {% endif %}-->
+            <!--    </ul>-->
+            <!--</nav>-->
+        </div>
+        <br>
+
+        <!--                <div class="footer_top_area"></div>-->
+        <h6 class="title"></h6>
+        {% block footer %} {% include 'main/footer.html' %} {% endblock %}
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+<script type="text/javascript">
+    selectnav('nav', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    selectnav('f_menu', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</body>
+</html>

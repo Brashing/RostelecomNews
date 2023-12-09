@@ -59,7 +59,7 @@
             {% if request.user.id %}
             {% if user.is_staff == True %}
             <div class="col-lg-2">
-                <a class="btn btn-danger" href="http://127.0.0.1:8000/admin/news/article/{{ news.id }}/change/">Редактировать</a>
+                <a class="btn btn-danger" href="http://127.0.0.1:8000/admin/news/article/{{ news.id }}/change/" target="_blank">Редактировать</a>
             </div>
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>

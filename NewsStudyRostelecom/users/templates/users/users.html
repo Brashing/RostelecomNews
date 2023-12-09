@@ -69,7 +69,11 @@
                                 </ol>
                             </div>
                             <div class="col-lg-3">
-                                !!!!ХОЧУ ДОБАВИТЬ КНОПКУ РЕДАКТИРОВАНИЯ И УДАЛЕНИЯ НОВОСТИ!!!!
+                               {% if request.user.id %}
+            {% if user.is_staff == True %}
+                <a class="btn btn-danger" href="{% url 'news_input' %}">Редактировать</a>
+            {% endif %}
+            {% endif %}
                             </div>
                             </hr>
                         </div>

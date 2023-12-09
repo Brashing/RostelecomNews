@@ -13,7 +13,7 @@
         <li><a href="{% url 'news_index' %}"><i class="fa-solid fa-bars"> Новости</i></a>
             <ul>
                 {% if request.user.id %}
-                <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-bars"> Подать заявку на создание новости</i></a></li>
+                <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-bars"> Создать новость на сайте</i></a></li>
                 {% endif %}
                 <li><a href="{% url 'news_subscribe' %}"><i class="fa-solid fa-envelope"> Подписаться на рассылку
                     новостей</i></a></li>
