@@ -34,7 +34,7 @@
                             <div class="container-fluid>">
                                 <form method="post" class="contact-form">
                                     {% csrf_token %}
-                                    {{ form.as_p }}<br>
+                                    {{ form|crispy }}<br>
                                     <input class="btn btn-danger" type="submit" value="Войти"><br>
                                     <ol></ol>
                                     <small class="text-muted"> Нужен аккаунт?

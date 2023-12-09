@@ -6,12 +6,18 @@
     </div>
     <div class="slider">
         <ul class="bxslider">
-            {% for n in articles %}
-            <li><a href="{{ n.get_absolute_url }}"><img src="\media\news_images\{{ n.id }}.jpg"
-                                                        style="margin:auto; height:350px; width:980px;" alt=""
-                                                        title="{{ n.title }}"/></a>
+        {% for n in articles %}
+            {% if n.image_set.all %}
+            <li>
+                <a href="{{ n.get_absolute_url }}">
+                    {% for image in n.image_set.all %}
+                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:auto;" alt=""
+                         title="{{ n.title }}"/>
+                    {% endfor %}
+                </a>
             </li>
-            {% endfor %}
+            {% endif %}
+        {% endfor %}
         </ul>
     </div>
     <br>

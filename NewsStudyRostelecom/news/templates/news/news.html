@@ -47,7 +47,7 @@
         <div class="content_area">
             {% for n in news %}
             <div class="single_cat_left_content floatleft"><div class="container-fluid"><a href="{{ n.get_absolute_url }}"><img
-                    src="{% static 'news/' %}images/{{ n.id }}.jpg" alt=""/></a>
+                    src="\media\news_images\{{ n.id }}.jpg" style="margin:auto; height:150px; width:250px;" alt=""/></a>
                 <h3>{{ n.title }}</h3><br>
                 <p align="justify">{{ n.anouncement }}</p>
                 <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>

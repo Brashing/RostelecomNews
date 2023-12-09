@@ -29,9 +29,9 @@ class Article(models.Model):
     sourcename = models.CharField('Название источника', max_length=150, null=False)
     text = models.TextField('Текст новости', null=False)
     date = models.DateTimeField('Дата публикации', auto_created=True)
-    categories=models.CharField(choices=categories, max_length=20, verbose_name='Категории', null=False)
+    categories=models.CharField(choices=categories, max_length=20, verbose_name='Категории')
     tags = models.ManyToManyField(to=Tag, blank=True)
-    status = models.BooleanField(default=False, verbose_name='Опубликовано')
+    status = models.BooleanField(default=True, verbose_name='Опубликовано')
     objects = models.Manager()
     published = PublishedToday()
 

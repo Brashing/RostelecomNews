@@ -1,21 +1,30 @@
 from django.shortcuts import render
+from django.views.generic import ListView
 from news.models import Article
 from .models import *
 from django.http import HttpResponse
 
-# from ..news.models import Image
-
 
 def index(request):
     articles = Article.objects.all()
-    # images = Image.objects.all()
-    # articles = Article.published.all()
     context = {
         'articles':articles,
-        # 'images': images
     }
+
     return render(request, 'main/index.html', context)
+
+# class Search(ListView):
+#     news = Article.objects.all()
+#     template_name = 'main/search.html'
+#     context_object_name = 'news'
+#     def get_queryset(self):
+#         return Article.objects.filter(title__icontains=self.request.GET.get("q"))
+#
+#     def get_context_data(self, *args, **kwargs):
+#         context = super().get_context_data(*args, **kwargs)
+#         # context["q"] = self.request.GET.get("q")
+#         return context
 
 def custom_404(request, exception):
     return render(request, 'main/custom_404.html')
-    #return HttpResponse(f'Ой, какая жалость!:{exception}')
+

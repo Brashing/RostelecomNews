@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'debug_toolbar',
     'crispy_forms',
+    'crispy_bootstrap5',
     'ckeditor',
     'ckeditor_uploader',
 ]

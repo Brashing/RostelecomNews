@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
+from django.contrib.auth.models import Group
 from news.models import Article
 from django.core.paginator import Paginator
 from django.views.generic import DetailView, DeleteView, UpdateView, ListView
@@ -41,7 +42,9 @@ def registration(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            group = Group.objects.get(name='Персонал')
+            user.groups.add(group)
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             messages.success(request,f'{username} зарегистрирован!')

@@ -12,7 +12,9 @@
         </li>
         <li><a href="{% url 'news_index' %}"><i class="fa-solid fa-bars"> Новости</i></a>
             <ul>
+                {% if request.user.id %}
                 <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-bars"> Подать заявку на создание новости</i></a></li>
+                {% endif %}
                 <li><a href="{% url 'news_subscribe' %}"><i class="fa-solid fa-envelope"> Подписаться на рассылку
                     новостей</i></a></li>
             </ul>
@@ -21,7 +23,7 @@
         <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"> {{ user }}_{{ request.user.account.nickname }}</i></a>
             <ul>
                 {% if user.is_staff == True %}
-                <li><a href="http://127.0.0.1:8000/admin/"><i class="fa-solid fa-wand-magic-sparkles"> Создать новость в панели администратора</i></a></li>
+                <li><a href="http://127.0.0.1:8000/admin/news/article/add/"><i class="fa-solid fa-wand-magic-sparkles"> Создать новость в панели администратора</i></a></li>
                 {% endif %}
                 <li><a href="{% url 'logout' %}"><i class="fa-solid fa-hand-point-up"> Выйти из профиля</i></a></li>
             </ul>

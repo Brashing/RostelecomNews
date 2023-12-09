@@ -30,11 +30,11 @@
                 <div class="inner_footer_top">
                     <div class="single_sidebar">
                         <div class="news-letter">
-                            <h2><i class="fa-solid fa-right-to-bracket"> Регистрация</i></h2><br>
+                            <h2><i class="fa-solid fa-user-pen"> Регистрация</i></h2><br>
                             <div class="container-fluid>">
                                 <form method="post" class="contact-form">
                                     {% csrf_token %}
-                                    {{ form.as_p }}
+                                    {{ form|crispy }}
                                     <input class="btn btn-danger" type="submit" value="Зарегистрироваться">
                                     <ol></ol>
                                     <small class="text-muted"> Уже есть аккаунт?

@@ -7,9 +7,9 @@
     <div class="social_plus_search floatright">
         <div class="social"></div>
         <div class="search">
-            <form action="#" method="post" id="search_form">
+            <form action="#" method="get" id="search_form">
                 {% csrf_token %}
-                <input type="text" id="s" placeholder="Поиск"/>
+                <input type="text" id="s" name = "q" placeholder="Поиск"/>
                 <input type="submit" id="searchform" value="search"/>
                 <input type="hidden" value="post" name="post_type"/>
             </form>
