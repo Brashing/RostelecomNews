@@ -23,46 +23,44 @@
 <div class="body_wrapper">
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
-        <div class="container-fluid">
         <h1>{{ news.title }}</h1>
         <h6 class="title"></h6>
-        <h3>Автор: {{ news.author.account.nickname }}</h3>
-        <h3>Дата публикации: {{ news.date.date }}</h3><br>
+        <div class="row">
+            <div class="col-lg-6">
+               <p><strong><i>Автор: <font color="red">{{ news.author.account.nickname }}</font></i></strong></p>
+               <p><strong><i>Дата публикации: <font color="red">{{ news.date.date }}</font></i></strong></p>
+           </div>
+            <div class="col-lg-3">
+                <a class="btn btn-danger" href="{% url 'home' %}">На главную</a>
+            </div>
+            <div class="col-lg-3">
+                <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
+            </div>
         </div>
         <h6 class="title"></h6>
-<!--        <div class="slider_area">-->
-<!--            <div class="slider">-->
-<!--                <ul class="bxslider">-->
-<!--                    {% for image in images %}-->
-<!--                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:980px;">-->
-<!--                    {% endfor %}-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </div><br>-->
-<!--        <h6 class="title"></h6>-->
-<!--            <p class="lead" align="justify">{{ news.anouncement }}</p>-->
-<!--        <h6 class="title"></h6>-->
         <blockquote class="blockquote">
             <p align="justify">{{ news.text|safe }}</p>
         </blockquote>
         <br>
         <h6 class="title"></h6>
-        <h3>Источник: <a href="{{ news.source }}">{{ news.sourcename }}</a></h3><br>
+        <p><strong><i>Источник: <a href="{{ news.source }}"><font color="red">{{ news.sourcename }}</a></font></i></strong></p><br>
         <h6 class="title"></h6>
         <div class="row">
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'home' %}">На главную</a>
             </div>
             <div class="col-lg-6">
-                <a class="btn btn-danger" href="{% url 'news_index' %}">Вернуться к списку новостей</a>
+                <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
             </div>
             {% if request.user.id %}
             {% if user.is_staff == True %}
             <div class="col-lg-2">
-                <a class="btn btn-danger" href="http://127.0.0.1:8000/admin/news/article/{{ news.id }}/change/" target="_blank">Редактировать</a>
+                <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>
             </div>
             <div class="col-lg-2">
-                <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
+                {% if user.is_superuser == True %}
+                    <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
+                {% endif %}
             </div>
             {% endif %}
             {% endif %}

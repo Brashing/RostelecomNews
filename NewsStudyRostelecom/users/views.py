@@ -31,7 +31,6 @@ def users(request):
     context = {
         'form': form,
         'articles': articles,
-        # 'page_obj': page_obj,
     }
     return render(request, 'users/users.html',context)
 

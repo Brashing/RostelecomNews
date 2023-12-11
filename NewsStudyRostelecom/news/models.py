@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.contrib.auth.models import User
@@ -18,18 +19,18 @@ class PublishedToday(models.Manager):
         return super(PublishedToday,self).get_queryset().filter(date__gte=datetime.date.today())
 
 class Article(models.Model):
-    categories = (('АН', 'Астрономия'),
-                  ('К', 'Космонавтика'),
-                  ('АФ', 'Астрофизика'),
-                  ('Г', 'Геология'))
+    categories = (('A', 'Астрономия'),
+                  ('K', 'Космонавтика'),
+                  ('AF', 'Астрофизика'),
+                  ('G', 'Геология'))
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, verbose_name='Автор')
     title = models.CharField('Название новости', max_length=150, default='', null=False)
     anouncement = models.TextField('Аннотация', max_length=1250, null=False)
     source = models.URLField('Источник', null=True)
     sourcename = models.CharField('Название источника', max_length=150, null=False)
-    text = models.TextField('Текст новости', null=False)
+    text = RichTextField('Текст новости', null=False)
     date = models.DateTimeField('Дата публикации', auto_created=True)
-    categories=models.CharField(choices=categories, max_length=20, verbose_name='Категории')
+    categories = models.CharField(choices=categories, max_length=20, verbose_name='Категории')
     tags = models.ManyToManyField(to=Tag, blank=True)
     status = models.BooleanField(default=True, verbose_name='Опубликовано')
     objects = models.Manager()

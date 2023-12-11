@@ -27,17 +27,29 @@
         <br>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-7">
                     <form method="post">
                         {% csrf_token %}
-                        <select class="form-control" name="author_filter">
-                            <option value="0">Все авторы</option>
-                            {% for author in author_list %}
-                            <option value="{{ author.id }}" {% if selected == author.id %} selected {% endif %}>{{ author }} ({{ author.account.nickname }})
-                            </option>
-                            {% endfor %}
-                        </select><br>
-                        <input class="btn btn-danger" type="submit" value="Выбрать">
+                        <div class="col-lg-5">
+                            <select class="form-control" name="author_filter">
+                                <option value="0">Все авторы</option>
+                                {% for author in author_list %}
+                                <option value="{{ author.id }}" {% if selected_author == author.id %} selected {% endif %}>{{ author }} ({{ author.account.nickname }})
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="col-lg-3">
+                            <input type="submit" class="btn btn-danger" value="Применить">
+                        </div>
+                         <div class="col-lg-4">
+<!--                        <select class="form-control" name="category_filter">-->
+<!--                            <option value="0">Все категории</option>-->
+<!--                                {% for c in categories %}-->
+<!--                                <option value="{{ foloop.counter }}" {% if selected_category == forloop.counter %} selected {% endif %}>{{ c.1 }}</option>-->
+<!--                                {% endfor %}-->
+<!--                        </select>-->
+                        </div>
                     </form>
                 </div>
             </div>
@@ -45,44 +57,25 @@
         <br>
         <h6 class="title"></h6>
         <div class="content_area">
-            {% for n in news %}
-            <div class="single_cat_left_content floatleft"><div class="container-fluid"><a href="{{ n.get_absolute_url }}"><img
-                    src="\media\news_images\{{ n.id }}.jpg" style="margin:auto; height:150px; width:250px;" alt=""/></a>
-                <h3>{{ n.title }}</h3><br>
-                <p align="justify">{{ n.anouncement }}</p>
-                <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
-                <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p></div>
-            </div>
+            {% for n in articles %}
+                {% if n.image_set.all %}
+                    <div class="single_cat_left_content floatleft">
+                        <div class="container-fluid"><a href="{{ n.get_absolute_url }}">
+                            {% for image in n.image_set.all %}
+                            <center>
+                            <img src="{{ image.image.url }}" style="margin:auto; height:150px; width:auto" alt=""/>
+                            </center>
+                            <h3>{{ n.title }}</h3><br>
+                            {% endfor %}</a>
+                            <p align="justify">{{ n.anouncement }}</p>
+                            <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
+                            <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p>
+                        </div>
+                    </div>
+                {% endif %}
             {% endfor %}
-            <!--&lt;!&ndash;Пагинатор&ndash;&gt;-->
-            <!-- <nav>-->
-            <!--    <ul>-->
-            <!--        {% if page_obj.has_previous %}-->
-            <!--        <li>-->
-            <!--            <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>-->
-            <!--        </li>-->
-            <!--        {% endif %}-->
-
-            <!--        {% for p in paginator.page_range %}-->
-            <!--        {% if page_obj.number == p %}-->
-            <!--        <li>{{ p }}</li>-->
-            <!--        {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}-->
-            <!--        <li>-->
-            <!--            <a href="?page={{ p }}">{{ p }}</a>-->
-            <!--        </li>-->
-            <!--        {% endif %}-->
-            <!--        {% endfor %}-->
-
-            <!--        {% if page_obj.has_next %}-->
-            <!--        <li>-->
-            <!--            <a href="?page={{ page_obj.next_page_number }}">&gt;</a>-->
-            <!--        </li>-->
-            <!--        {% endif %}-->
-            <!--    </ul>-->
-            <!--</nav>-->
         </div>
         <br>
-
         <!--                <div class="footer_top_area"></div>-->
         <h6 class="title"></h6>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
@@ -109,5 +102,26 @@
     });
 </script>
 <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        $(function() {
+            $("#search_input").autocomplete({
+                source: "search_auto/",
+                select: function (event, ui) { //item selected
+                    AutoCompleteSelectHandler(event, ui)
+                },
+                minLength: 2,
+            });
+        });
+
+      function AutoCompleteSelectHandler(event, ui)
+      {
+        var selectedObj = ui.item;
+      }
+</script>
 </body>
 </html>

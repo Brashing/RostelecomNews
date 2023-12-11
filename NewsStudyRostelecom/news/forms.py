@@ -70,11 +70,12 @@ class ArticleForm(ModelForm):
             'categories': Select(),
             'title': Textarea(attrs={'cols': 80, 'rows': 1}),
             'anouncement': Textarea(attrs={'cols': 87, 'rows': 7}),
-            'text': CKEditorWidget(),
+            # 'text': CKEditorWidget(),
             'source': Textarea(attrs={'cols': 88, 'rows': 1}),
             'sourcename': Textarea(attrs={'cols': 78, 'rows': 1}),
             'tags': CheckboxSelectMultiple(),
         }
+
 
         # self.fields['text'].widget.attrs.update({'class': 'form-control django_ckeditor'})
         # self.fields['text'].required = False

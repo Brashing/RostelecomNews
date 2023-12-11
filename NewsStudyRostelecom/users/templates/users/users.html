@@ -25,15 +25,16 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title"><img src="{{ request.user.account.account_image.url }}" style="margin:auto; height:50px; width:auto;border-radius: 50%"/><b> {{ user.account.nickname }}</b><br>
-               </h2>
+            <h2 class="title">СОЗДАТЬ/ОБНОВИТЬ АККАУНТ</h2>
             <div class="container">
                 <div class="row">
                     <div class="content_area">
                         <div class="inner_footer_top">
                             <div class="single_sidebar">
                                 <div class="news-letter">
-                                    <h2><i class="fa-solid fa-user-check"> Создать/обновить личные данные</i></h2><br>
+                                    <p>
+                                        <img src="{{ request.user.account.account_image.url }}" style="margin:auto; height:50px; width:auto;border-radius: 50%"/>
+                                    </p>
                                     <div class="container-fluid>">
                                         <form method="post">
                                             {% csrf_token %}
@@ -44,66 +45,58 @@
                                 </div>
                             </div>
                         </div>
-                        <h2 class="title">СПИСОК НОВОСТЕЙ </h2>
+                        {% if user.is_staff == True %}
+                        <h2 class="title">СПИСОК НОВОСТЕЙ АВТОРА </h2>
                         <div class="row">
-                            {% if user.is_staff == True %}
-                            <div class="col-lg-6">
-                                <p><a href="http://127.0.0.1:8000/admin/news/article/add/">
+                            <div class="col-lg-4">
+                                <p><a href="http://127.0.0.1:8000/admin/news/article/add/" target="_blank">
                                     <button class="btn btn-danger">Создать новость в панели администратора</button>
                                 </a></p>
                             </div>
-                            {% endif %}
+                            <div class="col-lg-4">
+                                <p><a href="{% url 'news_input' %}">
+                                    <button class="btn btn-danger">Создать новость на сайте</button></a>
+                                </p>
+                            </div>
                         </div>
+                        {% else %}
+                            <h2 class="title">СПИСОК ЗАЯВОК </h2>
+                            <div class="row">
+                            <div class="col-lg-4">
+                                <p><a href="{% url 'news_input' %}">
+                                    <button class="btn btn-danger">Подать заявку на создание новости</button></a>
+                                </p>
+                            </div>
+                            </div>
+                        {% endif %}
                         {% for n in articles %}
-                        <div class="row">
-                            <hr>
-                            <div class="col-lg-3">
-                                <ol>
-                                    <a href="{{ n.get_absolute_url }}"><img src="\media\news_images\{{ n.id }}.jpg" style="margin:auto; height:150px; width:250px;" alt=""/></a>
-                                </ol>
-                            </div>
-                            <div class="col-lg-6">
-                                <ol>
-                                    <h4><strong>{{ n.title }}</strong></h4>
-                                    <p align="justify">{{ n.anouncement }}</p>
-                                </ol>
-                            </div>
-                            <div class="col-lg-3">
-                               {% if request.user.id %}
-            {% if user.is_staff == True %}
-                <a class="btn btn-danger" href="{% url 'news_input' %}">Редактировать</a>
-            {% endif %}
-            {% endif %}
-                            </div>
-                            </hr>
-                        </div>
-                        {% endfor %}
-                        <!--                         &lt;!&ndash;Пагинатор&ndash;&gt;-->
-                        <!--                         <nav>-->
-                        <!--                            <ul>-->
-                        <!--                                {% if page_obj.has_previous %}-->
-                        <!--                                <li>-->
-                        <!--                                    <a href="?page={{ page_obj.previous_page_number }}">&lt;</a>-->
-                        <!--                                </li>-->
-                        <!--                                {% endif %}-->
-
-                        <!--                                {% for p in paginator.page_range %}-->
-                        <!--                                {% if page_obj.number == p %}-->
-                        <!--                                <li>{{ p }}</li>-->
-                        <!--                                {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}-->
-                        <!--                                <li>-->
-                        <!--                                    <a href="?page={{ p }}">{{ p }}</a>-->
-                        <!--                                </li>-->
-                        <!--                                {% endif %}-->
-                        <!--                                {% endfor %}-->
-
-                        <!--                                {% if page_obj.has_next %}-->
-                        <!--                                <li>-->
-                        <!--                                    <a href="?page={{ page_obj.next_page_number }}">&gt;</a>-->
-                        <!--                                </li>-->
-                        <!--                                {% endif %}-->
-                        <!--                            </ul>-->
-                        <!--                        </nav>-->
+                            {% if n.image_set.all %}
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                    <a href="{{ n.get_absolute_url }}">
+                                    {% for image in n.image_set.all %}
+                                        <img src="{{ image.image.url }}" style="margin:auto; height:150px; width:auto;" alt=""/></a>
+                                    {% endfor %}
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <h4><strong>{{ n.title }}</strong></h4>
+                                        <p align="justify">{{ n.anouncement }}</p><br>
+                                        {% if request.user.id %}
+                                        {% if user.is_staff == True %}
+                                            <div class="col-lg-7">
+                                                <p><a class="readmore"  href="http://127.0.0.1:8000/admin/news/article/{{ n.id }}/change/" target="_blank">Редактировать новость в панели администратора...</a></p>
+                                            </div>
+                                            <div class="col-lg-5">
+                                                <p><a class="readmore"  href="{% url 'news_update' n.pk %}">Редактировать новость на сайте...</a></p>
+                                            </div>
+                                            {% else %}
+                                        {% endif %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}<br>
                         <h2 class="title"></h2>
                     </div>
                 </div>

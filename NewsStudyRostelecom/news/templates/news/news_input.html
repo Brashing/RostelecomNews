@@ -25,23 +25,29 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title"></h2>
+            {% if user.is_staff == True %}
+            <h2 class="title">СОЗДАТЬ/РЕДАКТИРОВАТЬ НОВОСТЬ</h2>
+                {% else %}
+                <h2 class="title">ПОДАТЬ ЗАЯВКУ НА СОЗДАНИЕ НОВОСТИ</h2>
+            {% endif %}
             <div class="content_area">
                 <div class="inner_footer_top">
                     <div class="single_sidebar">
                         <div class="news-letter">
-                            <h2><i class="fa-solid fa-bars"> Создать новость</i></h2><br>
                             <div class="container-fluid>">
                                 <form method="post" enctype="multipart/form-data">
                                     {% csrf_token %}
                                     {{ form.media }}
                                     {{ form|crispy }}<br><br>
                                     <div class="row">
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-6">
                                             <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
                                         </div>
                                         <div class="col-lg-3">
-                                            <a class="btn btn-danger" href="{% url 'user_profile' %}">К списку новостей</a>
+                                            <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <p><a class="btn btn-danger" href="{% url 'user_profile' %}">В профиль</a></p>
                                         </div>
                                     </div>
                                 </form>

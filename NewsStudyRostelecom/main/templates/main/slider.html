@@ -11,7 +11,7 @@
             <li>
                 <a href="{{ n.get_absolute_url }}">
                     {% for image in n.image_set.all %}
-                    <img src="{{ image.image.url }}" style="margin:auto; height:450px; width:auto;" alt=""
+                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:980px;" alt=""
                          title="{{ n.title }}"/>
                     {% endfor %}
                 </a>
