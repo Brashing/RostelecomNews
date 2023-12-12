@@ -13,8 +13,8 @@ class UserUpdateForm(UserChangeForm):
         widgets = {
             'username': TextInput(attrs={'class': 'input', 'placeholder': 'Логин'}),
             'email': EmailInput(attrs={'class': 'input','placeholder': 'Адрес электронной почты'}),
-            'first_name': TextInput(attrs={'class': 'input', 'placeholder': 'Фамилия'}),
-            'last_name': TextInput(attrs={'class': 'input', 'placeholder': 'Имя'}),
+            'first_name': TextInput(attrs={'class': 'input', 'placeholder': 'Имя'}),
+            'last_name': TextInput(attrs={'class': 'input', 'placeholder': 'Фамилия'}),
         }
 
 class AccountUpdateForm(ModelForm):

@@ -11,27 +11,23 @@ from .models import *
 from .forms import *
 import datetime
 
-# from ..news.models import Image
-
 @login_required(login_url="/users/login")
 def users(request):
     articles = Article.objects.all()
-    if request.method == 'POST':
-        form = AccountUpdateForm(request.POST)
-        if form.is_valid():
-            current_user = request.user
-            if current_user.id != None:
-                data_account = form.save(commit=False)
-                data_account.user = current_user
-                data_account.save()
-                form.save_m2m()
-                # for img in request.FILES.getlist('image_field'):
-                #     Image.objects.create(account=data_account, image=img, title=img.name)
-                return redirect('user_profile')
-    else:
-        form = AccountUpdateForm()
+    # if request.method == 'POST':
+    #     form = AccountUpdateForm(request.POST)
+    #     if form.is_valid():
+    #         current_user = request.user
+    #         if current_user.id != None:
+    #             data_account = form.save(commit=False)
+    #             data_account.user = current_user
+    #             data_account.save()
+    #             form.save_m2m()
+    #             return redirect('user_profile')
+    # else:
+    #     form = AccountUpdateForm()
     context = {
-        'form': form,
+        # 'form': form,
         'articles': articles,
     }
     return render(request, 'users/users.html',context)
@@ -71,7 +67,8 @@ def profile_update(request):
             pass
     else:
         context = {'account_form':AccountUpdateForm(instance=account),
-                   'user_form':UserUpdateForm(instance=user)}
+                   'user_form':UserUpdateForm(instance=user),
+                   }
     return render(request,'users/edit_profile.html',context)
 
 from django.contrib.auth.forms import PasswordChangeForm
@@ -85,6 +82,5 @@ def password_update(request):
             update_session_auth_hash(request,password_info)
             messages.success(request,'Пароль успешно изменен')
             return redirect('user_profile')
-
     context = {"form": form}
     return render(request,'users/edit_password.html',context)

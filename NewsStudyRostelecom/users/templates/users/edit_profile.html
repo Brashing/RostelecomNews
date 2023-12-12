@@ -1,28 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 {% load static %}
 {% load bootstrap5 %}
 {% load crispy_forms_tags %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
 
+<head>
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+    <title>Профиль пользователя</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+</head>
 
-<div class="inner_footer_top">
-    <div class="single_sidebar">
-        <div class="news-letter">
-            <p>
-                <img src="{{ request.user.account.account_image.url }}"
-                     style="margin:auto; height:50px; width:auto;border-radius: 50%"/>
-            </p>
-            <div class="container-fluid>">
-                <form method="post">
-                    {% csrf_token %}
-                    {{ form|crispy }}<br>
-                    <div class="col-lg-9">
-                        <p><input class="btn btn-danger" type="submit" value="Сохранить"></p>
+<body>
+<div class="body_wrapper">
+    <div class="center">
+        {% block header %} {% include 'main/header.html' %} {% endblock %}
+        <div class="content_area">
+            <h2 class="title"></h2>
+            <div class="container">
+                <div class="row">
+                    <div class="content_area">
+                        <div class="inner_footer_top">
+                            <div class="single_sidebar">
+                                <div class="news-letter">
+                                    <p>
+                                        <img src="{{ request.user.account.account_image.url }}"
+                                             style="margin:auto; height:50px; width:auto;border-radius: 50%"/>
+                                    </p>
+                                    <div class="container-fluid>">
+                                        <form method="post" enctype="multipart/form-data">
+                                            {% csrf_token %}
+                                            {{ user_form|crispy }}
+                                            {{ account_form|crispy }}<br>
+                                            <div class="col-lg-9">
+                                                <p><input class="btn btn-danger" type="submit" value="Сохранить"></p>
+                                            </div>
+                                        </form>
+                                        <div class="col-lg-3">
+                                            <p><a href="{% url 'password' %}"><input class="btn btn-danger"
+                                                                                     type="submit"
+                                                                                     value="Изменить пароль"></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="title"></h2>
                     </div>
-                </form>
-                <div class="col-lg-3">
-                    <p><a href="{% url 'password' %}"><input class="btn btn-danger" type="submit"
-                                                             value="Изменить пароль"></a></p>
                 </div>
+                {% block footer %} {% include 'main/footer.html' %} {% endblock %}
             </div>
         </div>
-    </div>
-</div>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+        <script type="text/javascript">
+            selectnav('nav', {
+                label: 'Меню',
+                nested: true,
+                indent: ''
+            });
+            selectnav('f_menu', {
+                label: 'Меню',
+                nested: true,
+                indent: ''
+            });
+            $('.bxslider').bxSlider({
+                mode: 'fade',
+                captions: true
+            });
+        </script>
+        <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+</body>
+</html>

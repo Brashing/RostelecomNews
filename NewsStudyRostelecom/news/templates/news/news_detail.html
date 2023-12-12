@@ -26,16 +26,25 @@
         <h1>{{ news.title }}</h1>
         <h6 class="title"></h6>
         <div class="row">
-            <div class="col-lg-6">
-               <p><strong><i>Автор: <font color="red">{{ news.author.account.nickname }}</font></i></strong></p>
-               <p><strong><i>Дата публикации: <font color="red">{{ news.date.date }}</font></i></strong></p>
-           </div>
-            <div class="col-lg-3">
-                <a class="btn btn-danger" href="{% url 'home' %}">На главную</a>
+            <div class="col-lg-4">
+                <p><strong><i>Автор: <font color="red">{{ news.author.account.nickname }}</font></i></strong></p>
+                <p><strong><i>Дата публикации: <font color="red">{{ news.date.date }}</font></i></strong></p>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
             </div>
+            {% if request.user.id %}
+            {% if user.is_staff == True %}
+            <div class="col-lg-2">
+                <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>
+            </div>
+            <div class="col-lg-2">
+                {% if user.is_superuser == True %}
+                <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% endif %}
         </div>
         <h6 class="title"></h6>
         <blockquote class="blockquote">
@@ -52,18 +61,6 @@
             <div class="col-lg-6">
                 <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
             </div>
-            {% if request.user.id %}
-            {% if user.is_staff == True %}
-            <div class="col-lg-2">
-                <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>
-            </div>
-            <div class="col-lg-2">
-                {% if user.is_superuser == True %}
-                    <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
-                {% endif %}
-            </div>
-            {% endif %}
-            {% endif %}
         </div>
         <br>
         <h6 class="title"></h6>
