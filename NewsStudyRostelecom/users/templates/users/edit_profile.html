@@ -1,0 +1,28 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load crispy_forms_tags %}
+
+
+<div class="inner_footer_top">
+    <div class="single_sidebar">
+        <div class="news-letter">
+            <p>
+                <img src="{{ request.user.account.account_image.url }}"
+                     style="margin:auto; height:50px; width:auto;border-radius: 50%"/>
+            </p>
+            <div class="container-fluid>">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}<br>
+                    <div class="col-lg-9">
+                        <p><input class="btn btn-danger" type="submit" value="Сохранить"></p>
+                    </div>
+                </form>
+                <div class="col-lg-3">
+                    <p><a href="{% url 'password' %}"><input class="btn btn-danger" type="submit"
+                                                             value="Изменить пароль"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

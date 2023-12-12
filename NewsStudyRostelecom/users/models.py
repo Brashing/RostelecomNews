@@ -11,7 +11,7 @@ class Account(models.Model):
                                 primary_key=True, verbose_name='Пользователь')
     nickname = models.CharField(max_length=100, verbose_name='Имя автора (псевдоним)')
     birthdate = models.DateField(null=True, verbose_name='День рождения')
-    gender = models.CharField(choices=gender_choices, max_length=20, verbose_name='Пол')
+    gender = models.CharField(choices=gender_choices, max_length=20, verbose_name='Пол', null=True)
     account_image = models.ImageField(default='default.jpg',
                                       upload_to='account_images', verbose_name='Фото аккаунта')
 

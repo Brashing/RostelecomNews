@@ -25,26 +25,27 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title">СОЗДАТЬ/ОБНОВИТЬ АККАУНТ</h2>
+            <h2 class="title">АККАУНТ ПОЛЬЗОВАТЕЛЯ</h2>
             <div class="container">
                 <div class="row">
                     <div class="content_area">
-                        <div class="inner_footer_top">
-                            <div class="single_sidebar">
-                                <div class="news-letter">
-                                    <p>
-                                        <img src="{{ request.user.account.account_image.url }}" style="margin:auto; height:50px; width:auto;border-radius: 50%"/>
-                                    </p>
-                                    <div class="container-fluid>">
-                                        <form method="post">
-                                            {% csrf_token %}
-                                            {{ form|crispy }}
-                                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% block profile_update %} {% include 'users/edit_profile.html' %} {% endblock %}
+<!--                        <div class="inner_footer_top">-->
+<!--                            <div class="single_sidebar">-->
+<!--                                <div class="news-letter">-->
+<!--                                    <p>-->
+<!--                                        <img src="{{ request.user.account.account_image.url }}" style="margin:auto; height:50px; width:auto;border-radius: 50%"/>-->
+<!--                                    </p>-->
+<!--                                    <div class="container-fluid>">-->
+<!--                                        <form method="post">-->
+<!--                                            {% csrf_token %}-->
+<!--                                            {{ form|crispy }}-->
+<!--                                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         {% if user.is_staff == True %}
                         <h2 class="title">СПИСОК НОВОСТЕЙ АВТОРА </h2>
                         <div class="row">
