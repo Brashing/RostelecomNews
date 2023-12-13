@@ -6,6 +6,9 @@ from .models import *
 
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
+from .views import ViewCount
+
+
 class ArticleAdminForm(forms.ModelForm):
     text = forms.CharField(label="Текст новости", widget=CKEditorUploadingWidget())
     # anouncement = forms.CharField(label="Аннотация", widget=CKEditorUploadingWidget())
@@ -96,3 +99,8 @@ admin.site.register(Subscriber, SubscriberAdmin)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ['title','image_tag','article']
     list_display_links = ['article']
+
+class ViewCountAdmin(admin.ModelAdmin):
+    list_display = ['article','ip_address','view_date']
+
+admin.site.register(ViewCount, ViewCountAdmin)

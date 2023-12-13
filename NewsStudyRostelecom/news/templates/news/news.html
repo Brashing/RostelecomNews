@@ -55,7 +55,7 @@
             </div>
         </div>
         <br>
-        <h6 class="title"></h6>
+    <h6 class="title"></h6>
         <div class="content_area">
             {% for n in articles %}
                 {% if n.image_set.all %}
@@ -68,6 +68,8 @@
                             <h3>{{ n.title }}</h3><br>
                             {% endfor %}</a>
                             <p align="justify">{{ n.anouncement }}</p>
+                            <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
+                            <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
                             <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
                             <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p>
                         </div>
@@ -76,8 +78,28 @@
             {% endfor %}
         </div>
         <br>
-        <!--                <div class="footer_top_area"></div>-->
-        <h6 class="title"></h6>
+        {% if total > 1 %}
+        <h6 class="title"><nav aria-label="Навигация по списку новостей" pagination-hover-color="red">
+            <div class="text-center">
+            <ul class="pagination pagination-lg">
+                {% if articles.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}">Предыдущая</a>
+                </li>
+                {% endif %}
+                {% for p in articles.paginator.page_range %}
+                {% if articles.number == p %}
+                    <li class="page-item"><a class="page-link" style="color:black;"> {{ p }}</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ p }}"> {{ p }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}">Следующая</a></li>
+                {% endif %}
+            </ul>
+            </div>
+        </nav></h6>
+        {% endif %}
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
 </div>

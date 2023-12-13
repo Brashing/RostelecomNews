@@ -28,8 +28,8 @@
             <div class="content_area">
                 {% if user.is_staff == True %}
                 <h2 class="title">МОИ НОВОСТИ</h2>
-                {% else %}
-                <h2 class="title">МОИ ЗАЯВКИ</h2>
+                    {% else %}
+                    <h2 class="title">МОИ ЗАЯВКИ</h2>
                 {% endif %}
                 {% for n in articles %}
                 {% if n.image_set.all %}
@@ -64,6 +64,8 @@
                     </div>
                 </div>
                 {% endif %}
+                <hr>
+                <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
                 {% endfor %}<br>
                 <h2 class="title"></h2>
             </div>

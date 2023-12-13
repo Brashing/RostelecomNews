@@ -6,3 +6,7 @@ class AccountAdmin(admin.ModelAdmin):
     list_filter = ['user','gender']
 
 admin.site.register(Account,AccountAdmin)
+
+class FavoriteArticleAdmin(admin.ModelAdmin):
+    list_display = ['article','user','create_at']
+admin.site.register(FavoriteArticle, FavoriteArticleAdmin)

@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, DeleteView, UpdateView, ListView
+from .utils import ViewCountMixin
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from .forms import *
@@ -32,7 +33,7 @@ class ArticleListView(ListView):
         articles = Article.objects.filter(title__icontains=query)
         return articles
 
-class ArticleDetailView(DetailView):
+class ArticleDetailView(ViewCountMixin, DetailView):
     model = Article
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
@@ -85,14 +86,6 @@ def news_subscribe(request):
     return render(request,'news/news_subscribe.html', {'form': form})
 
 def news(request):
-    # articles = Article.objects.all()
-    # paginator = Paginator(news,4)
-    # page_number = request.GET.get('page')
-    # page_obj = paginator.get_page(page_number)
-    #
-    # a = news.first()
-    # categories = a.categories
-
     # categories = Article.categories
     author_list = User.objects.all()
     if request.method == "POST":
@@ -108,11 +101,15 @@ def news(request):
         selected_author = 0
         # selected_category = 0
         articles = Article.objects.all()
-
+    total = len(articles)
+    p = Paginator(articles, 4)
+    page_number = request.GET.get('page')
+    page_obj = p.get_page(page_number)
     context = {
-        'articles': articles,
+        'articles': page_obj,
         'author_list': author_list,
         'selected_author': selected_author,
+        'total': total,
         # 'categories': categories,
         # 'selected_category': selected_category,
     }
