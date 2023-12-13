@@ -54,8 +54,9 @@ def registration(request):
             user.groups.add(group)
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
-            messages.success(request,f'{username} зарегистрирован!')
-            authenticate(username=username,password=password)
+            Account.objects.create(user=user, nickname=user.username)
+            authenticate(username=username, password=password)
+            messages.success(request, f'{username} зарегистрирован!')
             return redirect('login')
     else:
         form = UserCreationForm()
