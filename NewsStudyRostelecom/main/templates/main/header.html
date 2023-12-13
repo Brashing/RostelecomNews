@@ -1,17 +1,18 @@
 {% load static %}
-
-<div class="header_area">
-    <div class="logo floatleft">
-        <p><a href="{% url 'home' %}"><img src="{% static 'main/' %}images/logo5.png" alt="Иконка"/></a></p>
-    </div>
-
-    <div class="social_plus_search floatright">
-
-        <div class="social"></div>
-        <div class="search">
-
-            {% block search %} {% include 'news/search.html' %} {% endblock %}
+<div class="container-fluid">
+    <div class="header_area">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="logo floatleft">
+                    <p><a href="{% url 'home' %}"><img src="{% static 'main/' %}images/logo5.png" alt="Иконка"/></a></p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="social"></div>
+                <div class="search">
+                    {% block search %} {% include 'news/search.html' %} {% endblock %}
+                </div>
+            </div>
         </div>
     </div>
-</div>
-{% block sidebar %} {% include 'main/sidebar.html' %} {% endblock %}
+    {% block sidebar %} {% include 'main/sidebar.html' %} {% endblock %}

@@ -1,3 +1,5 @@
+import json
+
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -13,21 +15,11 @@ import datetime
 
 @login_required(login_url="/users/login")
 def users(request):
-    articles = Article.objects.all()
-    # if request.method == 'POST':
-    #     form = AccountUpdateForm(request.POST)
-    #     if form.is_valid():
-    #         current_user = request.user
-    #         if current_user.id != None:
-    #             data_account = form.save(commit=False)
-    #             data_account.user = current_user
-    #             data_account.save()
-    #             form.save_m2m()
-    #             return redirect('user_profile')
-    # else:
-    #     form = AccountUpdateForm()
+    author = User.objects.get(id=request.user.id)
+    articles = Article.objects.filter(author=author)
+    if request.method == "POST":
+        articles = articles.filter(author=author)
     context = {
-        # 'form': form,
         'articles': articles,
     }
     return render(request, 'users/users.html',context)
@@ -84,3 +76,16 @@ def password_update(request):
             return redirect('user_profile')
     context = {"form": form}
     return render(request,'users/edit_password.html',context)
+
+def search_auto(request):
+    if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+        q = request.GET.get('term','')
+        articles = Article.objects.filter(title__icontains=q)
+        results =[]
+        for a in articles:
+            results.append(a.title)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data,mimetype)

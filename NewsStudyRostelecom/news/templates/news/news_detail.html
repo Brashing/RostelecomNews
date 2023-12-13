@@ -26,22 +26,18 @@
         <h1>{{ news.title }}</h1>
         <h6 class="title"></h6>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-8">
                 <p><strong><i>Автор: <font color="red">{{ news.author.account.nickname }}</font></i></strong></p>
                 <p><strong><i>Дата публикации: <font color="red">{{ news.date.date }}</font></i></strong></p>
             </div>
-            <div class="col-lg-4">
-                <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
-            </div>
+
             {% if request.user.id %}
-            {% if user.is_staff == True %}
+            {% if user.is_superuser == True %}
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>
             </div>
             <div class="col-lg-2">
-                {% if user.is_superuser == True %}
                 <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
-                {% endif %}
             </div>
             {% endif %}
             {% endif %}
@@ -58,9 +54,14 @@
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'home' %}">На главную</a>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
             </div>
+            {% if user.is_staff == True %}
+            <div class="col-lg-2">
+                <a class="btn btn-danger" href="{% url 'news_index' %}">В профиль</a>
+            </div>
+            {% endif %}
         </div>
         <br>
         <h6 class="title"></h6>
@@ -86,6 +87,28 @@
         mode: 'fade',
         captions: true
     });
+</script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+        $(function() {
+            $("#search_input").autocomplete({
+                source: "search_auto/",
+                select: function (event, ui) { //item selected
+                    AutoCompleteSelectHandler(event, ui)
+                },
+                minLength: 2,
+            });
+        });
+
+      function AutoCompleteSelectHandler(event, ui)
+      {
+        var selectedObj = ui.item;
+      }
 </script>
 </body>
 </html>
