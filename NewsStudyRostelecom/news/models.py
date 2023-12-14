@@ -15,9 +15,9 @@ class Tag(models.Model):
         verbose_name = 'Тэг'
         verbose_name_plural ='Тэги'
 
-class PublishedToday(models.Manager):
+class PublishedManager(models.Manager):
     def get_queryset(self):
-        return super(PublishedToday,self).get_queryset().filter(date__gte=datetime.date.today())
+        return super().get_queryset().filter(status=1)
 
 class Article(models.Model):
     categories = (('A', 'Астрономия'),
@@ -33,9 +33,9 @@ class Article(models.Model):
     date = models.DateTimeField('Дата публикации', auto_created=True)
     categories = models.CharField(choices=categories, max_length=20, verbose_name='Категории')
     tags = models.ManyToManyField(to=Tag, blank=True)
-    status = models.BooleanField(default=True, verbose_name='Опубликовано')
+    status = models.BooleanField(default=False, verbose_name='Опубликовано')
     objects = models.Manager()
-    published = PublishedToday()
+    published = PublishedManager()
 
     def __str__(self):
         return f'Статья №{self.id} от {str(self.date)[:16]} "{self.title}"'
@@ -99,11 +99,14 @@ class Image(models.Model):
 
 class ViewCount(models.Model):
     article = models.ForeignKey(Article,on_delete=models.CASCADE,
-                                related_name='views')
-    ip_address = models.GenericIPAddressField()
-    view_date = models.DateTimeField(auto_now_add=True)
+                                related_name='views', verbose_name='Новость')
+    ip_address = models.GenericIPAddressField(verbose_name='ip-адрес')
+    view_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата просмотра')
 
     class Meta:
+        verbose_name = 'Счетчик просмотров'
+        verbose_name = 'Счетчик просмотров'
+        verbose_name_plural = 'Счетчики просмотров'
         ordering=('-view_date',)
         indexes = [models.Index(fields=['-view_date'])]
 

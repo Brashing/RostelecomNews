@@ -31,6 +31,30 @@
                     {% else %}
                     <h2 class="title">МОИ ЗАЯВКИ</h2>
                 {% endif %}
+<!--pagination-->
+        {% if total > 1 %}
+        <nav aria-label="Навигация по списку новостей" pagination-border-color = 'red'>
+            <div class="text-center">
+            <ul class="pagination pagination-lg">
+                {% if articles.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}"><span aria-hidden="true">&laquo;</span></a>
+                </li>
+                {% endif %}
+                {% for p in articles.paginator.page_range %}
+                {% if articles.number == p %}
+                    <li class="page-item"><a class="page-link" style="color:black;"> {{ p }}</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link" href="?page={{ p }}"> {{ p }}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}"><span aria-hidden="true">&raquo;</span></a></li>
+                {% endif %}
+            </ul>
+            </div>
+        </nav>
+        {% endif %}
+<!--end pagination-->
                 {% for n in articles %}
                 {% if n.image_set.all %}
                 <hr>
@@ -42,7 +66,7 @@
                         {% endfor %}
                     </div>
                     <div class="col-lg-9">
-                        <h4><strong>{{ n.title }}</strong></h4>
+                        <h4><strong><a href="{{ n.get_absolute_url }}">{{ n.title }}</a></strong></h4>
                         <p align="justify">{{ n.anouncement }}</p><br>
                         {% if request.user.id %}
                         {% if user.is_superuser == True %}
@@ -65,8 +89,40 @@
                 </div>
                 {% endif %}
                 <hr>
+                {% if user.is_staff == True %}
                 <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
+                {% endif %}
+                {% if n.status == True %}
+                    <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
+                {% else %}
+                    <p><small><strong>Опубликовано: {{ n.status }}</strong></small></p>
+                {% endif %}
                 {% endfor %}<br>
+<!--                <div class="container-fluid">-->
+<!--                <div class="row">-->
+<!--                    {% if article.title == None %}-->
+<!--                        {% if user.is_staff == True %}-->
+<!--                            <div class="row">-->
+<!--                            <div class="col-lg-10">-->
+<!--                                <h2> Вы еще не написали ни одной новости. Хотите создать первую?</h2>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-2">-->
+<!--                                <a class="btn btn-danger" href="{% url 'news_input' %}"> Создать</a>-->
+<!--                            </div>-->
+<!--                            </div>-->
+<!--                        {% elif user.is_staff == False  %}-->
+<!--                            <div class="row">-->
+<!--                            <div class="col-lg-10">-->
+<!--                                <h2> Вы еще не создали ни одной заявки. Хотите создать первую?</h2>-->
+<!--                            </div>-->
+<!--                            <div class="col-lg-2">-->
+<!--                                <a class="btn btn-danger" href="{% url 'news_input' %}">Создать</a>-->
+<!--                            </div>-->
+<!--                            </div>-->
+<!--                        {% endif %}-->
+<!--                    {% endif %}-->
+<!--                </div>-->
+<!--                </div>-->
                 <h2 class="title"></h2>
             </div>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}

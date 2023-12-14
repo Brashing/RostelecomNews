@@ -1,5 +1,4 @@
 import json
-
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.decorators import login_required
@@ -7,29 +6,23 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import Group
-from news.models import Article
 from django.core.paginator import Paginator
-from django.views.generic import DetailView, DeleteView, UpdateView, ListView
-from .models import *
 from .forms import *
-import datetime
 
 from django.contrib.auth.decorators import login_required
 from news.models import Article
 @login_required
 def add_to_favorites(request, id):
     article = Article.objects.get(id=id)
-    #проверям есть ли такая закладка с этой новостью
     bookmark = FavoriteArticle.objects.filter(user=request.user.id,
                                               article=article)
     if bookmark.exists():
         bookmark.delete()
-        messages.warning(request,f"Новость {article.title} удалена из закладок")
+        messages.warning(request,f"Новость '{article.title}' удалена из избранного")
     else:
         bookmark = FavoriteArticle.objects.create(user=request.user, article=article)
-        messages.success(request,f"Новость {article.title} добавлена в закладки")
+        messages.success(request,f"Новость '{article.title}' добавлена в избранное")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
-
 
 @login_required(login_url="/users/login")
 def users(request):
@@ -37,8 +30,13 @@ def users(request):
     articles = Article.objects.filter(author=author)
     if request.method == "POST":
         articles = articles.filter(author=author)
+    total = len(articles)
+    p = Paginator(articles, 4)
+    page_number = request.GET.get('page')
+    page_obj = p.get_page(page_number)
     context = {
-        'articles': articles,
+        'articles': page_obj,
+        'total': total,
     }
     return render(request, 'users/users.html',context)
 

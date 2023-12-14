@@ -1,7 +1,6 @@
-from ckeditor.widgets import CKEditorWidget
 from django import forms
 from django.core.validators import ValidationError
-from django.forms import ModelForm, Textarea, CheckboxSelectMultiple, Select, DateInput, EmailInput, ImageField, FileInput
+from django.forms import ModelForm, Textarea, CheckboxSelectMultiple, Select
 from .models import *
 
 
@@ -70,12 +69,26 @@ class ArticleForm(ModelForm):
             'categories': Select(),
             'title': Textarea(attrs={'cols': 80, 'rows': 1}),
             'anouncement': Textarea(attrs={'cols': 87, 'rows': 7}),
-            # 'text': CKEditorWidget(),
             'source': Textarea(attrs={'cols': 88, 'rows': 1}),
             'sourcename': Textarea(attrs={'cols': 78, 'rows': 1}),
             'tags': CheckboxSelectMultiple(),
         }
 
-
-        # self.fields['text'].widget.attrs.update({'class': 'form-control django_ckeditor'})
-        # self.fields['text'].required = False
+class ArticleRequestForm(ModelForm):
+    image_field = MultipleFileField()
+    class Meta:
+        model = Article
+        fields = ['categories',
+                  'title',
+                  'anouncement',
+                  'text',
+                  'source',
+                  'sourcename',
+                  ]
+        widgets = {
+            'categories': Select(),
+            'title': Textarea(attrs={'cols': 80, 'rows': 1}),
+            'anouncement': Textarea(attrs={'cols': 87, 'rows': 7}),
+            'source': Textarea(attrs={'cols': 88, 'rows': 1}),
+            'sourcename': Textarea(attrs={'cols': 78, 'rows': 1}),
+        }

@@ -62,15 +62,17 @@ def news_input(request):
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
             current_user = request.user
-            if current_user.id != None:
-                new_article = form.save(commit=False)
-                new_article.author = current_user
-                new_article.date = datetime.date.today()
-                new_article.save()
-                form.save_m2m()
-                for img in request.FILES.getlist('image_field'):
-                    Image.objects.create(article=new_article, image=img, title=img.name)
-                return redirect('news_index')
+            if current_user.is_staff == True:
+                if current_user.id != None:
+                    new_article = form.save(commit=False)
+                    new_article.author = current_user
+                    new_article.date = datetime.date.today()
+                    new_article.status = True
+                    new_article.save()
+                    form.save_m2m()
+                    for img in request.FILES.getlist('image_field'):
+                        Image.objects.create(article=new_article, image=img, title=img.name)
+                    return redirect('news_index')
     else:
         form = ArticleForm()
     return render(request, 'news/news_input.html', {'form': form})
@@ -92,15 +94,15 @@ def news(request):
         selected_author = int(request.POST.get('author_filter'))
         # selected_category = int(request.POST.get('category_filter'))
         if selected_author == 0:
-            articles= Article.objects.all()
+            articles= Article.published.all()
         else:
-            articles = Article.objects.filter(author=selected_author)
+            articles = Article.published.filter(author=selected_author)
         # if selected_category != 0:
         #     articles = articles.filter(category__icontains=categories[selected_category-1][0])
     else:
         selected_author = 0
         # selected_category = 0
-        articles = Article.objects.all()
+        articles = Article.published.all()
     total = len(articles)
     p = Paginator(articles, 4)
     page_number = request.GET.get('page')
@@ -114,3 +116,24 @@ def news(request):
         # 'selected_category': selected_category,
     }
     return render(request, 'news/news.html', context)
+
+
+@login_required(login_url="/")
+def news_request(request):
+    if request.method == 'POST':
+        form = ArticleRequestForm(request.POST, request.FILES)
+        if form.is_valid():
+            current_user = request.user
+            if current_user.is_staff == False:
+                if current_user.id != None:
+                    new_article = form.save(commit=False)
+                    new_article.author = current_user
+                    new_article.date = datetime.date.today()
+                    new_article.save()
+                    form.save_m2m()
+                    for img in request.FILES.getlist('image_field'):
+                        Image.objects.create(article=new_article, image=img, title=img.name)
+                    return redirect('news_index')
+    else:
+        form = ArticleRequestForm()
+    return render(request, 'news/news_request.html', {'form': form})

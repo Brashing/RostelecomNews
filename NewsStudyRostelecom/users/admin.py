@@ -8,5 +8,8 @@ class AccountAdmin(admin.ModelAdmin):
 admin.site.register(Account,AccountAdmin)
 
 class FavoriteArticleAdmin(admin.ModelAdmin):
-    list_display = ['article','user','create_at']
+    ordering = ['-create_at','user','article']
+    list_display = ['user','article','create_at']
+    list_filter = ['user','article','create_at']
+
 admin.site.register(FavoriteArticle, FavoriteArticleAdmin)

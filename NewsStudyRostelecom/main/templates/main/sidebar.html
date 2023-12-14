@@ -20,8 +20,9 @@
             </ul>
         </li>
         {% if request.user.id %}
-        <li><a href="{% url 'profile_update' %}"><i class="fa-solid fa-user"> Мой профиль_{{ user }}</i></a>
+        <li><a href="{% url 'profile_update' %}"><i class="fa-solid fa-user"> Аккаунт_{{ user }}</i></a>
             <ul>
+                <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-heart"> Избранное</i></a></li>
                 {% if user.is_staff == True %}
                     <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-list"> Мои новости</i></a></li>
                     {% else %}
@@ -33,7 +34,7 @@
                     {% elif user.is_staff == True %}
                         <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-pen-nib"> Создать новость</i></a></li>
                         {% else %}
-                            <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-bars"> Подать заявку на создание новости</i></a></li>
+                            <li><a href="{% url 'news_request' %}"><i class="fa-solid fa-bars"> Подать заявку на создание новости</i></a></li>
                 {% endif %}
                 <li><a href="{% url 'logout' %}"><i class="fa-solid fa-hand-point-up"> Выйти из профиля</i></a></li>
             </ul>

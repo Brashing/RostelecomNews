@@ -25,6 +25,11 @@ class Account(models.Model):
 
 from news.models import Article
 class FavoriteArticle(models.Model):
-    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
-    article = models.ForeignKey(Article,on_delete=models.SET_NULL,null=True)
-    create_at=models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True, verbose_name='Пользователь')
+    article = models.ForeignKey(Article,on_delete=models.SET_NULL,null=True, verbose_name='Новость')
+    create_at=models.DateTimeField(auto_now_add=True, verbose_name='Дата добавления')
+
+    class Meta:
+        ordering = ['create_at','article','user']
+        verbose_name = 'Избранное'
+        verbose_name_plural = 'Избранное'

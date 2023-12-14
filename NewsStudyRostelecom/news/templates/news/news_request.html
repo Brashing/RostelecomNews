@@ -25,7 +25,7 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title">СОЗДАТЬ/РЕДАКТИРОВАТЬ НОВОСТЬ</h2>
+                <h2 class="title">ПОДАТЬ ЗАЯВКУ НА СОЗДАНИЕ НОВОСТИ</h2>
             <div class="content_area">
                 <div class="inner_footer_top">
                     <div class="single_sidebar">
@@ -37,7 +37,7 @@
                                     {{ form|crispy }}<br><br>
                                     <div class="row">
                                         <div class="col-lg-6">
-                                            <p><input class="btn btn-danger" type="submit" value="Сохранить"></p>
+                                            <p><input class="btn btn-danger" type="submit" value="Отправить"></p>
                                         </div>
                                         <div class="col-lg-3">
                                             <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>

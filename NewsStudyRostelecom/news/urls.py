@@ -10,5 +10,6 @@ urlpatterns = [
     path('update/<int:pk>', views.ArticleUpdateView.as_view(), name='news_update'),
     path('delete/<int:pk>', views.ArticleDeleteView.as_view(), name='news_delete'),
     path('news_input/', views.news_input, name='news_input'),
+    path('news_request/', views.news_request, name='news_request'),
     path('news_subscribe/', views.news_subscribe, name='news_subscribe'),
 ]

@@ -57,7 +57,7 @@
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'news_index' %}">К списку новостей</a>
             </div>
-            {% if user.is_staff == True %}
+            {% if user.is_active == True %}
             <div class="col-lg-2">
                 <a class="btn btn-danger" href="{% url 'user_profile' %}">В профиль</a>
             </div>

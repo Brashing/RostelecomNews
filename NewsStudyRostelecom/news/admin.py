@@ -50,7 +50,7 @@ class ArticleAdmin(admin.ModelAdmin):
     # list_editable = ['status'] #Возможность редактирования содержимого из списка
     # readonly_fields = ['author'] #Закрытие редактирования
     # prepopulated_fields = {"author":("title")} #Предзаполненные поля
-    list_per_page = 5 # Количество записей на странице (пагинация)
+    # list_per_page = 5 # Количество записей на странице (пагинация)
     inlines = [ArticleImageInline,]
     actions = ['set_true','set_false']
 
