@@ -9,7 +9,7 @@
 <head>
     {%bootstrap_css%}
     {%bootstrap_javascript%}
-    <title>Профиль пользователя</title>
+    <title>Мои новости</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
@@ -98,31 +98,22 @@
                     <p><small><strong>Опубликовано: {{ n.status }}</strong></small></p>
                 {% endif %}
                 {% endfor %}<br>
-<!--                <div class="container-fluid">-->
-<!--                <div class="row">-->
-<!--                    {% if article.title == None %}-->
-<!--                        {% if user.is_staff == True %}-->
-<!--                            <div class="row">-->
-<!--                            <div class="col-lg-10">-->
-<!--                                <h2> Вы еще не написали ни одной новости. Хотите создать первую?</h2>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-2">-->
-<!--                                <a class="btn btn-danger" href="{% url 'news_input' %}"> Создать</a>-->
-<!--                            </div>-->
-<!--                            </div>-->
-<!--                        {% elif user.is_staff == False  %}-->
-<!--                            <div class="row">-->
-<!--                            <div class="col-lg-10">-->
-<!--                                <h2> Вы еще не создали ни одной заявки. Хотите создать первую?</h2>-->
-<!--                            </div>-->
-<!--                            <div class="col-lg-2">-->
-<!--                                <a class="btn btn-danger" href="{% url 'news_input' %}">Создать</a>-->
-<!--                            </div>-->
-<!--                            </div>-->
-<!--                        {% endif %}-->
-<!--                    {% endif %}-->
-<!--                </div>-->
-<!--                </div>-->
+                <div class="container-fluid">
+                <div class="row">
+                    {% if article.title == None %}
+                        {% if user.is_staff == True %}
+                            <div class="row">
+                                <p align="center"><a class="btn btn-danger" href="{% url 'news_input' %}"> Создать новость?</a></p>
+                            </div>
+                        {% endif %}
+                        {% if user.is_staff == False  %}
+                            <div class="row">
+                                <p align="center"><a class="btn btn-danger" href="{% url 'news_input' %}"> Подать заявку на создание новости?</a></p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </div>
+                </div>
                 <h2 class="title"></h2>
             </div>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}

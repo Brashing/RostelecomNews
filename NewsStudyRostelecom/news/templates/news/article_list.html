@@ -27,27 +27,30 @@
             <h2 class="title">РЕЗУЛЬТАТЫ ПОИСКА</h2>
             <div class="container-fluid">
                 {% for n in articles %}
+                {% if n.status == True %}
                 {% if n.image_set.all %}
                 <div class="row">
                     <div class="col-lg-3">
                         <a href="{{ n.get_absolute_url }}">
-                            {% for image in n.image_set.all %}
+                        {% for image in n.image_set.all %}
                             <img src="{{ image.image.url }}" style="margin:auto; height:150px; width:auto;" alt=""/></a>
                         {% endfor %}
                     </div>
                     <div class="col-lg-9">
-                        <h4><strong>{{ n.title }}</strong></h4>
+                        <a href="{{ n.get_absolute_url }}"><h4><strong>{{ n.title }}</strong></h4></a>
                         <p align="justify">{{ n.anouncement }}</p><br>
                         <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong>
                         </p>
                         <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p><br><br>
                     </div>
-                    <hr>
                     <div class="col-lg-3">
-                        <p align="center"><a href="{% url 'news_index' %}">
-                            <button class="btn btn-danger">Искать еще...</button>
-                        </a>
-                        </p>
+                        {% if n.status == True %}
+                            <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
+                        {% endif %}
+                        {% if user.is_active == True %}
+                            <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
+                            <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
+                        {% endif %}
                     </div>
                     <div class="col-lg-5">
                         {% if request.user.id %}
@@ -64,6 +67,8 @@
                     {% endif %}
                     {% endif %}
                 </div>
+                <hr>
+                {% endif %}
                 {% endif %}
                 {% endfor %}<br>
             </div>
@@ -93,12 +98,12 @@
         });
     </script>
     <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
-<!-- jQuery !-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
-<!-- jQuery UI !-->
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script>
+    <!-- jQuery !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- jQuery UI !-->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
         $(function() {
             $("#search_input").autocomplete({
                 source: "search_auto/",
@@ -113,6 +118,6 @@
       {
         var selectedObj = ui.item;
       }
-</script>
+    </script>
 </body>
 </html>

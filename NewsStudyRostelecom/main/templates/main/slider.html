@@ -8,6 +8,7 @@
         <ul class="bxslider">
         {% for n in articles %}
             {% if n.image_set.all %}
+            {% if n.status == True %}
             <li>
                 <a href="{{ n.get_absolute_url }}">
                     {% for image in n.image_set.all %}
@@ -16,6 +17,7 @@
                     {% endfor %}
                 </a>
             </li>
+            {% endif %}
             {% endif %}
         {% endfor %}
         </ul>
