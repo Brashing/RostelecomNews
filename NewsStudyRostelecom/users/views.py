@@ -71,7 +71,7 @@ def profile_update(request):
             user_form.save()
             account_form.save()
             messages.success(request,"Профиль успешно обновлен")
-            return redirect('profile')
+            return redirect('profile_update')
         else:
             pass
     else:
