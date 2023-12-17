@@ -31,3 +31,6 @@ def search_auto(request):
 def custom_404(request, exception):
     return render(request, 'main/custom_404.html')
 
+def about(request):
+    return render(request, 'main/about.html')
+

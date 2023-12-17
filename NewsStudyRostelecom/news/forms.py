@@ -53,6 +53,19 @@ class SubscribeForm(forms.ModelForm):
         email = self.cleaned_data['email']
         Subscriber.objects.create(last_name=last_name, first_name=first_name, email=email)
 
+    def clean_last_name(self):
+        last_name = self.cleaned_data['last_name']
+        if len(last_name) < 2:
+            raise ValidationError('Фамилия не может быть меньше 2 знаков')
+        return last_name
+
+    def clean_first_name(self):
+        first_name = self.cleaned_data['first_name']
+        if len(first_name) < 2:
+            raise ValidationError('Имя не может быть меньше 2 знаков')
+        return first_name
+
+
 class ArticleForm(ModelForm):
     image_field = MultipleFileField()
     class Meta:

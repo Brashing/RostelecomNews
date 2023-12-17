@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+{% load bootstrap5 %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ru">
+
+<head>
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+    <title>Тестировщикам</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+    <script src="https://kit.fontawesome.com/b91fb3443a.js"></script>
+</head>
+<body>
+
+<div class="body_wrapper">
+    <div class="center">
+        {% block header %} {% include 'main/header.html' %} {% endblock %}
+        <div class="container" style="line-height:1.5;">
+            <h1 style="text-align:center">Добро пожаловать на сайт &quot;Новости нашей Галактики&quot;!</h1>
+
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp; Рады приветствовать вас в качестве тестировщика нашего новостного сайта. Ваше участие очень важно для нас, и мы ценим ваше время и усилия. Чтобы помочь вам с тестированием, предоставляем подробную инструкцию ниже:</span>
+            </div>
+
+            <hr/>
+            <h2 style="text-align:center">1. Обзор функциональности сайта</h2>
+
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Ознакомьтесь с основной функциональностью сайта &quot;Новости нашей Галактики&quot;. Изучите разделы и возможности, предоставляемые сайтом, такие как:</span>
+            </div>
+
+            <ul>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Просмотр изображений на главной странице с переходом на детальное описание новости.</span>
+                    </div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Просмотр новостей на странице со списком новостей.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Чтение детального описания статей.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Поиск новостей по заголовку.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Фильтр новостей по автору, категории.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Подписка на рассылку новостей.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Возможности аутентификации и авторизации.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Возможность подачи заявки на создание новости после регистрации на сайте.</span>
+                    </div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Возможность добавления новостей в избранное.</span></div>
+                </li>
+            </ul>
+
+            <hr/>
+            <h2 style="text-align:center">2. Поиск ошибок и несоответствий</h2>
+
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Пожалуйста, активно ищите любые ошибки, несоответствия и неполадки на сайте. Обратите внимание на следующие аспекты:</span>
+            </div>
+
+            <ul>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Внешний вид и оформление страниц.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Функциональность ссылок и кнопок.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Работа форм и валидация данных.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Правильность отображения данных, грамматические и орфографические ошибки.</span>
+                    </div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Юзабилити и логика взаимодействия пользователя с сайтом.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <hr/>
+            <h2 style="text-align:center">3. Сбор информации об ошибках</h2>
+
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Если вы обнаружите ошибку, неправильное отображение или сбой функциональности, пожалуйста, следуйте следующим шагам:</span>
+            </div>
+
+            <ul>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Опишите проблему подробно, указав свои действия, которые привели к возникновению ошибки.</span>
+                    </div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Укажите страницу, на которой произошла ошибка.</span></div>
+                </li>
+                <li style="text-align:justify">
+                    <div><span style="font-size:16px">Если возможно, сделайте снимок экрана с описанием проблемы.</span>
+                    </div>
+                </li>
+            </ul>
+
+            <hr/>
+            <h2 style="text-align:center">4. Отправка отчета об ошибках</h2>
+
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Чтобы помочь нам исправить ошибки, пожалуйста, отправьте отчет с описанием каждой найденной проблемы, прикладывая сохраненные снимки экрана. Используйте предоставленный адрес электронной почты или форму обратной связи на сайте.</span>
+            </div>
+
+            <hr/>
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;С вашей помощью мы сможем сделать &quot;Новости нашей Галактики&quot; еще лучше. Благодарим вас за ваше участие и ценный вклад в развитие нашего сайта. Если у вас есть дополнительные вопросы, не стесняйтесь обратиться к нашей команде поддержки. Спасибо и удачи в тестировании!</span>
+            </div>
+            <hr/>
+        </div>
+    </div>
+    <br>
+    <div class="container"><a class="readmore" href="{% url 'home' %}"><input class="btn btn-danger" type="submit"
+                                                                              value="К тестированию"></a></div>
+    <div class="content_area">
+        <h6 class="title"></h6>
+    </div>
+
+
+    {% block footer %} {% include 'main/footer.html' %} {% endblock %}
+</div>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery-min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
+<script type="text/javascript">
+    selectnav('nav', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    selectnav('f_menu', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
+<script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        $("#search_input").autocomplete({
+            source: "search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
+        });
+    });
+
+  function AutoCompleteSelectHandler(event, ui)
+  {
+    var selectedObj = ui.item;
+  }
+</script>
+</body>
+</html>

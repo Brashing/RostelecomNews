@@ -33,7 +33,7 @@
                     <div class="col-lg-3">
                         <a href="{{ n.get_absolute_url }}">
                         {% for image in n.image_set.all %}
-                            <img src="{{ image.image.url }}" style="margin:auto; height:150px; width:auto;" alt=""/></a>
+                            <img src="{{ image.image.url }}" style="margin:auto; height:auto; width:450px;" alt=""/></a>
                         {% endfor %}
                     </div>
                     <div class="col-lg-9">
@@ -44,10 +44,8 @@
                         <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p><br><br>
                     </div>
                     <div class="col-lg-3">
-                        {% if n.status == True %}
-                            <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
-                        {% endif %}
                         {% if user.is_active == True %}
+                            <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
                             <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
                             <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
                         {% endif %}
