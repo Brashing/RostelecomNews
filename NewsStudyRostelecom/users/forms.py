@@ -1,3 +1,6 @@
+from ckeditor.widgets import CKEditorWidget
+from .validators import russian_email
+from django.core.validators import MinLengthValidator
 from django import forms
 from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
@@ -34,3 +37,7 @@ class AccountUpdateForm(ModelForm):
             raise ValidationError('Имя не может быть меньше 2 знаков')
         return nickname
 
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100, validators = [MinLengthValidator(2)])
+    email = forms.CharField(validators=[russian_email])
+    message = forms.CharField(widget=CKEditorWidget())

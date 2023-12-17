@@ -13,4 +13,5 @@ urlpatterns = [
     path('password', views.password_update, name='password'),
     path('search_auto/', views.search_auto, name='search_auto'),
     path('favorites/<int:id>', views.add_to_favorites, name='favorites'),
+    path('contact_page', views.contact_page, name='contact_page'),
 ]

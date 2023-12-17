@@ -1,4 +1,6 @@
 import json
+
+from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.decorators import login_required
@@ -106,3 +108,15 @@ def search_auto(request):
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data,mimetype)
+
+def contact_page(request):
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            print('Сообщение отправлено', form.cleaned_data)
+        else:
+            print(form.errors)
+    else:
+        form = ContactForm()
+    context = {'form': form}
+    return render(request, 'users/contact_page.html', context)
