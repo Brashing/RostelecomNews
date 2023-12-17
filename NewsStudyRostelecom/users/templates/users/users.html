@@ -26,6 +26,7 @@
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="container">
             <div class="content_area">
+                {% if articles|length  != 0 %}
                 {% if user.is_staff == True %}
                 <h2 class="title">МОИ НОВОСТИ</h2>
                     {% else %}
@@ -98,22 +99,26 @@
                     <p><small><strong>Опубликовано: {{ n.status }}</strong></small></p>
                 {% endif %}
                 {% endfor %}<br>
+                {% else %}
                 <div class="container-fluid">
                 <div class="row">
                     {% if article.title == None %}
                         {% if user.is_staff == True %}
-                            <div class="row">
-                                <p align="center"><a class="btn btn-danger" href="{% url 'news_input' %}"> Создать новость?</a></p>
+                            <div class="container" align="center">
+                                <p><h1>Вы еще не создали ни одной новости.</h1></p>
+                                <p align="center"><a class="btn btn-danger" href="{% url 'news_input' %}"> Создать первую?</a></p>
                             </div>
                         {% endif %}
                         {% if user.is_staff == False  %}
-                            <div class="row">
-                                <p align="center"><a class="btn btn-danger" href="{% url 'news_input' %}"> Подать заявку на создание новости?</a></p>
+                            <div class="container" align="center">
+                                <p><h1>Вы еще не создали ни одной заявки.</h1></p>
+                                <p align="center"><a class="btn btn-danger" href="{% url 'news_request' %}"> Создать первую?</a></p>
                             </div>
                         {% endif %}
                     {% endif %}
                 </div>
                 </div>
+                {% endif %}
                 <h2 class="title"></h2>
             </div>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}

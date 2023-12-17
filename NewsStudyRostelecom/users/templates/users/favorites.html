@@ -9,7 +9,7 @@
 <head>
     {%bootstrap_css%}
     {%bootstrap_javascript%}
-    <title>Новости</title>
+    <title>Избранное</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
@@ -94,7 +94,9 @@
                             {% endfor %}</a>
                             <p align="justify">{{ n.anouncement }}</p>
                             <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
-                            <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
+                            {% if user.is_active == True %}
+                                <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
+                            {% endif %}
                             <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
                             <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p>
                         </div>
