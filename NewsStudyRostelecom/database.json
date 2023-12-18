@@ -1,0 +1,4328 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-12-04T20:48:58.623Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "НАСА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-12-04T20:49:04.711Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "Космос",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-12-04T20:49:12.516Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Солнце",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-12-04T20:49:21.241Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-12-04T20:53:23.096Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-12-04T20:58:32.896Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-12-04T21:13:23.030Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-12-04T21:14:00.883Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u0438\", \"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\", \"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-12-04T21:26:22.545Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-12-04T21:28:13.966Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-12-04T21:49:52.828Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0441\\u0442\\u043e\\u0447\\u043d\\u0438\\u043a\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-12-05T18:07:08.463Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-05 00:00 \"Почему следующие 4–5 лет будут лучшими для того, чтобы увидеть северное сияние\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-12-05T21:51:09.214Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-12-05T21:51:38.200Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-12-05T21:51:53.093Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-12-05T21:52:20.565Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-12-05T21:52:31.601Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-05 00:00 \"Почему следующие 4–5 лет будут лучшими для того, чтобы увидеть северное сияние\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-12-05T21:52:45.085Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-12-05T21:52:56.280Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-12-05T22:14:22.334Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-12-05T22:15:38.063Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-12-05T22:15:53.667Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-12-05T22:16:07.338Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-12-05T22:35:48.818Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"11\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-12-05T22:38:05.504Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-12-05T22:38:19.924Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "11",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-12-05T22:41:10.211Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-12-05T22:41:18.990Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-12-05T22:41:27.131Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-12-05T22:51:41.937Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-12-05T22:52:15.535Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-12-05T23:06:10.306Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-12-05T23:06:16.896Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-12-05T23:37:25.443Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-12-06T00:58:41.861Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"5\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-12-06T00:58:58.580Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"2\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-12-06T00:59:16.580Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-05 00:00 \"Почему следующие 4–5 лет будут лучшими для того, чтобы увидеть северное сияние\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"3\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-12-06T00:59:26.608Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"4\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-12-06T00:59:36.275Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"1\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-12-06T01:00:24.054Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-12-06T01:00:36.046Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"11\", \"fields\": [\"Title\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-12-06T01:00:47.250Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-12-06T01:03:16.809Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "11",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-12-06T01:03:25.716Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-12-06T01:12:59.423Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"11\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-12-06T01:18:52.331Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"12\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2023-12-06T01:20:41.328Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"13\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2023-12-06T10:37:55.118Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-06 00:00 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2023-12-06T13:31:12.438Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2023-12-06T13:34:22.067Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Irina-Romanova@volga.rt.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2023-12-06T13:34:46.571Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2023-12-06T13:35:51.091Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2023-12-06T13:54:41.334Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2023-12-06T13:57:14.571Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2023-12-06T13:59:26.128Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2023-12-06T14:01:13.090Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2023-12-06T14:03:14.181Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2023-12-06T15:17:22.331Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0441\\u0435\\u0432\\u0434\\u043e\\u043d\\u0438\\u043c\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2023-12-06T15:19:39.496Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0441\\u0435\\u0432\\u0434\\u043e\\u043d\\u0438\\u043c\", \"\\u0414\\u0435\\u043d\\u044c \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\", \"\\u041f\\u043e\\u043b\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2023-12-06T15:32:21.812Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2023-12-06T15:39:18.412Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2023-12-06T15:39:51.484Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u0441\\u0435\\u0432\\u0434\\u043e\\u043d\\u0438\\u043c\", \"\\u0414\\u0435\\u043d\\u044c \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\", \"\\u041f\\u043e\\u043b\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2023-12-06T15:40:04.836Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2023-12-06T17:07:59.570Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2023-12-06T17:40:51.938Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Звезда",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2023-12-06T17:41:06.838Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-04 20:47 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2023-12-06T18:01:56.696Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2023-12-06T18:28:31.242Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2023-12-06T18:30:43.511Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2023-12-06T18:44:47.687Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Статья №6 от 2023-12-06 18:41 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2023-12-06T18:47:14.884Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Сидоров Антон test2@mail.ru",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0434\\u0440\\u0435\\u0441 \\u044d\\u043b\\u0435\\u043a\\u0442\\u0440\\u043e\\u043d\\u043d\\u043e\\u0439 \\u043f\\u043e\\u0447\\u0442\\u044b\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2023-12-07T08:30:45.144Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "й й 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2023-12-07T08:31:37.654Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "q q aa@ss.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2023-12-07T08:35:49.617Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2023-12-07T08:38:11.171Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2023-12-07T08:44:25.046Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2023-12-07T11:28:01.933Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2023-12-07T11:28:01.943Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2023-12-07T11:28:01.952Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2023-12-07T11:28:01.960Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "r r 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2023-12-07T17:35:04.625Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2023-12-07T17:35:04.652Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2023-12-07T17:35:04.668Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2023-12-07T17:40:07.198Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2023-12-07T17:40:07.207Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2023-12-07T18:54:24.716Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2023-12-07T18:54:24.730Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "9",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2023-12-07T18:54:24.741Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2023-12-07T19:02:21.268Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"2_2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2023-12-07T19:02:46.539Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"4_1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2023-12-07T19:03:56.367Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-05 21:13 \"Открытие цикла продолжительностью 27,5 миллионов лет, влияющего на основные геологические события на Земле\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2023-12-07T19:04:08.722Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2023-12-07T19:29:14.059Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "Romashka@45",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2023-12-07T19:29:51.006Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "Romashka@45",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2023-12-07T20:21:20.305Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Статья №7 от 2023-12-07 00:00 \"Тестовая новость Ромашки №1\"",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2023-12-07T20:32:59.130Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2023-12-07T20:34:09.313Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Персонал",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2023-12-07T20:36:10.786Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Персонал",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2023-12-07T20:36:39.301Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\", \"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2023-12-07T20:38:26.861Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Персонал",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2023-12-07T20:49:17.521Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f \\u0430\\u0432\\u0442\\u043e\\u0440\\u0430 (\\u043f\\u0441\\u0435\\u0432\\u0434\\u043e\\u043d\\u0438\\u043c)\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2023-12-07T20:49:31.728Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "Romashka@45's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0435\\u043d\\u044c \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2023-12-07T20:49:43.716Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User1's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0435\\u043d\\u044c \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2023-12-07T20:50:09.773Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "User",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2023-12-07T21:54:52.798Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "User1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2023-12-07T21:54:52.812Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2023-12-07T21:54:52.822Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2023-12-07T23:34:26.608Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Персонал",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2023-12-08T08:24:00.754Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Млечный путь",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2023-12-08T08:28:52.478Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Статья №10 от 2023-12-08 08:25 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"5\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2023-12-08T14:47:21.979Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.187Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.197Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "2_2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.205Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.216Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.225Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "13",
+    "object_repr": "4_1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.233Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "17",
+    "object_repr": "5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2023-12-08T14:47:38.242Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2023-12-08T14:48:55.583Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-05 00:00 \"Солнечная активность достигнет пика в следующем году!\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"4\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2023-12-08T14:50:19.779Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "18",
+    "object_repr": "4",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2023-12-08T15:05:40.632Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Звезда",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2023-12-08T15:05:59.576Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2023-12-08T15:10:23.325Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"2\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2023-12-08T15:11:24.992Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"2\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2023-12-08T15:12:09.598Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2023-12-08T15:32:53.893Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Звезда",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2023-12-08T15:33:17.857Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Tags\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2023-12-08T15:38:42.714Z",
+    "user": 2,
+    "content_type": 9,
+    "object_id": "7",
+    "object_repr": "Комета",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2023-12-08T15:38:53.279Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-08 15:34 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"3\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2023-12-08T15:39:36.007Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-08 15:34 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2023-12-08T15:40:03.355Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2023-12-08T15:40:30.357Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2023-12-08T15:46:02.350Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-08 15:41 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"4\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2023-12-08T17:53:41.995Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2023-12-08T19:34:52.498Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2023-12-08T19:35:26.911Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-08 15:34 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2023-12-08T19:35:39.946Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2023-12-08T19:35:50.557Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2023-12-08T19:37:25.066Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2023-12-08T19:37:42.074Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-08 15:41 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2023-12-08T21:22:02.526Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "User2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2023-12-08T22:04:43.715Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2023-12-09T23:19:43.822Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Статья №5 от 2023-12-10 00:00 \"Создание тестовой новости на сайте\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2023-12-11T10:02:20.417Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Статья №4 от 2023-12-08 15:41 \"Обнаружена первая в истории протозвезда, покидающая место своего рождения\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2023-12-11T10:02:31.731Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Статья №3 от 2023-12-08 15:34 \"Кометы могут переносить жизнь с одной планеты на другую\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2023-12-11T10:02:42.848Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Статья №2 от 2023-12-08 15:07 \"Солнечная активность достигнет пика в следующем году\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2023-12-11T10:02:54.389Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Статья №1 от 2023-12-08 15:02 \"Астрономы обнаружили самый тусклый спутник Млечного Пути\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2023-12-11T19:52:18.272Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2023-12-12T16:09:18.031Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "17",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2023-12-12T16:09:18.064Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2023-12-12T16:09:18.074Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2023-12-12T16:09:18.082Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2023-12-12T16:09:29.800Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2023-12-12T16:17:17.348Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2023-12-12T16:17:17.360Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2023-12-12T16:18:04.121Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "User's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2023-12-12T16:18:17.254Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "Romashka@45's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2023-12-12T16:18:29.343Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "15",
+    "object_repr": "User1's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2023-12-12T16:21:01.242Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "11",
+    "object_repr": "Romashka@45's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2023-12-12T21:04:45.646Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f \\u0430\\u0432\\u0442\\u043e\\u0440\\u0430 (\\u043f\\u0441\\u0435\\u0432\\u0434\\u043e\\u043d\\u0438\\u043c)\", \"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2023-12-12T21:42:55.275Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Admin's account",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u043a\\u043a\\u0430\\u0443\\u043d\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2023-12-12T22:23:00.513Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "User1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Groups\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2023-12-13T18:21:27.233Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "25",
+    "object_repr": "beta-pic_pr_2004.jpg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.088Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.102Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.112Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.121Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "26",
+    "object_repr": "User7",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.129Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "27",
+    "object_repr": "User8",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2023-12-13T18:46:14.139Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "28",
+    "object_repr": "User9",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2023-12-13T19:08:56.493Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Статья №8 от 2023-12-13 18:59 \"Астрономы подтвердили вращение сверхмассивной черной дыры в галактике Messier 87\"",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2023-12-13T19:09:55.915Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "27",
+    "object_repr": "potw2343a-1456x1532.jpg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2023-12-13T19:11:42.087Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2023-12-13T19:15:17.133Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "29",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2023-12-13T19:15:54.448Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2023-12-13T19:17:35.516Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Статья №7 от 2023-12-13 00:00 \"«Hubble» сфотографировал необычную группу галактик\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2023-12-14T12:16:36.412Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Статья №7 от 2023-12-13 00:00 \"«Hubble» сфотографировал необычную группу галактик\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2023-12-14T12:18:25.523Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "30",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2023-12-14T12:18:31.345Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "33",
+    "object_repr": "",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2023-12-14T12:18:43.443Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Статья №7 от 2023-12-13 00:00 \"«Hubble» сфотографировал необычную группу галактик\"",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2023-12-14T12:28:14.550Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Статья №7 от 2023-12-13 00:00 \"«Hubble» сфотографировал необычную группу галактик\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2023-12-14T13:47:22.554Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2023-12-14T13:47:22.565Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "30",
+    "object_repr": "User3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2023-12-14T13:47:22.573Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2023-12-14T13:47:22.586Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2023-12-14T20:55:13.652Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Статья №13 от 2023-12-14 20:55 \"«Hubble» раскрыл тайну «пропавшей из виду» гигантской звезды\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u0430\\u0446\\u0438\\u0438\", \"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2023-12-15T21:38:20.589Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Статья №11 от 2023-12-14 00:00 \"Крупные планеты могут срывать оболочки погибающих звезд\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2023-12-15T22:24:37.494Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Статья №13 от 2023-12-14 20:55 \"«Hubble» раскрыл тайну «пропавшей из виду» гигантской звезды\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0441\\u0442 \\u043d\\u043e\\u0432\\u043e\\u0441\\u0442\\u0438\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2023-12-16T20:00:25.439Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "35",
+    "object_repr": "mpia-pr_hotsuperearth_trifonov_2021_fig1-1456x819.jpg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2023-12-16T20:01:40.396Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "39",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2023-12-16T20:02:21.012Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Статья №12 от 2023-12-14 00:00 \"В окрестностях Солнца открыта «пылающая» суперземля\"",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\", \"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2023-12-16T20:17:26.079Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "39",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2023-12-16T20:18:36.602Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "40",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2023-12-16T20:24:19.016Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "40",
+    "object_repr": "",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2023-12-16T20:25:47.689Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Статья №12 от 2023-12-14 00:00 \"В окрестностях Солнца открыта «пылающая» суперземля\"",
+    "action_flag": 2,
+    "change_message": "[{\"added\": {\"name\": \"\\u0424\\u043e\\u0442\\u043e\", \"object\": \"\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2023-12-17T10:18:53.754Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "1 1 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2023-12-17T10:18:53.773Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "1 1 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2023-12-17T10:18:53.782Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "q q 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2023-12-17T12:38:16.010Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "8",
+    "object_repr": "FavoriteArticle object (8)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2023-12-17T12:38:16.019Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "FavoriteArticle object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2023-12-17T20:53:03.764Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "f f 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2023-12-18T06:39:33.376Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "33",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2023-12-18T06:39:33.395Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "34",
+    "object_repr": "User4",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2023-12-18T06:39:33.402Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "User5",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2023-12-18T06:39:33.408Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "36",
+    "object_repr": "User6",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2023-12-18T06:39:33.415Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "37",
+    "object_repr": "й",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2023-12-18T18:53:43.112Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "ContactForm object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0441\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2023-12-18T18:54:17.552Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "ContactForm object (1)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2023-12-18T19:05:53.962Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "5",
+    "object_repr": "ContactForm object (5)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0441\\u043f\\u0440\\u0430\\u0432\\u043b\\u0435\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2023-12-18T19:06:22.886Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "5",
+    "object_repr": "ContactForm object (5)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2023-12-18T19:06:22.893Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "4",
+    "object_repr": "ContactForm object (4)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2023-12-18T19:06:22.901Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "ContactForm object (3)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2023-12-18T19:06:22.908Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "ContactForm object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2023-12-18T19:06:36.876Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Иван Иванов test3@mail.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2023-12-18T19:06:36.884Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Иванов Пётр 111@gmail.com",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2023-12-18T19:06:36.891Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Иванов Иван test1@mail.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2023-12-18T19:06:36.898Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Сидоров Иван test3@mail.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2023-12-18T19:06:36.905Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Сидоров Антон test2@mail.ru",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2023-12-18T19:07:02.463Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "38",
+    "object_repr": "User2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 219,
+  "fields": {
+    "action_time": "2023-12-18T19:07:51.937Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "User1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Новость",
+    "content_type": 7,
+    "codename": "add_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Новость",
+    "content_type": 7,
+    "codename": "change_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Новость",
+    "content_type": 7,
+    "codename": "delete_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Новость",
+    "content_type": 7,
+    "codename": "view_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Подписчик",
+    "content_type": 8,
+    "codename": "add_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Подписчик",
+    "content_type": 8,
+    "codename": "change_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Подписчик",
+    "content_type": 8,
+    "codename": "delete_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Подписчик",
+    "content_type": 8,
+    "codename": "view_subscriber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add Тэг",
+    "content_type": 9,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change Тэг",
+    "content_type": 9,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete Тэг",
+    "content_type": 9,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view Тэг",
+    "content_type": 9,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add image",
+    "content_type": 10,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change image",
+    "content_type": 10,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete image",
+    "content_type": 10,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view image",
+    "content_type": 10,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Аккаунт",
+    "content_type": 11,
+    "codename": "add_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Аккаунт",
+    "content_type": 11,
+    "codename": "change_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Аккаунт",
+    "content_type": 11,
+    "codename": "delete_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Аккаунт",
+    "content_type": 11,
+    "codename": "view_account"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add view count",
+    "content_type": 12,
+    "codename": "add_viewcount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change view count",
+    "content_type": 12,
+    "codename": "change_viewcount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete view count",
+    "content_type": 12,
+    "codename": "delete_viewcount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view view count",
+    "content_type": 12,
+    "codename": "view_viewcount"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add favorite article",
+    "content_type": 13,
+    "codename": "add_favoritearticle"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change favorite article",
+    "content_type": 13,
+    "codename": "change_favoritearticle"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete favorite article",
+    "content_type": 13,
+    "codename": "delete_favoritearticle"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view favorite article",
+    "content_type": 13,
+    "codename": "view_favoritearticle"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add Форма обратной связи",
+    "content_type": 14,
+    "codename": "add_contactform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change Форма обратной связи",
+    "content_type": 14,
+    "codename": "change_contactform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete Форма обратной связи",
+    "content_type": 14,
+    "codename": "delete_contactform"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view Форма обратной связи",
+    "content_type": 14,
+    "codename": "view_contactform"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Персонал",
+    "permissions": [
+      25,
+      26,
+      27,
+      37,
+      39,
+      33,
+      35
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$llVzmBa1qHTm2UkemnxEzF$tSwGNGhBjyfBHD3xCLP5SsbTKTS8VNvlAkTk7SYZdJU=",
+    "last_login": "2023-12-18T18:32:08.670Z",
+    "is_superuser": true,
+    "username": "Admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-12-04T20:44:59Z",
+    "groups": [],
+    "user_permissions": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      10,
+      11,
+      12,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      25,
+      26,
+      27,
+      28,
+      37,
+      38,
+      39,
+      40,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      21,
+      22,
+      23,
+      24,
+      41,
+      42,
+      43,
+      44
+    ]
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$lA54XtyElTOKUg6rYI5Han$VWkfBk1AN5Mwl9Gy36+CfvydJ3Z3VPafCQUEu30Zq08=",
+    "last_login": "2023-12-14T20:57:23.978Z",
+    "is_superuser": false,
+    "username": "User",
+    "first_name": "Ирина",
+    "last_name": "Романова",
+    "email": "bra_shing@mail.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-12-06T13:31:11Z",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$JBTS70KcV1oLLFNveTQNKL$ujJ/JGchbfjnGXTWKb+K+m3Vq2rKln2kc2MIp8jsmaM=",
+    "last_login": "2023-12-17T11:38:51.887Z",
+    "is_superuser": false,
+    "username": "Romashka@45",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-12-07T19:22:02Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "news",
+    "model": "article"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "news",
+    "model": "subscriber"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "news",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "news",
+    "model": "image"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "users",
+    "model": "account"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "news",
+    "model": "viewcount"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "users",
+    "model": "favoritearticle"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "users",
+    "model": "contactform"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "f24xod5v6ntrhq959fx7m8oxrxraonea",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hCx-Qwu3XsG0kC3jBpIhpmV8e5KMgvdVtV7LxFwW0vYOi1hzuIslDj8sojpQXWIfMd6azK1ui5zlCORu-3y2jI9L3v7d1Cwl-_aGo4aEhoHibw3U0RCy0dtSIE7ZXBO4aQRtbXsAHngyNEmYvKQxfsD7xw4oA:1rFIPQ:FPa9hjf0_jwi-COhh0xn6EYckwtiwXbggDKLQUS3fIc",
+    "expire_date": "2024-01-01T18:32:08.821Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uylkhp9yuut43wxsmeeyz1iglchwozkc",
+  "fields": {
+    "session_data": ".eJxVjEsOAiEQBe_C2hCx-Qwu3XsG0kC3jBpIhpmV8e5KMgvdVtV7LxFwW0vYOi1hzuIslDj8sojpQXWIfMd6azK1ui5zlCORu-3y2jI9L3v7d1Cwl-_aGo4aEhoHibw3U0RCy0dtSIE7ZXBO4aQRtbXsAHngyNEmYvKQxfsD7xw4oA:1rDsrX:GUkPggwPHK83Xz6ani47BCB3RF-Ic_aWfJCvo7DXmM4",
+    "expire_date": "2023-12-28T21:03:19.373Z"
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 1,
+  "fields": {
+    "title": "НАСА",
+    "status": true
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 2,
+  "fields": {
+    "title": "Космос",
+    "status": true
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 3,
+  "fields": {
+    "title": "Солнце",
+    "status": true
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 4,
+  "fields": {
+    "title": "Звезда",
+    "status": true
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 5,
+  "fields": {
+    "title": "Млечный путь",
+    "status": true
+  }
+},
+{
+  "model": "news.tag",
+  "pk": 7,
+  "fields": {
+    "title": "Комета",
+    "status": true
+  }
+},
+{
+  "model": "news.article",
+  "pk": 1,
+  "fields": {
+    "date": "2023-12-08T15:02:05Z",
+    "author": 1,
+    "title": "Астрономы обнаружили самый тусклый спутник Млечного Пути",
+    "anouncement": "Благодаря тщательному анализу данных Ультрафиолетового ближнего инфракрасного оптического северного обзора (UNIONS) группа астрономов обнаружила наличие нового спутника нашей галактики под названием Ursa Major III/UNIONS 1. По словам группы, это самый тусклый галактический спутник, когда-либо обнаруженный внутри Млечного Пути.",
+    "source": "https://new-science.ru/astronomy-obnaruzhili-samyj-tusklyj-sputnik-mlechnogo-puti/",
+    "sourcename": "Новая наука",
+    "text": "<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/35-5.jpg\" style=\"width:870px\" /><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><strong>Благодаря тщательному анализу данных Ультрафиолетового ближнего инфракрасного оптического северного обзора (UNIONS) группа астрономов обнаружила наличие нового спутника нашей галактики под названием Ursa Major III/UNIONS 1. По словам группы, это самый тусклый галактический спутник, когда-либо обнаруженный внутри Млечного Пути.</strong></p>\r\n\r\n<h2 style=\"text-align:justify\">Ближайшее окружение Млечного Пути</h2>\r\n\r\n<p style=\"text-align:justify\">Наша галактика является домом для множества других космических объектов, включая карликовые галактики и более мелкие скопления звезд, которые вращаются вокруг нее. Эти небесные спутники связаны с Млечным Путем силой гравитации, создавая динамичное собрание космических объектов, разделяющих общую судьбу.</p>\r\n\r\n<p style=\"text-align:justify\">Как следует из их названия, карликовые галактики являются галактиками более скромного размера по сравнению с гигантами, такими как Млечный Путь. Они часто находятся в ее периферийных областях и могут быть обнаружены в виде звездных скоплений или галактических групп. Эти космические спутники таким образом способствуют сложности и богатству нашей галактической среды.</p>\r\n\r\n<p style=\"text-align:justify\">Звездные скопления &mdash; это группы звезд, связанных гравитацией. Они могут быть двух основных типов: открытые или шаровидные. Рассеянные скопления, состоящие из относительно молодых звезд и часто скрепляемые облаками газа и пыли, разбросаны по спиральным рукавам Млечного Пути. С другой стороны, шаровые скопления представляют собой компактные группы старых звезд, образующие сферу вокруг галактического центра.</p>\r\n\r\n<h2 style=\"text-align:justify\">Самый тусклый известный спутник</h2>\r\n\r\n<p style=\"text-align:justify\">Последний проект UNIONS на основе телескопов Канада-Франция-Гавайи и Pan-STARRS недавно позволил более глубоко изучить небо северного полушария, чтобы лучше понять структуру и сборку нашей галактики. Анализируя эти данные, команда из Университета Виктории, Канада, наконец, выявила Ursa Major III/UNIONS 1 &ndash; спутник, который ранее не был зафиксирован.</p>\r\n\r\n<p style=\"text-align:justify\">Большая Медведица III/UNIONS 1 отличается низкой светимостью: абсолютная суммарная звездная величина в V-диапазоне +2,2 магнитной величины, что устанавливает новый рекорд как самый тусклый спутник нашей галактики. Это компактное образование, радиус полусвечения которого простирается примерно на десять световых лет и является домом для примерно 50-60 звезд, имеет общую массу, которая, по оценкам, примерно в шестнадцать раз превышает массу Солнца.</p>\r\n\r\n<h2 style=\"text-align:justify\">Что мы знаем об этой маленькой галактике?</h2>\r\n\r\n<p style=\"text-align:justify\">Орбитальные характеристики Ursa Major III/UNIONS 1 показывают, что она проходит через диск Млечного Пути, с перицентром в 41 700 световых лет и прохождением через галактический центр примерно в 52 100 световых лет. Данные также указывают на то, что это космический спутник существует по меньшей мере одиннадцать миллиардов лет и содержит звездное население, бедное металлами.</p>\r\n\r\n<p style=\"text-align:justify\">Тем не менее таинство подлинного происхождения Ursa Major III/UNIONS 1 остается неизвестным. Он может быть результатом накопления в галактическом гало и, возможно, представляет собой карликовую галактику или звездное скопление. Дополнительные наблюдения будут необходимы для разъяснения истинной природы этого компактного и слабого спутника, что откроет новые перспективы на скрытое богатство нашей галактики.</p>\r\n\r\n<p style=\"text-align:justify\">Подробности исследования опубликованы на сайте препринтов&nbsp;<a href=\"https://arxiv.org/abs/2311.10147\" rel=\"nofollow\">arXiv</a>.</p>",
+    "categories": "K",
+    "status": true,
+    "tags": [
+      4,
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 2,
+  "fields": {
+    "date": "2023-12-08T15:07:57Z",
+    "author": 1,
+    "title": "Солнечная активность достигнет пика в следующем году",
+    "anouncement": "Исследователи из Центра передового опыта в области космических наук при IISER Kolkata, Индия, обнаружили новую корреляцию между магнитным полем Солнца и циклом солнечных пятен, что дает возможность предсказать пик солнечной активности. Согласно их выводам, максимальная интенсивность 25-го солнечного цикла, который продолжается в настоящее время, неминуема и должна наступить в течение следующего года.",
+    "source": "https://new-science.ru/solnechnaya-aktivnost-dostignet-pika-v-sledujushhem-godu/",
+    "sourcename": "Новая наука",
+    "text": "<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/35-1.jpg\" /></p>\r\n\r\n<p style=\"text-align:justify\">Исследователи из Центра передового опыта в области космических наук при IISER Kolkata, Индия, обнаружили новую корреляцию между магнитным полем Солнца и циклом солнечных пятен, что дает возможность предсказать пик солнечной активности. Согласно их выводам, максимальная интенсивность 25-го солнечного цикла, который продолжается в настоящее время, неминуема и должна наступить в течение следующего года.</p>\r\n\r\n<h2 style=\"text-align:justify\">Солнце &mdash; активная звезда</h2>\r\n\r\n<p style=\"text-align:justify\"><a href=\"https://new-science.ru/solnce/\">Солнце</a>&nbsp;состоит из горячей ионизированной плазмы, что приводит к возникновению на его поверхности магнитных полей, которые проявляются на поверхности нашей звезды в виде солнечных пятен. Эти зоны размером с Землю характеризуются интенсивным магнетизмом, который примерно в 10 000 раз сильнее магнитного поля Земли.</p>\r\n\r\n<p style=\"text-align:justify\">Время от времени эти магнитные поля нарушаются в результате сильных событий, порождающих солнечные бури, такие как солнечные вспышки или выбросы корональной массы. Они высвобождают высокоэнергетическое излучение и выбрасывают в космос намагниченную плазму, которая может нанести ущерб спутникам, электросетям и телекоммуникациям на Земле.</p>\r\n\r\n<h2 style=\"text-align:justify\">Более ранний пик, чем ожидалось</h2>\r\n\r\n<p style=\"text-align:justify\">Наблюдения за Солнцем, ведущиеся с XVII века, выявили периодическое изменение количества солнечных пятен, достигающее пика примерно раз в одиннадцать лет - в период, когда солнечная активность наиболее интенсивна. Однако предсказать точное время наступления этого пика по-прежнему сложно.</p>\r\n\r\n<p style=\"text-align:justify\">Солнечный цикл генерируется механизмом динамо, питаемым энергией плазменных потоков внутри Солнца. Этот механизм динамо включает в себя два основных компонента солнечного магнитного поля: тот, который проявляется в цикле солнечных пятен, и тот, который связан с переработкой крупномасштабного дипольного поля Солнца, аналогичного магнитному полю Земли.</p>\r\n\r\n<p style=\"text-align:justify\">В 1935 году швейцарский астроном Макс Вальдмайер установил корреляцию между скоростью нарастания цикла солнечных пятен и их последующей силой. Это наблюдение позволило делать прогнозы на основе начальной фазы нарастания цикла. Выявленный таким образом эффект Вальдмайера помог связать два основных компонента солнечного магнитного поля. Это подтверждает идею о том, что эволюция солнечных пятен является неотъемлемой частью общего процесса солнечного динамо, механизма, ответственного за возникновение солнечного цикла.</p>\r\n\r\n<p style=\"text-align:justify\">Недавние наблюдения за затуханием дипольного магнитного поля Солнца могут быть использованы в сочетании с наблюдениями за солнечными пятнами для прогнозирования пика 25-го солнечного цикла. Согласно недавнему анализу, скорее всего, пик придется на начало 2024 года, но с некоторой погрешностью, которая распространяется на сентябрь 2024 года, что несколько раньше, чем ожидалось.</p>\r\n\r\n<h2 style=\"text-align:justify\">Почему эти прогнозы важны?</h2>\r\n\r\n<p style=\"text-align:justify\">Прогнозирование пика 25-го солнечного цикла имеет значительные последствия. Как уже говорилось выше, вспышки на Солнце и магнитные бури могут нарушить работу систем радиосвязи и спутниковой навигации. Зная время пика солнечной активности, операторы спутников и руководители телекоммуникационных служб могут адаптироваться, чтобы свести к минимуму возможные сбои.</p>\r\n\r\n<p style=\"text-align:justify\">Космонавты во время космических полетов также подвергаются воздействию потенциально враждебной космической среды. Предвидя периоды высокой солнечной активности, космические агентства могут принять меры по защите здоровья и безопасности космонавтов, скорректировав расписание космических полетов.</p>\r\n\r\n<p style=\"text-align:justify\">Следует также помнить, что солнечные бури могут вызывать электрические токи в наземных сетях. Это может привести к перебоям в подаче электроэнергии. Понимая, когда вероятность таких бурь возрастает, руководители электросетей могут принять меры предосторожности, чтобы свести к минимуму их воздействие на электрическую инфраструктуру.</p>\r\n\r\n<p style=\"text-align:justify\">Наконец, обратите внимание на то, что в высоких широтах в периоды интенсивной солнечной активности может наблюдаться усиление атмосферных явлений. Поэтому эта информация может быть очень полезна для авиакомпаний, которые в случае необходимости смогут обеспечить безопасность полетов.</p>",
+    "categories": "K",
+    "status": true,
+    "tags": [
+      4,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 3,
+  "fields": {
+    "date": "2023-12-08T15:34:33Z",
+    "author": 2,
+    "title": "Кометы могут переносить жизнь с одной планеты на другую",
+    "anouncement": "В своей первозданной фазе наша планета подверглась целому ряду ударов астероидов, комет и других небесных тел, оставшихся со времен образования Солнечной системы. Научное сообщество до сих пор пытается понять, как Земля приобрела воду и молекулы, имеющие фундаментальное значение для зарождения жизни, и кометы, попавшие на нее, остаются хорошими кандидатами на разгадку этой тайны.",
+    "source": "https://new-science.ru/komety-mogut-perenosit-zhizn-s-odnoj-planety-na-druguju/",
+    "sourcename": "Новая наука",
+    "text": "<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/68.jpg\" style=\"width:870px\" /></p>\r\n\r\n<p style=\"text-align:justify\">В своей первозданной фазе наша планета подверглась целому ряду ударов астероидов, комет и других небесных тел, оставшихся со времен образования Солнечной системы. Научное сообщество до сих пор пытается понять, как Земля приобрела воду и молекулы, имеющие фундаментальное значение для зарождения жизни, и кометы, попавшие на нее, остаются хорошими кандидатами на разгадку этой тайны.</p>\r\n\r\n<p style=\"text-align:justify\">Однако главный вопрос заключается в том, что если кометы могли зародить жизнь на Земле, то могли ли они сыграть ту же роль для&nbsp;<a href=\"https://new-science.ru/ekzoplaneta/\">экзопланет</a>, разбросанных по остальной части Вселенной?</p>\r\n\r\n<p style=\"text-align:justify\">Чтобы ответить на этот вопрос, исследовательская группа из Кембриджского университета недавно разработала математические модели, показывающие, как кометы теоретически могут переносить необходимые для жизни элементы на другие планеты в пределах нашей Галактики. Однако в одних случаях этот процесс будет более эффективным, чем в других.</p>\r\n\r\n<h2 style=\"text-align:justify\">Перенос органического материала кометами</h2>\r\n\r\n<p style=\"text-align:justify\">Известно, что астероиды и&nbsp;<a href=\"https://new-science.ru/chto-takoe-kometa-i-pochemu-ona-svetitsya/\">кометы</a>&nbsp;содержат ряд строительных блоков для жизни, известных как пребиотические молекулы. Например, анализ образцов с астероида&nbsp;<a href=\"https://new-science.ru/na-asteroide-rjugu-obnaruzhen-komponent-rnk/\">Рюгу</a>, проведенный в 2022 году, показал, что они содержат неповрежденные аминокислоты и витамин B3.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/86-1-scaled.jpg\" style=\"width:870px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic; text-align:justify\">Фотографии образцов A0106 и C0107, собранных с астероида Рюгу во время первого и второго пробоотбора &quot;Хаябуса2&quot; соответственно.</h3>\r\n\r\n<p style=\"text-align:justify\">В кометах также содержится большое количество цианистого водорода (HCN) - еще одной важной пребиотической молекулы. Прочные углеродно-азотные связи HCN делают его более устойчивым к высоким температурам, а значит, он может выжить при попадании в атмосферу и остаться в целости и сохранности.</p>\r\n\r\n<p style=\"text-align:justify\">По оценкам ученых, для переноса органического материала кометы должны двигаться достаточно медленно, со скоростью менее 15 км/с. При более высоких скоростях основные молекулы не выживут: скорость и температура столкновения приведут к их разрушению. Если же скорость достаточно мала, комета упадет на поверхность&nbsp;<a href=\"https://new-science.ru/kakaya-samaya-bolshaya-planeta-vo-vselennoj/\">планеты</a>, унеся с собой молекулы-предшественники жизни в целости и сохранности.</p>\r\n\r\n<h2 style=\"text-align:justify\">Где это может произойти с наибольшей вероятностью?</h2>\r\n\r\n<p style=\"text-align:justify\">Используя различные методы математического моделирования, исследователи установили, что доставка кометами молекул-предшественников жизни возможна только в определенных сценариях. Наиболее вероятными местами, где кометы могут двигаться с &quot;нужной&quot; скоростью для эффективной транспортировки органического материала, являются планетные системы, состоящие из планет, вращающихся вблизи друг друга. Это если речь идет о планетных системах вокруг звезд, похожих на&nbsp;<a href=\"https://new-science.ru/solnce/\">Солнце</a>.</p>\r\n\r\n<p style=\"text-align:justify\">В таких системах комета, по сути, может проходить или &quot;перескакивать&quot; с орбиты одной планеты на другую. Фактически она притягивается гравитационным притяжением одной планеты, а затем перед столкновением проходит мимо другой планеты. Если бы такое прохождение происходило несколько раз, то комета замедлилась бы настолько, что некоторые пребиотические молекулы смогли бы выжить, попав в атмосферу. В частности, на планетах, входящих в обитаемую зону вокруг своей звезды.</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/85-5.jpg\" style=\"width:870px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">На рисунке выше показана идеализированная планетарная система с равноудаленными планетами одинаковой массы, что позволяет исследователям сделать аналитические прогнозы относительно минимальной скорости падения комет на внутренние планеты в обитаемой зоне. Низкоскоростные кометные удары по этим планетам следуют за черными стрелками внизу, представляя собой диффузию &quot;отскока&quot; между соседними планетами. Динамическая диффузия, показанная стрелками выше, напротив, приведет к высокоскоростным столкновениям, что не позволит эффективно распределить сложные&nbsp;<a href=\"https://new-science.ru/organicheskie-molekuly/\">молекулы</a>.</h3>\r\n\r\n<h2 style=\"text-align:justify\">Что же касается систем вокруг красных карликов?</h2>\r\n\r\n<p style=\"text-align:justify\">Согласно результатам исследования, для планет, вращающихся вокруг звезд с меньшей массой, таких как красные карлики, перенос сложных молекул кометами был бы более затруднен или, по крайней мере, менее эффективен. Особенно если эти планетные системы не очень близки, т.е. с недостаточно близкими планетами. Кометы действительно достигали бы более высоких скоростей, что привело бы к сильным ударам и разрушению молекул до того, как они достигнут земли.</p>\r\n\r\n<p style=\"text-align:justify\">Таким образом, проведенное командой моделирование позволяет предположить, что способность комет зарождать жизнь в системах вокруг красных карликов может быть подорвана, особенно если планеты расположены дальше друг от друга. Поэтому будет интересно исследовать эти результаты дальше, не в последнюю очередь потому, что красные карлики являются наиболее распространенными звездами в нашей Галактике.</p>\r\n\r\n<p style=\"text-align:justify\">С научной статьей, описывающей исследование, можно ознакомиться&nbsp;<a href=\"https://doi.org/10.1098/rspa.2023.0434\" rel=\"nofollow\">здесь</a>.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      7,
+      2
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 4,
+  "fields": {
+    "date": "2023-12-08T15:41:58Z",
+    "author": 2,
+    "title": "Обнаружена первая в истории протозвезда, покидающая место своего рождения",
+    "anouncement": "Впервые удалось наблюдать, как протозвезда делает первые шаги из газового облака, в котором она образовалась. Результат, полученный при изучении области звездообразования, позволит лучше понять механизм, приводящий к удалению звезд от места их рождения, а следовательно, и распределение звезд внутри галактик.",
+    "source": "https://new-science.ru/obnaruzhena-pervaya-v-istorii-protozvezda-pokidajushhaya-mesto-svoego-rozhdeniya/",
+    "sourcename": "Новая наука",
+    "text": "<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/58-scaled.jpg\" style=\"width:870px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">На снимке космического телескопа НАСА Spitzer показана звездообразующая туманность W51, одна из крупнейших звездных фабрик в Млечном Пути.</h3>\r\n\r\n<p style=\"text-align:justify\">Впервые удалось наблюдать, как протозвезда делает первые шаги из газового облака, в котором она образовалась. Результат, полученный при изучении области звездообразования, позволит лучше понять механизм, приводящий к удалению звезд от места их рождения, а следовательно, и распределение звезд внутри галактик.</p>\r\n\r\n<p style=\"text-align:justify\">Открытие было сделано в ходе наблюдательной кампании ATOMS. Цель этой кампании &mdash; детальное изучение областей звездообразования для лучшего понимания процессов, приводящих к формированию звезд, и характеристик среды, в которой они образуются. Для этого использовался радиоинтерферометр ALMA (Atacama Large Millimiter/submillimetre Array).</p>\r\n\r\n<h2 style=\"text-align:justify\">Убегающая протозвезда</h2>\r\n\r\n<p style=\"text-align:justify\">Анализируемая область звездообразования называется G352.63-1.07. Для ее изучения использовались эмиссионные линии некоторых молекул, встречающихся в областях звездообразования. На рисунке ниже показано изображение, полученное с помощью ALMA по эмиссионным линиям молекулы H13CO.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/58-1.jpg\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Протозвезда в области G352.63-1.07, наблюдаемая с помощью ALMA, с использованием молекулы H13CO в качестве индикатора. Интересующая нас область звездообразования показана пунктиром. Среди различных выделенных компонентов интересующая нас протозвезда обозначена как M1. Масштаб изображения показан в правом нижнем углу. Слева внизу белой точкой указан размер.</h3>\r\n\r\n<p style=\"text-align:justify\">Движение протозвезды в области G352.63-1.07 было получено путем измерения красного смещения эмиссионных линий различных молекул, т.е. красного смещения линий, вызванного удаляющимися источниками света вследствие расширения Вселенной.</p>\r\n\r\n<p style=\"text-align:justify\">Полученные данные показывают, что разница скоростей протозвезды и газового облака составляет - 2 км/с вдоль линии зрения. Это означает, что протозвезда приближается к нам с большей&nbsp;<a href=\"https://new-science.ru/skorost/\">скоростью</a>, чем газовое облако - 2 км/с. Направление, в котором движется протозвезда, показано на рисунке красной стрелкой, а различные движения газового облака &mdash; синими стрелками. Из них хорошо видно, как&nbsp;<a href=\"https://new-science.ru/zvezda/\">звезда</a>&nbsp;удаляется от молекулярного газового облака, увлекая за собой часть газа в облаке.</p>\r\n\r\n<p style=\"text-align:justify\">Материал, который следует за протозвездой, показан двумя серыми нитями, которые начинаются от облака и присоединяются к протозвезде. Сопоставив скорость протозвезды и расстояние до места образования, было рассчитано, что начало этого бегства произошло около 4000 лет назад.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://new-science.ru/wp-content/uploads/2023/11/58-2.jpg\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Молекулярное облако G352 в профиль. Газовое облако показано зеленым цветом, протозвезда &mdash; красным, а две серые нити представляют собой газ, увлекаемый самой протозвездой. Стрелки указывают направление движения различных компонентов.</h3>\r\n\r\n<h2 style=\"text-align:justify\">Почему произошло бегство?</h2>\r\n\r\n<p style=\"text-align:justify\">Кроме того, была рассчитана кинетическая энергия протозвезды, равная примерно 3,5 &times; 1044 эрг. Это ключевой параметр для понимания того, какой механизм инициировал бегство протозвезды. Из всех возможных механизмов, предложенных для объяснения этого явления, &quot;коллапс газовой нити&quot; - единственный, который может обеспечить рассчитанную кинетическую энергию.</p>\r\n\r\n<p style=\"text-align:justify\">&quot;Коллапс газовой нити&quot; является фундаментальным процессом в эволюции молекулярных облаков, в которых образуются звезды. После возмущения часть облака начинает разрушаться под преобладающим действием гравитации. Гравитация преодолевает внутреннее давление газа, в результате чего область начинает сжиматься.</p>\r\n\r\n<p style=\"text-align:justify\">В процессе коллапса вещество стремится сконцентрироваться вдоль линий магнитного поля или уже существующих нитевидных структур в молекулярном облаке. Таким образом, образуется более плотная нить газа. В ядре нити плотность продолжает расти, что приводит к образованию более мелких структур, таких как протозвезды или даже зрелые звезды. Этот процесс лежит в основе звездообразования в молекулярных облаках.</p>\r\n\r\n<p style=\"text-align:justify\">Согласно гипотезе данного исследования, протозвезда должна была приобрести всю кинетическую энергию, необходимую для выхода, уже во время коллапса газовой нити, из которой она образовалась. При этом коллапс должен был происходить асимметрично: нить, из которой возникла протозвезда, была изогнута в нашу сторону. Асимметрия коллапса обеспечила бы кинетическую энергию, необходимую для отталкивания протозвезды от места ее образования и запуска ее в межзвездное пространство.</p>\r\n\r\n<h2 style=\"text-align:justify\">Почему это открытие так важно?</h2>\r\n\r\n<p style=\"text-align:justify\">На сегодняшний день многие теоретические исследования улучшили наше понимание динамики и эволюции звездообразующих областей. Тем не менее еще ни разу протозвезда не наблюдалась &quot;вживую&quot;, когда она покидает область своего формирования.</p>\r\n\r\n<p style=\"text-align:justify\">Это новое открытие поможет ученым понять различные механизмы, происходящие внутри областей звездообразования, а также процессы, приводящие к уходу звезд из этих областей.</p>\r\n\r\n<p style=\"text-align:justify\">Понимание этих механизмов может помочь лучше объяснить распределение звезд внутри галактик и вблизи областей звездообразования.</p>\r\n\r\n<p style=\"text-align:justify\">С полным текстом исследования, опубликованным в журнале The Astrophysical Journal, можно ознакомиться&nbsp;<a href=\"https://iopscience.iop.org/article/10.3847/1538-4357/aced54\" rel=\"nofollow\">здесь</a>.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      2
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 5,
+  "fields": {
+    "date": "2023-12-13T00:00:00Z",
+    "author": 1,
+    "title": "Осколки протопланеты, породившей Луну, могут залегать в недрах Земли",
+    "anouncement": "Они сформировали две обширных области, которые демонстрируют аномально низкую сейсмическую скорость. Столкновение протоземли с древней протопланетой Тейя около 4,5 миллиарда лет назад, которое привело к образованию Луны, возможно, оставило след в виде двух обширных областей на глубине трех километров под Африканской и Тихоокеанской тектоническими плитами.",
+    "source": "https://in-space.ru/oskolki-protoplanety-porodivshej-lunu-mogut-zalegat-v-nedrah-zemli/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">Столкновение протоземли с древней протопланетой Тейя около 4,5 миллиарда лет назад, которое привело к образованию Луны, возможно, оставило след в виде двух обширных областей на глубине трех километров под Африканской и Тихоокеанской тектоническими плитами. Эти формирования, по мнению ученых, более плотные, чем окружение, и образованы в результате накопления осколков, отколовшихся от Тейи и постепенно опустившихся в недра нашей планеты. Результаты исследования представлены в журнале&nbsp;<a href=\"https://www.nature.com/articles/s41586-023-06589-1\" rel=\"noopener\">Nature</a>.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Мы разработали метод, позволяющий с большой точностью моделировать турбулентность и перемешивание материалов при столкновении объектов. Проведя множество симуляций события, приведшего к появлению Луны, мы пришли к выводу, что плотные области в недрах Земли являются обогащенным железом веществом из мантии Тейи, сохранившимся до наших дней&raquo;, &ndash; заявили авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2023/11/02310271309502.jpg\" style=\"width:800px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Иллюстрация показывает, как осколки Тейи накапливались в недрах Земли, формируя сохранившиеся до наших дней неоднородности в мантии. Credit: DENG Hongping and Hangzhou Sphere Studio</h3>\r\n\r\n<p style=\"text-align:justify\">Неоднородности в глубинах мантии Земли предполагают, что внутренние слои нашей планеты далеки от однообразной &laquo;скучной&raquo; системы. Фактически, небольшие количества глубоко залегающих осколков Тейи могут быть вынесены на поверхность мантийными плюмами, такими, которые, вероятно, сформировали Гавайи и Исландию.</p>\r\n\r\n<p style=\"text-align:justify\">Например, геохимики, изучающие изотопные соотношения редких газов в образцах исландского базальта, обнаружили, что они содержат компоненты, отличные от типичных материалов поверхности.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Эти компоненты, скорее всего, являются остатками неоднородности в глубинах мантии, возраст которых превышает 4,5 миллиарда лет, и служат ключами к пониманию начального состояния Земли и даже формирования близлежащих планет&raquo;, &ndash; отметили авторы исследования.</p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2018/04/beta-pic_pr_2004.jpg\" style=\"width:800px\" /></h3>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Столкновения в молодой Солнечной системе. Credit: ESA</h3>\r\n\r\n<p style=\"text-align:justify\">Ученые считают, что, поскольку гигантские столкновения являются обычным явлением на конечных стадиях формирования систем, аналогичные неоднородности мантии могут также существовать у других планет в Солнечной системе и за ее пределами.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      2
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 6,
+  "fields": {
+    "date": "2023-12-13T00:00:00Z",
+    "author": 1,
+    "title": "Открыта уникальная система с шестью планетами",
+    "anouncement": "Она является самой яркой из известных с четырьмя или более мирами. Наблюдения звезды HD110067 с помощью космических телескопов NASA «Transiting Exoplanet Survey Satellite» (TESS) и ESA «Characterising Exoplanets Satellite» (CHEOPS) привели к открытию у нее шести экзопланет. Интересно, что все они находятся в орбитальном резонансе, то есть конфигурация системы, вероятно, не изменилась с момента ее зарождения.",
+    "source": "https://in-space.ru/otkrytaya-unikalnaya-sistema-s-shestyu-planetami/",
+    "sourcename": "in-spase",
+    "text": "<p style=\"text-align:justify\">Наблюдения звезды HD110067 с помощью космических телескопов NASA &laquo;Transiting Exoplanet Survey Satellite&raquo; (TESS) и ESA &laquo;Characterising Exoplanets Satellite&raquo; (CHEOPS) привели к открытию у нее шести экзопланет. Интересно, что все они находятся в орбитальном резонансе, то есть конфигурация системы, вероятно, не изменилась с момента ее зарождения. Результаты исследования и выводы ученых представлены в журнале&nbsp;<a href=\"https://www.nature.com/articles/s41586-023-06692-3\" rel=\"noopener\">Nature</a>.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2023/11/Artist_impression_of_the_TOI-178_planetary_system_pillars.jpg\" style=\"width:650px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Художественное представление системы звезды HD110067. Credit: ESA</h3>\r\n\r\n<p style=\"text-align:justify\">&laquo;Эта система несколько лет ставила нас в тупик. В 2020 году TESS заметил серию падений светимости родительской звезды, вызванных прохождением по ее диску экзопланет. Анализ полученных данных указал на существование в ней двух миров с орбитальным периодом у первого 5,64 земных суток и неопределенным у второго. Однако спустя два года TESS вновь провел наблюдения звезды HD110067, которые исключили первоначальную интерпретацию, предоставили новую информацию, но так и не принесли ощутимых плодов. Тогда мы решили обратиться за помощью к CHEOPS, и наши усилия окупились&raquo;, &ndash; рассказывают авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2023/11/image-2.png\" style=\"width:650px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Орбитальное движение всех шести миров в системе звезды HD110067 относительно одного года третьей планеты. Из-за точных резонансных орбит всех шести планет орбиты каждой планеты тесно связаны. При каждом обороте третьей планеты на 360 градусов вокруг звезды первая планета перемещается на 540 градусов, вторая на 240 градусов, четвертая на 160 градусов, пятая на 120 градусов и шестая на 90 градусов. Credit: Dr. Hugh Osborn (University of Bern)</h3>\r\n\r\n<p style=\"text-align:justify\">Наблюдения CHEOPS позволили астрономам подтвердить существование в системе первых двух экзопланет, открыть третью экзопланету, рассчитать их орбиты и выяснить, что все они находятся в резонансе.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Самой внешней экзопланете из трех требуется 20,519 земных суток для завершения орбиты, что чрезвычайно близко к 1,5-кратному периоду обращения следующей экзопланеты &ndash; 13,673 земных суток. Это, в свою очередь, почти в 1,5 раза больше орбитального периода внутренней планеты, составляющего 9,114 земных суток. Найдя &laquo;ключ&raquo; к разгадке системы, мы предсказали орбиты других трех экзопланет в системе и смогли найти их в архивных данных&raquo;, &ndash; пояснили авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2020/09/EMDW0cPX0AAJzAE.jpg\" style=\"width:650px\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Телескоп CHEOPS в представлении худодника. Credit: ESA</h3>\r\n\r\n<p style=\"text-align:justify\">Орбитально резонансные системы чрезвычайно важны, поскольку они многое могут рассказать об эволюции планетных семейств. Считается, что на первых этапах практически все миры вокруг звезд формируются в резонансе, но затем многие из них подвергаются возмущениям, например, от очень массивной планеты, близкой проходящей звезды или от гигантского столкновения &ndash; все это может нарушить тщательный баланс. В результате многие из известных на сегодня многопланетных систем не находятся в резонансе, но выглядят достаточно близкими к нему.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Мы думаем, что только около одного процента всех систем остаются в резонансе. Вот почему система звезды HD110067 является особенной и требует дальнейшего изучения. Она показывает нам первозданную конфигурацию, которая сохранилась нетронутой&raquo;, &ndash; пояснили авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\">Система HD110067 является самой яркой из известных с четырьмя или более экзопланетами. Кроме этого, все миры в ней субнептуны с раздутыми атмосферами, что делает их идеальными целями для наблюдений с помощью космического телескопа &laquo;James Webb&raquo; и других обсерваторий.</p>",
+    "categories": "K",
+    "status": true,
+    "tags": [
+      4,
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 8,
+  "fields": {
+    "date": "2023-12-13T18:59:57Z",
+    "author": 1,
+    "title": "Астрономы подтвердили вращение сверхмассивной черной дыры в галактике Messier 87",
+    "anouncement": "После успешной визуализации черной дыры в этой галактике вопрос о том, вращается она или нет, стал центральной проблемой. Анализ данных наблюдений галактики Messier 87 с помощью глобальной сети радиотелескопов выявил колебания с амплитудой около 10 градусов у вырывающегося из центральной сверхмассивной черной дыры джета, тем самым подтвердив ее вращение.",
+    "source": "https://in-space.ru/astronomy-podtverdili-vrashhenie-sverhmassivnoj-chernoj-dyry-v-galaktike-messier-87/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">Анализ данных наблюдений галактики Messier 87 с помощью глобальной сети радиотелескопов выявил колебания с амплитудой около 10 градусов у вырывающегося из центральной сверхмассивной черной дыры джета, тем самым подтвердив ее вращение. Результаты исследования и выводы ученых представлены в журнале&nbsp;<a href=\"https://www.nature.com/articles/s41586-023-06479-6\" rel=\"noopener\">Nature</a>.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Мониторинг сверхмассивной черной дыры в галактике Messier 87 с 2000 по 2022 год показал повторяющийся 11-летний цикл прецессионного движения основания джета, что согласуется с предсказаниями Общей теории относительности Альберта Эйнштейна&raquo;, &ndash; рассказывают авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2019/04/eso1907c.jpg\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Художественное представление окружения сверхмассивной черной дыры в гигантской эллиптической галактике Messier 87. На изображении виден разогретый материал, окружающий гравитационного монстра, и выбрасываемый им джет. Credit: ESO/M. Kornmesser</h3>\r\n\r\n<p style=\"text-align:justify\">Активные сверхмассивные черные дыры являются самыми разрушительными объектами во Вселенной &ndash; они могут накапливать в своем окружении огромное количество вещества из-за необычайной гравитационной силы и выбрасывать мощные потоки плазмы, известные как джеты, которые простираются на тысячи световых лет, состоят из движущихся на околосветовой скорости частиц и влияют на эволюцию родительской галактики.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Однако источник энергии и механизм ее передачи между сверхмассивными черными дырами и их аккреционными дисками и релятивистскими струями пока нераскрыт. Преобладающая теория предполагает, что необходимая для выброса джета энергия может быть извлечена из вращения черной дыры, но до сих пор оно непосредственно не наблюдалось&raquo;, &ndash; пояснили авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\">Галактика Messier 87 расположена в 55 миллионах световых лет от Земли и содержит знаменитую сверхмассивную черную дыру, снимок тени которой был опубликован в 2019 году. Благодаря ее относительной близости к нам совместные усилия радиотелескопов позволяют детально наблюдать процессы в основании вырывающегося из гравитационного монстра джета.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2019/04/gargantua.jpg\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Фотография сверхмассивной черной дыры в галактике Messier 87. Credit: Event Horizon Telescope</h3>\r\n\r\n<p style=\"text-align:justify\">В основе этого открытия лежит важнейший вопрос: какая сила во Вселенной может периодически изменять направление такой мощной струи? Ответ может быть скрыт в поведении аккреционного диска, связанного с центральной сверхмассивной черной дырой.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Изначально падающее в черную дыру вещество образует дискообразную структуру, а по мере приближения к горизонту событий постепенно закручивается внутрь по спирали. Однако, если черная дыра вращается, она оказывает значительное влияние на окружающее ее пространство-время, заставляя близлежащие объекты перемещаться вдоль ее оси вращения, явление, известное как &laquo;перетаскивание кадров&raquo;. Анализ показывает, что из-за действия этого эффекта ось вращения аккреционного диска постоянно меняется и не совпадает с осью вращения сверхмассивной черной дыры, это и вызывает прецессию джета&raquo;, &ndash; пояснили авторы открытия.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2023/09/m87prec.gif\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Прецессия джета, вырывающегося из центральной сверхмассивной черной дыры галактики Messier 87. Credit: Yuzhu Cui et al.</h3>\r\n\r\n<p style=\"text-align:justify\">Хотя это исследование проливает свет на таинственный мир сверхмассивных черных дыр, оно также поднимает новые вопросы, так как структура аккреционного диска и точное значение вращения сверхмассивной черной дыры в галактике Messier 87 все еще крайне неопределенны.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      7,
+      2,
+      5
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 9,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 1,
+    "title": "Астрономы расширили диапазон потенциально обитаемых планет",
+    "anouncement": "Согласно моделированию, каменистые экзопланеты с атмосферой, в которой преобладают газообразный водород и гелий, могут сохранять жидкую воду на поверхности и обладать умеренным климатом в течение миллиардов лет. Результаты исследования, представленного в журнале Nature Astronomy, показывают, что даже миры, сильно отличающиеся от Земли, могут быть потенциально обитаемыми на протяжении долгого периода своей истории.",
+    "source": "https://in-space.ru/astronomy-rasshirili-diapazon-potentsialno-obitaemyh-planet/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">Согласно моделированию, каменистые экзопланеты с атмосферой, в которой преобладают газообразный водород и гелий, могут сохранять жидкую воду на поверхности и обладать умеренным климатом в течение миллиардов лет. Результаты исследования, представленного в журнале&nbsp;<a href=\"https://www.nature.com/articles/s41550-022-01699-8\" rel=\"noopener\">Nature Astronomy</a>, показывают, что даже миры, сильно отличающиеся от Земли, могут быть потенциально обитаемыми на протяжении долгого периода своей истории.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Одна из причин наличия на Земле жидкой воды &ndash; ее атмосфера. Благодаря своему естественному парниковому эффекту наша планета улавливает ровно столько тепла, сколько необходимо для существования океанов, рек и осадков. Однако атмосфера Земли в прошлом была совсем другой по составу и в основном включала водород и гелий&raquo;, &ndash; рассказывают авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\">Поскольку газообразные водород и гелий находятся в легком доступе в протопланетных дисках вокруг молодых звезд, все развивающиеся миры накапливают оболочки, в которых преобладают эти два элемента. Однако со временем большинство каменистых планет утрачивают эту первичную атмосферу в пользу более тяжелых элементов, в случае с Землей это кислород и азот.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Но все же некоторые крупные экзопланеты на большом расстоянии от своих звезд могли бы сохранить атмосферы с преобладанием водорода и гелия. Мы рассмотрели их эволюцию. Разработанная модель позволила нам предсказать продолжительность, в течение которой экзопланеты, богатые водородом и гелием, могут содержать жидкую воду на своей поверхности. Оказалось, что в зависимости от массы и расстояния от звезды они могут сохранять умеренную поверхностную среду до 8 миллиардов лет при условии, что атмосфера достаточно плотная и от ста до тысячи раз протяженнее земной&raquo;, &ndash; пояснили авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\">Стоит отметить, что хотя для решения многих поднятых вопросов, таких как вероятность образования рассмотренных экзопланет или процесса накопления ими жидкой воды, необходимы будущие исследования, результаты показывают: условия, пригодные для возникновения жизни, могут сильно отличаться от тех, к которым мы привыкли на Земле.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Чтобы на таких экзопланетах долгое время была жидкая вода, у них должна быть атмосфера определенной толщины. Мы не знаем, насколько это распространено. И даже при правильных условиях неясно, насколько вероятно появление жизни в таком экзотическом месте. Это вопрос к астробиологам. Тем не менее, в исследовании мы показали, что наше ориентированное на Землю представление о пригодной для жизни планете может быть слишком узким&raquo;, &ndash; заключили авторы исследования.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      7,
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 10,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 2,
+    "title": "Астрономы открыли молодой пульсар в далекой карликовой галактике",
+    "anouncement": "В карликовой галактике, распложенной на расстоянии 395 миллионов световых лет от Земли, открыта одна из самых молодых нейтронных звезд. Впервые объект, получивший обозначение VT 1137-0337, появился в данных обзора в январе 2018 года, при этом на снимках того же региона неба в 1998 году он отсутствовал.",
+    "source": "https://in-space.ru/astronomy-otkryli-molodoj-pulsar-v-dalekoj-karlikovoj-galaktike/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">В карликовой галактике, распложенной на расстоянии 395 миллионов световых лет от Земли, открыта одна из самых молодых нейтронных звезд. Впервые объект, получивший обозначение VT 1137-0337, появился в данных обзора в январе 2018 года, при этом на снимках того же региона неба в 1998 году он отсутствовал.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Скорее всего, мы видим туманность пульсарного ветра. Она образуется, когда мощное магнитное поле быстро вращающейся нейтронной звезды разгоняет окружающие заряженные частицы почти до скорости света. Судя по своим характеристикам, это очень молодой пульсар, на небе он сияет не более 14 лет, и он точно не старше 80 лет&raquo;, &ndash;&nbsp;<a href=\"https://public.nrao.edu/news/powerful-pulsar-in-distant-galaxy/\" rel=\"noopener\">заявили</a>&nbsp;авторы исследования из Национальной радиоастрономической обсерватории (США)&nbsp;на 240-м заседании Американского астрономического общества.</p>\r\n\r\n<p style=\"text-align:justify\">Объект проживает в карликовой галактике SDSS J113706.18-033737.1, которая переживает всплеск звездообразования. Ее масса оценивается примерно в 100 миллионов солнечных.</p>\r\n\r\n<p style=\"text-align:justify\">Первоначально, после вспышки сверхновой, радиоизлучение пульсара VT 1137-0337 было скрыто от наблюдателя за плотной оболочкой осколков от взрыва. Однако по мере расширения она становилась все менее плотной, пока, наконец, радиоволны из туманности пульсарного ветра не смогли пройти сквозь нее.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Такой процесс занимает несколько десятилетий и завершился он между 1998 и 2018 годами&raquo;, &ndash; заключили авторы исследования.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      2
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 11,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 1,
+    "title": "Крупные планеты могут срывать оболочки погибающих звезд",
+    "anouncement": "Планета, превышающая по массе Юпитер в 10 и более раз, может сорвать внешнюю оболочку поглощающей ее звезды, находящейся на заключительных стадиях своей эволюции, заявили астрономы на 240-м собрании Американского астрономического общества.",
+    "source": "https://in-space.ru/krupnye-planety-mogut-sryvat-obolochki-pogibayushhih-zvezd-vyyasnili-astronomy/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\"><img alt=\"\" src=\"/media/uploads/2023/12/16/sun_red.gif\" style=\"height:490px; width:870px\" /></p>\r\n\r\n<p style=\"text-align:justify\">Планета, превышающая по массе Юпитер в 10 и более раз, может сорвать внешнюю оболочку поглощающей ее звезды, находящейся на заключительных стадиях своей эволюции, заявили астрономы на 240-м собрании Американского астрономического общества.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Примерно через 5 миллиардов лет Солнце израсходует водородное топливо в ядре, расширится и станет красным гигантом, поглотив внутренние планеты. Динамика и возможные последствия таких событий плохо изучены, но считается, что это относительно обычная судьба для большинства планетарных систем с солнцеподобной звездой. Наша работа с использованием гидродинамического моделирования показывает, что взаимодействие может привести к ряду результатов в зависимости от размера поглощенного объекта и стадии эволюция звезды&raquo;, &ndash; рассказывают авторы исследования, представленного в журнале&nbsp;<a href=\"https://arxiv.org/abs/2203.11227\" rel=\"noopener\">Astrophysical Journal</a>.</p>\r\n\r\n<p style=\"text-align:justify\">Эволюционировавшие звезды могут быть в сотни или даже тысячи раз больше, чем их планеты, и это несоответствие размеров затрудняет выполнение симуляций, которые точно моделируют физические процессы в масштабе. Чтобы обойти эту проблему, астрономы рассмотрели небольшой участок звезды с центром на поглощаемом объекте. Это позволило оценить поток вокруг него и измерить действующие силы сопротивления.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Согласно расчетам, никакие тела с массой меньше ста масс Юпитера не могут сорвать оболочку солнцеподобной звезды прежде, чем она расширится до десятикратного радиуса Солнца. Однако на более поздних стадиях эволюции и расширения звездная оболочка может быть сорвана объектом, превышающим Юпитер по массе всего в десять раз&raquo;, &ndash; пояснили авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\">Результаты позволяют объяснить существование систем с планетами и коричневыми карликами, вращающимися на малых расстояниях вокруг остатков солнцеподобных звезд. Предыдущие исследования предполагали, что они могут быть конечным результатом процесса планетарного поглощения, который включает сокращение орбиты поглощенного тела и выброс внешних слоев звезды.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Моделирование также показало, что планетарное поглощение может увеличить светимость солнцеподобной звезды на несколько порядков на срок до тысяч лет, в зависимости от массы объекта и стадии эволюции звезды&raquo;, &ndash; заключили авторы исследования.</p>",
+    "categories": "K",
+    "status": true,
+    "tags": [
+      4,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 12,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 1,
+    "title": "В окрестностях Солнца открыта «пылающая» суперземля",
+    "anouncement": "В рамках проекта CARMENES по поиску экзопланет в системах близлежащих красных карликов, астрономы открыли раскаленную суперземлю, которая является отличным кандидатом для будущих исследований атмосфер внесолнечных миров.",
+    "source": "https://in-space.ru/v-okrestnostyah-solntsa-otkryta-pylayushhaya-superzemlya/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">В рамках проекта CARMENES по поиску экзопланет в системах близлежащих красных карликов, астрономы открыли раскаленную суперземлю, которая является отличным кандидатом для будущих исследований атмосфер внесолнечных миров. О перспективной находке сообщается в журнале&nbsp;<a href=\"https://science.sciencemag.org/cgi/doi/10.1126/science.abd7645\" rel=\"noopener\">Science</a>.</p>\r\n\r\n<p style=\"text-align:justify\">С появлением инструментов для охоты за экзопланетами количество открытых миров за пределами Солнечной системы быстро выросло до тысяч. Комбинируя различные методы наблюдений, астрономы сегодня могут определять их массу, размер и даже плотность, что позволяет оценивать внутренний состав.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Следующая цель &ndash; полностью охарактеризовать похожие на Землю экзопланеты путем изучения их атмосфер. Это гораздо сложнее, особенно для каменистых миров, так как они окутаны лишь тонкой, а не обширной, как у газовых гигантов, оболочкой. В результате многие современные модели атмосфер каменистых планет остаются непроверенными&raquo;, &ndash; рассказывают авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\">Атмосферы внесолнечных миров должны отвечать определенным требованиям для наблюдения за ними с помощью обсерваторий следующего поколения. Каменистая Gliese 486b, проживающая в системе красного карлика на расстоянии 26 световых лет от нас, идеально удовлетворяет им.</p>\r\n\r\n<p style=\"text-align:justify\">Она является суперземлей, превосходящей нашу планету по массе на 30%, а по размеру &ndash; в 2,8 раза. Из расчета плотности астрономы сделали вывод, что Gliese 486b обладает железным ядром и по структуре напоминает Землю и Венеру. Находясь в приливном захвате, экзопланета совершает один оборот вокруг своей звезды за 1,5 земных дня на расстоянии 2,5 миллиона километров.</p>\r\n\r\n<p style=\"text-align:justify\">Несмотря на то, что ее красный карлик намного слабее и холоднее Солнца, она подвергается интенсивному излучению, разогревающему поверхность планеты до примерно 430 градусов по Цельсию. В этом смысле Gliese 486b, вероятно, больше похожа на Венеру, чем на Землю, с жарким и сухим ландшафтом, рассекаемым пылающими реками лавы.</p>\r\n\r\n<p style=\"text-align:justify\">Однако, в отличие от нашей соседки, Gliese 486b, возможно, обладает разреженной, а не плотной атмосферой, или вообще лишена ее. Текущие модели поддерживают оба сценария, так как, с одной стороны, излучение красного карлика могло привести к ее испарению, а с другой &ndash; вполне вероятно, что гравитация суперземли способствовала удержанию оболочки. Оценить баланс этих сил сегодня сложно.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;Открытие Gliese 486b и условия на ней большая удача. Будь она на сто градусов горячее, и вся поверхность планеты покрылась бы лавой. И, наоборот, окажись на ней на сто градусов холоднее, она стала бы непригодной для последующих атмосферных наблюдений. В дополнение близость к нам делает ее отличной целью для более подробного исследования с приходом мощных телескопов&raquo;, &ndash; заключили авторы исследования.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": [
+      4,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "news.article",
+  "pk": 13,
+  "fields": {
+    "date": "2023-12-14T20:55:10Z",
+    "author": 11,
+    "title": "«Hubble» раскрыл тайну «пропавшей из виду» гигантской звезды",
+    "anouncement": "Красный сверхгигант колоссальных размеров VY Большого Пса, видимый пару веков назад невооруженным глазом, а затем исчезнувший из виду, погрузился в облако пыли, заявили астрономы в исследовании, представленном в журнале The Astronomical Journal. Такое поведение говорит о том, что звезда приближается к концу своей жизни и в ближайшее 100 тысяч лет она либо взорвется как сверхновая, либо напрямую схлопнется в черную дыру.",
+    "source": "https://in-space.ru/hubble-raskryl-tajnu-propavshej-iz-vidu-gigantskoj-zvezdy/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">Красный сверхгигант колоссальных размеров VY Большого Пса, видимый пару веков назад невооруженным глазом, а затем исчезнувший из виду, погрузился в облако пыли, заявили астрономы в исследовании, представленном в журнале&nbsp;<a href=\"https://iopscience.iop.org/journal/1538-3881\" rel=\"noopener\">The Astronomical Journal</a>. Такое поведение говорит о том, что звезда приближается к концу своей жизни и в ближайшее 100 тысяч лет она либо взорвется как сверхновая, либо напрямую схлопнется в черную дыру.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;VY Большого Пса ведет себя во многом как Бетельгейзе на стероидах. Эта звезда просто потрясающая. Она одна из самых больших звезд, о которых мы знаем &ndash; очень развитый красный сверхгигант. Известно, что в прошлом у нее было несколько гигантских извержений&raquo;, &ndash; рассказывают авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\"><img alt=\"\" src=\"/media/uploads/2023/12/16/stsci-h-p2109c-m-2000x1125-1456x819.jpg\" /></p>\r\n\r\n<h3 style=\"color:#aaaaaa; font-style:italic\">Художественное представление окутанного пылью красного сверхгиганта VY Большого Пса. Credit: NASA, ESA, and R. Humphreys (University of Minnesota), and J. Olmsted (STScI)</h3>\r\n\r\n<p style=\"text-align:justify\">Огромный красный сверхгигант VY Большого Пса расположен на расстоянии примерно 3,9 тысячи световых лет от Земли. Он в 300 тысяч раз ярче нашего Солнца, в 17 раз массивнее его и в 1420 раз крупнее. Свету требуется около 6 земных часов, чтобы обогнуть VY Большого Пса, а если поместить гиганта в центр Солнечной системы, то это раздувшееся чудовище простиралось бы за орбиту Юпитера.</p>\r\n\r\n<p style=\"text-align:justify\">Гигантские плазменные дуги окружают VY Большого Пса на расстояниях в тысячи раз больших, чем от Земли до Солнца. Эти структуры похожи на протуберанцы, только гораздо крупнее. Кроме того, они физически не связаны со звездой, а были выброшены сотни лет назад и удаляются.<img alt=\"\" src=\"https://in-space.ru/wp-content/uploads/2021/03/STScI-H-p2109b-f-1098x1098.jpg\" /></p>\r\n\r\n<p style=\"text-align:justify\">Как показали наблюдения &laquo;Hubble&raquo;, VY Большого Пса также окружают относительно компактные узлы материи, которые еще довольно близки к сверхгиганту и изверглись всего 100-200 лет назад &ndash; как раз в период, когда яркость звезды упала почти в 6 раз, сделав ее невидимой невооруженным глазом.</p>\r\n\r\n<p style=\"text-align:justify\">&laquo;VY Большого Пса теряет в 100 раз больше вещества, чем Бетельгейзе. Удивительно, но масса некоторых выбросов более чем в два раза превышает массу Юпитера. Природа этих явлений как у этого гиганта, так и у Бетельгейзе, вероятно, связана с поверхностной активностью &ndash; большими конвективными ячейками, некоторые из которых крупнее Солнца&raquo;, &ndash; пояснили авторы исследования.</p>\r\n\r\n<p style=\"text-align:justify\">Звезда начала свою жизнь как супергорячий, яркий голубой сверхгигант, масса которого в 35-40 раз превышала массу Солнца. Через несколько миллионов лет, когда скорость горения термоядерного водорода в ее ядре изменилась, VY Большого Пса перешла в фазу красного сверхгиганта. По мнению астрономов, есть вероятность, что в будущем вместо того, чтобы взорваться как сверхновая, она может сразу схлопнуться в черную дыру.</p>",
+    "categories": "A",
+    "status": true,
+    "tags": []
+  }
+},
+{
+  "model": "news.article",
+  "pk": 14,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 11,
+    "title": "Про Луну",
+    "anouncement": "Описание новости",
+    "source": "https://in-space.ru/hubble-raskryl-tajnu-propavshej-iz-vidu-gigantskoj-zvezdy/",
+    "sourcename": "in-space",
+    "text": "<p>Текст новости</p>",
+    "categories": "A",
+    "status": false,
+    "tags": []
+  }
+},
+{
+  "model": "news.article",
+  "pk": 15,
+  "fields": {
+    "date": "2023-12-14T00:00:00Z",
+    "author": 11,
+    "title": "Китайский зонд «Tianwen-1» прислал первые снимки высокого разрешения с орбиты Марса",
+    "anouncement": "Китайское Национальное космическое управление опубликовало три изображения Марса в высоком разрешении, полученные камерами орбитального космического аппарата миссии «Tianwen-1».",
+    "source": "https://in-space.ru/kitajskij-zond-tianwen-1-prislal-pervye-snimki-s-orbity-marsa/",
+    "sourcename": "in-space",
+    "text": "<p style=\"text-align:justify\">Китайское Национальное космическое управление опубликовало три изображения Марса в высоком разрешении, полученные камерами орбитального космического аппарата миссии &laquo;Tianwen-1&raquo;.</p>\r\n\r\n<p style=\"text-align:justify\">Миссия &laquo;Tianwen-1&raquo; является первой для Китая по изучению Красной планеты. Ее запуск состоялся 23 июля 2020 года, а выход на орбиту вокруг Марса &ndash; 10 февраля 2021 года.</p>\r\n\r\n<p style=\"text-align:justify\">Основной задачей проекта &laquo;Tianwen-1&raquo;, включающего посадочную платформу, орбитальный и спускаемый аппараты, является глобальное обследование Красной планеты с помощью дистанционного зондирования, а также детальное изучение одной из его областей марсоходом.</p>\r\n\r\n<p style=\"text-align:justify\">Отделение спускаемого аппарата запланировано на конец апреля текущего года. После посадки в регионе Utopia Planitia марсоход по трапу съедет с платформы и начнет свою программу исследований. Расчетный срок его работы &ndash; три месяца.</p>\r\n\r\n<p style=\"text-align:justify\">Результаты работы всех компонентов миссии позволят получить топографические карты марсианской поверхности с указанием характеристик грунтов, ионосферы, участков водяного льда и других научных данных.</p>",
+    "categories": "K",
+    "status": false,
+    "tags": []
+  }
+},
+{
+  "model": "news.article",
+  "pk": 16,
+  "fields": {
+    "date": "2023-12-17T00:00:00Z",
+    "author": null,
+    "title": "Тест1",
+    "anouncement": "Тест",
+    "source": "https://comnews24.ru/kosmos/",
+    "sourcename": "Тест",
+    "text": "<p>Тест</p>",
+    "categories": "A",
+    "status": false,
+    "tags": []
+  }
+},
+{
+  "model": "news.image",
+  "pk": 19,
+  "fields": {
+    "article": 1,
+    "title": "1",
+    "image": "news_images/1.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 20,
+  "fields": {
+    "article": 2,
+    "title": "2",
+    "image": "news_images/2_kdYoual.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 21,
+  "fields": {
+    "article": 3,
+    "title": "3",
+    "image": "news_images/3.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 22,
+  "fields": {
+    "article": 4,
+    "title": "4",
+    "image": "news_images/4.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 24,
+  "fields": {
+    "article": 5,
+    "title": "02310271309502.jpg",
+    "image": "news_images/02310271309502.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 26,
+  "fields": {
+    "article": 6,
+    "title": "Artist_impression_of_the_TOI-178_planetary_system_pillars-1456x819.jpg",
+    "image": "news_images/Artist_impression_of_the_TOI-178_planetary_system_pillars-1456x819.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 28,
+  "fields": {
+    "article": 8,
+    "title": "",
+    "image": "news_images/eso1907c.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 31,
+  "fields": {
+    "article": 9,
+    "title": "261758.jpg",
+    "image": "news_images/261758.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 32,
+  "fields": {
+    "article": 10,
+    "title": "NRAO-002-pulsarwind_H_lrg-1456x1092.jpg",
+    "image": "news_images/NRAO-002-pulsarwind_H_lrg-1456x1092.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 34,
+  "fields": {
+    "article": 11,
+    "title": "sun_red.gif",
+    "image": "news_images/sun_red.gif"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 36,
+  "fields": {
+    "article": 13,
+    "title": "STScI-H-p2109c-m-2000x1125-1456x819.jpg",
+    "image": "news_images/STScI-H-p2109c-m-2000x1125-1456x819.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 37,
+  "fields": {
+    "article": 14,
+    "title": "3.jpg",
+    "image": "news_images/3_mlFmox2.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 38,
+  "fields": {
+    "article": 15,
+    "title": "1_tai_mars.jpg",
+    "image": "news_images/1_tai_mars.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 41,
+  "fields": {
+    "article": 12,
+    "title": "",
+    "image": "news_images/mpia-pr_hotsuperearth_trifonov_2021_fig1-1456x819_bYguYAU.jpg"
+  }
+},
+{
+  "model": "news.image",
+  "pk": 42,
+  "fields": {
+    "article": 16,
+    "title": "NRAO-002-pulsarwind_H_lrg-1456x1092.jpg",
+    "image": "news_images/NRAO-002-pulsarwind_H_lrg-1456x1092_JO6ez4J.jpg"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 1,
+  "fields": {
+    "article": 1,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T13:53:58.348Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 2,
+  "fields": {
+    "article": 4,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T13:57:19.753Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 3,
+  "fields": {
+    "article": 2,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T14:14:04.666Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 4,
+  "fields": {
+    "article": 3,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T14:29:19.432Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 5,
+  "fields": {
+    "article": 5,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T18:19:36.259Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 6,
+  "fields": {
+    "article": 6,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T18:52:52.616Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 8,
+  "fields": {
+    "article": 8,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-13T19:10:33.882Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 9,
+  "fields": {
+    "article": 10,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T12:21:36.645Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 10,
+  "fields": {
+    "article": 11,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T12:22:19.715Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 11,
+  "fields": {
+    "article": 9,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T12:53:41.371Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 12,
+  "fields": {
+    "article": 13,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T15:33:12.153Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 13,
+  "fields": {
+    "article": 14,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T15:53:12.080Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 14,
+  "fields": {
+    "article": 15,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T17:15:09.285Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 15,
+  "fields": {
+    "article": 12,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-14T21:11:03.223Z"
+  }
+},
+{
+  "model": "news.viewcount",
+  "pk": 16,
+  "fields": {
+    "article": 16,
+    "ip_address": "127.0.0.1",
+    "view_date": "2023-12-17T11:08:07.432Z"
+  }
+},
+{
+  "model": "users.account",
+  "pk": 1,
+  "fields": {
+    "nickname": "Администратор",
+    "birthdate": "1985-01-10",
+    "gender": "Ж",
+    "account_image": "account_images/Фото_0fVUNKH.jpg"
+  }
+},
+{
+  "model": "users.account",
+  "pk": 2,
+  "fields": {
+    "nickname": "Писатель",
+    "birthdate": "2000-08-10",
+    "gender": "Ж",
+    "account_image": "account_images/Снимок.JPG"
+  }
+},
+{
+  "model": "users.account",
+  "pk": 11,
+  "fields": {
+    "nickname": "Елизавета",
+    "birthdate": "2000-01-01",
+    "gender": "Ж",
+    "account_image": "account_images/изображение_viber_2021-08-14_13-53-48-482_drrk7Ii.jpg"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 9,
+  "fields": {
+    "user": 1,
+    "article": 9,
+    "create_at": "2023-12-14T18:02:13.022Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 10,
+  "fields": {
+    "user": 11,
+    "article": 8,
+    "create_at": "2023-12-14T18:34:20.246Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 11,
+  "fields": {
+    "user": 11,
+    "article": 10,
+    "create_at": "2023-12-14T18:34:25.089Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 12,
+  "fields": {
+    "user": 11,
+    "article": 9,
+    "create_at": "2023-12-14T18:34:28.393Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 13,
+  "fields": {
+    "user": 11,
+    "article": 4,
+    "create_at": "2023-12-14T20:04:08.139Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 14,
+  "fields": {
+    "user": 2,
+    "article": 10,
+    "create_at": "2023-12-14T20:57:38.902Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 15,
+  "fields": {
+    "user": 1,
+    "article": 5,
+    "create_at": "2023-12-14T21:09:47.352Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 17,
+  "fields": {
+    "user": 1,
+    "article": 10,
+    "create_at": "2023-12-15T19:25:34.202Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "article": 1,
+    "create_at": "2023-12-17T11:13:19.584Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "article": 10,
+    "create_at": "2023-12-17T11:13:23.749Z"
+  }
+},
+{
+  "model": "users.favoritearticle",
+  "pk": 20,
+  "fields": {
+    "user": 1,
+    "article": 13,
+    "create_at": "2023-12-17T12:37:21.149Z"
+  }
+}
+]

@@ -97,7 +97,7 @@ admin.site.register(Subscriber, SubscriberAdmin)
 
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ['title','image_tag','article']
+    list_display = ['id','title','image_tag','article']
     list_display_links = ['article']
 
 class ViewCountAdmin(admin.ModelAdmin):

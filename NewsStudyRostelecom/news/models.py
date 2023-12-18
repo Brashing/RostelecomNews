@@ -81,7 +81,7 @@ class Subscriber(models.Model):
 
 class Image(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
-    title = models.CharField(max_length=50, blank=True)
+    title = models.CharField(max_length=150, blank=True)
     image = models.ImageField(upload_to='news_images/', blank=True, null=True)
 
     def __str__(self):
