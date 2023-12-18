@@ -13,3 +13,10 @@ class FavoriteArticleAdmin(admin.ModelAdmin):
     list_filter = ['user','article','create_at']
 
 admin.site.register(FavoriteArticle, FavoriteArticleAdmin)
+
+@admin.register(ContactForm)
+class ContactFormAdmin(admin.ModelAdmin):
+    list_display = ['status','name', 'email']
+    list_filter = ['status','name', 'email']
+    list_display_links = ['name']
+    # list_editable = ['status']

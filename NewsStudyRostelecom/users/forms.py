@@ -37,7 +37,12 @@ class AccountUpdateForm(ModelForm):
             raise ValidationError('Имя не может быть меньше 2 знаков')
         return nickname
 
-class ContactForm(forms.Form):
-    name = forms.CharField(max_length=100, validators = [MinLengthValidator(2)])
-    email = forms.CharField(validators=[russian_email])
-    message = forms.CharField(widget=CKEditorWidget())
+# class ContactForm(forms.Form):
+#     name = forms.CharField(label='Имя',max_length=100, validators = [MinLengthValidator(2)])
+#     email = forms.EmailField(label='Адрес электронной почты',validators=[russian_email])
+#     message = forms.CharField(label='Сообщение',widget=CKEditorWidget())
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactForm
+        fields = ['name', 'email', 'message']

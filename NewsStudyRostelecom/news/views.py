@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic import DetailView, DeleteView, UpdateView, ListView
 from .utils import ViewCountMixin
 from django.core.paginator import Paginator
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import *
 from .models import *
@@ -82,7 +83,8 @@ def news_subscribe(request):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('news_index')
+            messages.success(request,'Ваш запрос успешно отправлен!')
+            return redirect('home')
     else:
         form = SubscribeForm()
     return render(request,'news/news_subscribe.html', {'form': form})

@@ -67,7 +67,7 @@ def profile_update(request):
     user = request.user
     account = Account.objects.get(user=user)
     if request.method == "POST":
-        user_form = UserUpdateForm(request.POST, instance=user, exclude=['password'])
+        user_form = UserUpdateForm(request.POST, instance=user)
         account_form = AccountUpdateForm(request.POST, request.FILES, instance=account)
         if user_form.is_valid() and account_form.is_valid():
             user_form.save()
@@ -109,14 +109,25 @@ def search_auto(request):
     mimetype = 'application/json'
     return HttpResponse(data,mimetype)
 
+# def contact_page(request):
+#     if request.method == "POST":
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             print('Сообщение отправлено', form.cleaned_data)
+#         else:
+#             print(form.errors)
+#     else:
+#         form = ContactForm()
+#     context = {'form': form}
+#     return render(request, 'users/contact_page.html', context)
+
 def contact_page(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            print('Сообщение отправлено', form.cleaned_data)
-        else:
-            print(form.errors)
+            form.save()
+            messages.success(request, 'Ваше сообщение успешно отправлено разработчикам сайта! Благодарим Вас за обратную связь!')
+            return redirect('home')
     else:
         form = ContactForm()
-    context = {'form': form}
-    return render(request, 'users/contact_page.html', context)
+    return render(request, 'users/contact_page.html', {'form': form})
