@@ -19,4 +19,10 @@ class ContactFormAdmin(admin.ModelAdmin):
     list_display = ['status','name', 'email']
     list_filter = ['status','name', 'email']
     list_display_links = ['name']
+    readonly_fields = ['name', 'email']
     # list_editable = ['status']
+    actions = ['set_true']
+    @admin.action(description='Пометить исправленными выбранные замечания')
+    def set_true(self, request, queryset):
+        amount = queryset.update(status=True)
+        self.message_user(request, f'Исправлено {amount} проблем')

@@ -29,7 +29,7 @@ class ArticleListView(ListView):
     template_name = 'article_list.html'
     context_object_name = "articles"
 
-    def get_queryset(self):  # новый
+    def get_queryset(self):
         query = self.request.GET.get('search_input')
         articles = Article.objects.filter(title__icontains=query)
         return articles

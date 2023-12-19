@@ -41,14 +41,19 @@
                                             {% csrf_token %}
                                             {{ user_form|crispy }}
                                             {{ account_form|crispy }}<br>
-                                            <div class="col-lg-9">
+                                            <div class="col-lg-3">
                                                 <p><input class="btn btn-danger" type="submit" value="Сохранить"></p>
                                             </div>
                                         </form>
-                                        <div class="col-lg-3">
+                                        <div class="col-lg-7">
                                             <p><a href="{% url 'password' %}"><input class="btn btn-danger"
                                                                                      type="submit"
                                                                                      value="Изменить пароль"></a></p>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <p><a href="{% url 'user_profile' %}"><input class="btn btn-danger"
+                                                                                     type="submit"
+                                                                                     value="В профиль"></a></p>
                                         </div>
                                     </div>
                                 </div>

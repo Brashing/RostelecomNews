@@ -10,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-# https://github.com/Brashing/RostelecomNews.git
-
 from pathlib import Path
 import environ
 env = environ.Env()
@@ -30,7 +28,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 # Для проверки своей страницы 404 конфигурация такая:
 # DEBUG = False
-# ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["Romashka45.pythonanywhere.com"]
 # В режиме отладки - такая:
 DEBUG = True
 ALLOWED_HOSTS = []

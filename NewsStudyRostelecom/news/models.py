@@ -2,9 +2,6 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.contrib.auth.models import User
-from .validators import russian_email
-from django.db.models import Count
-import datetime
 
 class Tag(models.Model):
     title = models.CharField(max_length=80, verbose_name='Название')
@@ -69,7 +66,7 @@ class Article(models.Model):
 class Subscriber(models.Model):
     last_name = models.CharField(max_length=50, verbose_name='Фамилия', default='', null=False)
     first_name = models.CharField(max_length=50, verbose_name='Имя', default='', null=False)
-    email = models.EmailField(max_length=254, verbose_name='Адрес электронной почты', null=False, validators=[russian_email])
+    email = models.EmailField(max_length=254, verbose_name='Адрес электронной почты', null=False)
 
     def __str__(self):
         return f"{self.last_name} {self.first_name} {self.email}"

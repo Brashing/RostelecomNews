@@ -90,8 +90,8 @@ def password_update(request):
         if form.is_valid():
             password_info = form.save()
             update_session_auth_hash(request,password_info)
-            messages.success(request,'Пароль успешно изменен')
-            return redirect('user_profile')
+            messages.success(request,'Пароль успешно изменен!')
+            return redirect('profile_update')
     context = {"form": form}
     return render(request,'users/edit_password.html',context)
 
@@ -107,18 +107,6 @@ def search_auto(request):
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data,mimetype)
-
-# def contact_page(request):
-#     if request.method == "POST":
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             print('Сообщение отправлено', form.cleaned_data)
-#         else:
-#             print(form.errors)
-#     else:
-#         form = ContactForm()
-#     context = {'form': form}
-#     return render(request, 'users/contact_page.html', context)
 
 def contact_page(request):
     if request.method == 'POST':

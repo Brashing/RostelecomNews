@@ -27,10 +27,12 @@
         <h6 class="title"></h6>
         <div class="row">
             <div class="col-lg-8">
-                <p><strong><i>Автор: <font color="red">{{ news.author.account.nickname }}</font></i></strong></p>
-                <p><strong><i>Дата публикации: <font color="red">{{ news.date.date }}</font></i></strong></p>
+                <p class="readmore" style="color:black">{% if news.status == True %}<i class="fa-solid fa-user"> Автор: {{ news.author.account.nickname }}{% else %}{% endif %}</i></p>
+                <p class="readmore">
+                    {% if news.status == True %}<i class="fa-solid fa-check"> Дата публикации: {{ news.date.date }}</i></p>
+                    {% else %}<p class="readmore" style="color:black"><i class="fa-solid fa-xmark"> Не опубликовано
+                    {% endif %}</i></p>
             </div>
-
             {% if request.user.id %}
             {% if user.is_superuser == True %}
             <div class="col-lg-2">
@@ -48,7 +50,7 @@
         </blockquote>
         <br>
         <h6 class="title"></h6>
-        <p><strong><i>Источник: <a href="{{ news.source }}" target="_blank"><font color="red">{{ news.sourcename }}</a></font></i></strong></p><br>
+        <p class="readmore" style="color:black"><i class="fa-solid fa-globe"> Источник: <a href="{{ news.source }}" style="color:red" target="_blank"> {{ news.sourcename }}</a></i></p><br>
         <h6 class="title"></h6>
         <div class="row">
             <div class="col-lg-2">

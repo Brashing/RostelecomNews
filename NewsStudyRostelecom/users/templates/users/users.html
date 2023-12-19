@@ -66,6 +66,15 @@
                         {% for image in n.image_set.all %}
                             <img src="{{ image.image.url }}" style="margin:auto; height:auto; width:450px;" alt=""/></a>
                         {% endfor %}
+                        <hr>
+                        {% if n.status == True %}
+                            <p class="readmore"><i class="fa-solid fa-check"> Опубликовано: {{ n.date.date }}</i></p>
+                        {% else %}
+                            <p class="readmore" style="color:black"><i class="fa-solid fa-xmark"> Не опубликовано</i></p>
+                        {% endif %}
+                        {% if user.is_staff == True %}
+                            <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
+                        {% endif %}
                     </div>
                     <div class="col-lg-9">
                         <h4><strong><a href="{{ n.get_absolute_url }}">{{ n.title }}</a></strong></h4>
@@ -73,7 +82,7 @@
                         {% if request.user.id %}
                         {% if user.is_superuser == True %}
                         <div class="col-lg-7">
-                            <p><a class="readmore" href="http://127.0.0.1:8000/admin/news/article/{{ n.id }}/change/"
+                            <p><a class="readmore" href="/admin/news/article/{{ n.id }}/change/"
                                   target="_blank">Редактировать новость в панели администратора...</a></p>
                         </div>
                         <div class="col-lg-5">
@@ -90,15 +99,8 @@
                     </div>
                 </div>
                 {% endif %}
-                <hr>
-                {% if user.is_staff == True %}
-                <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
-                {% endif %}
-                {% if n.status == True %}
-                    <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
-                {% else %}
-                    <p><small><strong>Опубликовано: {{ n.status }}</strong></small></p>
-                {% endif %}
+
+
                 {% endfor %}<br>
                 {% else %}
                 <div class="container-fluid">

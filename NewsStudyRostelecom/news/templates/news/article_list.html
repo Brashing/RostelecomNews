@@ -24,7 +24,7 @@
     <div class="center">
         {% block header %} {% include 'main/header.html' %} {% endblock %}
         <div class="content_area">
-            <h2 class="title">РЕЗУЛЬТАТЫ ПОИСКА</h2>
+            <h2 class="title">РЕЗУЛЬТАТЫ ПОИСКА: {{ articles.count }}</h2>
             <div class="container-fluid">
                 {% for n in articles %}
                 {% if n.status == True %}
@@ -35,42 +35,40 @@
                         {% for image in n.image_set.all %}
                             <img src="{{ image.image.url }}" style="margin:auto; height:auto; width:450px;" alt=""/></a>
                         {% endfor %}
+                        <hr>
+                        <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
+                        {% if n.status == True %}
+                            <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
+                        {% endif %}
+                        {% if user.is_active == True %}
+                            <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
+                            <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
+                        {% endif %}
                     </div>
                     <div class="col-lg-9">
                         <a href="{{ n.get_absolute_url }}"><h4><strong>{{ n.title }}</strong></h4></a>
                         <p align="justify">{{ n.anouncement }}</p><br>
-                        <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong>
-                        </p>
-                        <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p><br><br>
-                    </div>
-                    <div class="col-lg-3">
-                        {% if user.is_active == True %}
-                            <p><small><strong>Опубликовано: <font color="red">{{ n.status }}</font></strong></small></p>
-                            <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
-                            <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
-                        {% endif %}
-                    </div>
-                    <div class="col-lg-5">
-                        {% if request.user.id %}
-                        {% if user.is_staff == True %}
-                        <a class="readmore"
-                           href="http://127.0.0.1:8000/admin/news/article/{{ n.id }}/change/"
-                           target="_blank">Редактировать новость в панели администратора...</a>
-                    </div>
-                    <div class="col-lg-4">
-                        <p><a class="readmore" href="{% url 'news_update' n.pk %}">Редактировать новость на
+                        <div class="col-lg-7">
+                            {% if request.user.id %}
+                            {% if user.is_staff == True %}
+                                <a class="readmore"
+                                   href="/admin/news/article/{{ n.id }}/change/"
+                                   target="_blank">Редактировать новость в панели администратора...</a>
+                        </div>
+                        <div class="col-lg-5">
+                            <p><a class="readmore" href="{% url 'news_update' n.pk %}">Редактировать новость на
                             сайте...</a></p>
+                        </div>
+                            {% else %}
+                            {% endif %}
+                            {% endif %}
                     </div>
-                    {% else %}
-                    {% endif %}
-                    {% endif %}
                 </div>
                 <hr>
                 {% endif %}
                 {% endif %}
                 {% endfor %}<br>
             </div>
-            <br>
             <h6 class="title"></h6>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}
         </div>

@@ -93,12 +93,15 @@
                             {% endfor %}</a>
                             <h3>{{ n.title }}</h3><br>
                             <p align="justify">{{ n.anouncement }}</p>
-                            <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
+                            <hr>
+                            <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
+                            {% if n.status == True %}
+                                <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
+                            {% endif %}
                             {% if user.is_active == True %}
+                                <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
                                 <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
                             {% endif %}
-                            <p><strong><i><small>Автор: <font color="red">{{ n.author.account.nickname }}</font></small></i></strong></p>
-                            <p><strong><i><small>Дата публикации: <font color="red">{{ n.date.date }}</font></small></i></strong></p>
                         </div>
                     </div>
                 {% endif %}

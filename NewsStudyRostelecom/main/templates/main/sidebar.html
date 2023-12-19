@@ -6,7 +6,7 @@
             <ul>
                 <li><a href="{% url 'contact_page' %}"><i class="fa-solid fa-envelope"> Страница обратной связи</i></a></li>
                 {% if user.is_staff == True %}
-                <li><a href="http://127.0.0.1:8000/admin" target="_blank"><i class="fa-solid fa-user-gear"> Панель
+                <li><a href="/admin/" target="_blank"><i class="fa-solid fa-user-gear"> Панель
                     администратора</i></a></li>
                 {% endif %}
             </ul>
@@ -28,7 +28,7 @@
                         <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-list"> Мои заявки</i></a></li>
                 {% endif %}
                 {% if user.is_superuser == True %}
-                    <li><a href="http://127.0.0.1:8000/admin/news/article/add/" target="_blank"><i class="fa-solid fa-wand-magic-sparkles"> Создать новость в панели администратора</i></a></li>
+                    <li><a href="/admin/news/article/add/" target="_blank"><i class="fa-solid fa-wand-magic-sparkles"> Создать новость в панели администратора</i></a></li>
                     <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-pen-nib"> Создать новость на сайте</i></a></li>
                     {% elif user.is_staff == True %}
                         <li><a href="{% url 'news_input' %}"><i class="fa-solid fa-pen-nib"> Создать новость</i></a></li>
@@ -48,11 +48,16 @@
         {% endif %}
         {% if messages %}
         {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-            {{ message }}
+        <div class="text-center alert alert-{{ message.tags }}">
+            <a class="close" data-dismiss="alert">×</a>
+            {{ message|safe }}
+            <img src="close.soon" style="display:none;" onerror="(function(el){ setTimeout(function(){ el.parentNode.parentNode.removeChild(el.parentNode); },5000 ); })(this);" />
         </div>
         {% endfor %}
         {% endif %}
+        </li>
+        <li>
+            <a href="javascript:window.history.back();"><i class="fa-solid fa-reply"> Назад</i></a>
         </li>
     </ul>
 </div>
