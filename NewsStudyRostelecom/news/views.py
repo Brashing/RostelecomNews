@@ -83,27 +83,27 @@ def news_subscribe(request):
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request,'Ваш запрос успешно отправлен!')
+            messages.success(request,'Ваш запрос на рассылку новостей успешно отправлен!')
             return redirect('home')
     else:
         form = SubscribeForm()
     return render(request,'news/news_subscribe.html', {'form': form})
 
 def news(request):
-    # categories = Article.categories
+    categories = Article.categories_list
     author_list = User.objects.all()
     if request.method == "POST":
         selected_author = int(request.POST.get('author_filter'))
-        # selected_category = int(request.POST.get('category_filter'))
+        selected_category = int(request.POST.get('category_filter'))
         if selected_author == 0:
             articles= Article.published.all()
         else:
             articles = Article.published.filter(author=selected_author)
-        # if selected_category != 0:
-        #     articles = articles.filter(category__icontains=categories[selected_category-1][0])
+        if selected_category != 0:
+            articles = articles.filter(categories__icontains=categories[selected_category-1][0])
     else:
         selected_author = 0
-        # selected_category = 0
+        selected_category = 0
         articles = Article.published.all()
     total = len(articles)
     p = Paginator(articles, 4)
@@ -114,8 +114,8 @@ def news(request):
         'author_list': author_list,
         'selected_author': selected_author,
         'total': total,
-        # 'categories': categories,
-        # 'selected_category': selected_category,
+        'categories': categories,
+        'selected_category': selected_category,
     }
     return render(request, 'news/news.html', context)
 

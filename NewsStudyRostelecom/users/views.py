@@ -6,7 +6,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import Group
 from django.core.paginator import Paginator
 from .forms import *
@@ -42,8 +42,6 @@ def users(request):
     }
     return render(request, 'users/users.html',context)
 
-def login(request):
-    return render(request, 'users/login.html')
 
 def registration(request):
     if request.method == 'POST':
@@ -53,11 +51,12 @@ def registration(request):
             group = Group.objects.get(name='Персонал')
             user.groups.add(group)
             username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password')
+            password = form.cleaned_data.get('password1')
             Account.objects.create(user=user, nickname=user.username)
-            authenticate(username=username, password=password)
-            messages.success(request, f'{username} зарегистрирован!')
-            return redirect('login')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            messages.success(request, f'{username} зарегистрирован! Заполните данные своего аккаунта.')
+            return redirect('profile_update')
     else:
         form = UserCreationForm()
     context = {'form': form}
@@ -72,8 +71,8 @@ def profile_update(request):
         if user_form.is_valid() and account_form.is_valid():
             user_form.save()
             account_form.save()
-            messages.success(request,"Профиль успешно обновлен")
-            return redirect('profile_update')
+            messages.success(request,"Профиль успешно обновлен!")
+            return redirect('news_index')
         else:
             pass
     else:

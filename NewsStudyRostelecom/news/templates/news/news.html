@@ -39,16 +39,16 @@
                                 {% endfor %}
                             </select>
                         </div>
+                         <div class="col-lg-4">
+                        <select class="form-control" name="category_filter">
+                            <option value="0">Все категории</option>
+                                {% for c in categories %}
+                                <option value="{{ forloop.counter }}" {% if selected_category == forloop.counter %} selected {% endif %}>{{ c.1 }}</option>
+                                {% endfor %}
+                        </select>
+                        </div>
                         <div class="col-lg-3">
                             <input type="submit" class="btn btn-danger" value="Применить">
-                        </div>
-                         <div class="col-lg-4">
-<!--                        <select class="form-control" name="category_filter">-->
-<!--                            <option value="0">Все категории</option>-->
-<!--                                {% for c in categories %}-->
-<!--                                <option value="{{ foloop.counter }}" {% if selected_category == forloop.counter %} selected {% endif %}>{{ c.1 }}</option>-->
-<!--                                {% endfor %}-->
-<!--                        </select>-->
                         </div>
                     </form>
                 </div>
@@ -90,8 +90,8 @@
                             <center>
                             <img src="{{ image.image.url }}" style="margin:auto; height:150px; width:auto" alt=""/>
                             </center>
-                            <h3>{{ n.title }}</h3><br>
                             {% endfor %}</a>
+                            <h3>{{ n.title }}</h3><br>
                             <p align="justify">{{ n.anouncement }}</p>
                             <p><small><strong>Просмотры: <font color="red">{{ n.get_views }}</font></strong></small></p>
                             {% if user.is_active == True %}

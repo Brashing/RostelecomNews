@@ -9,7 +9,7 @@
 <head>
     {%bootstrap_css%}
     {%bootstrap_javascript%}
-    <title>Мои новости</title>
+    <title>Мой профиль</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
@@ -29,8 +29,9 @@
                 {% if articles|length  != 0 %}
                 {% if user.is_staff == True %}
                 <h2 class="title">МОИ НОВОСТИ</h2>
-                    {% else %}
+                    {% if user.is_staff == False %}
                     <h2 class="title">МОИ ЗАЯВКИ</h2>
+                    {% endif %}
                 {% endif %}
 <!--pagination-->
         {% if total > 1 %}

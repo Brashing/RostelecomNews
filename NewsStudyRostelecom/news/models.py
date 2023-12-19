@@ -21,7 +21,7 @@ class PublishedManager(models.Manager):
         return super().get_queryset().filter(status=1)
 
 class Article(models.Model):
-    categories = (('A', 'Астрономия'),
+    categories_list = (('A', 'Астрономия'),
                   ('K', 'Космонавтика'),
                   ('AF', 'Астрофизика'),
                   ('G', 'Геология'))
@@ -32,7 +32,7 @@ class Article(models.Model):
     sourcename = models.CharField('Название источника', max_length=150, null=False)
     text = RichTextField('Текст новости', null=False)
     date = models.DateTimeField('Дата публикации', auto_created=True)
-    categories = models.CharField(choices=categories, max_length=20, verbose_name='Категории')
+    categories = models.CharField(choices=categories_list, max_length=20, verbose_name='Категории')
     tags = models.ManyToManyField(to=Tag, blank=True)
     status = models.BooleanField(default=False, verbose_name='Опубликовано')
     objects = models.Manager()
