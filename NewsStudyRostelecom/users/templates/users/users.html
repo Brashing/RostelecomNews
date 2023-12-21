@@ -62,10 +62,26 @@
                 <hr>
                 <div class="row">
                     <div class="col-lg-3">
-                        <a href="{{ n.get_absolute_url }}">
-                        {% for image in n.image_set.all %}
-                            <img src="{{ image.image.url }}" style="margin:auto; height:auto; width:450px;" alt=""/></a>
-                        {% endfor %}
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <a href="{{ n.get_absolute_url }}">
+                                {% for image in n.image_set.all %}
+                                    <div class="carousel-item active">
+                                        <img src="{{ image.image.url }}" class="d-block w-100" style="margin:auto; height:auto; width:450px;" alt=""/>
+                                    </div>
+                                {% endfor %}</a>
+                            </div>
+                                {% if n.image_set.all|length > 1 %}
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                                </button>
+                                {% endif %}
+                        </div>
                         <hr>
                         {% if n.status == True %}
                             <p class="readmore"><i class="fa-solid fa-check"> Опубликовано: {{ n.date.date }}</i></p>
@@ -89,18 +105,16 @@
                             <p><a class="readmore" href="{% url 'news_update' n.pk %}">Редактировать новость на
                                 сайте...</a></p>
                         </div>
-                        {% elif user.is_staff == True %}
-                        <div class="col-lg-5">
-                            <p><a class="readmore" href="{% url 'news_update' n.pk %}">Редактировать новость...</a></p>
-                        </div>
+                            {% elif user.is_staff == True %}
+                                <div class="col-lg-5">
+                                    <p><a class="readmore" href="{% url 'news_update' n.pk %}">Редактировать новость...</a></p>
+                                </div>
                         {% else %}
                         {% endif %}
                         {% endif %}
                     </div>
                 </div>
                 {% endif %}
-
-
                 {% endfor %}<br>
                 {% else %}
                 <div class="container-fluid">

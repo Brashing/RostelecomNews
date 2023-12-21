@@ -44,20 +44,18 @@
                 <li><a href="{% url 'registration' %}"><i class="fa-solid fa-user-pen"> Регистрация</i></a></li>
             </ul>
         </li>
-        <li>
         {% endif %}
-        {% if messages %}
-        {% for message in messages %}
+        <li>
+            <a href="javascript:window.history.back();"><i class="fa-solid fa-reply"> Назад</i></a>
+        </li>
+    </ul>
+    {% if messages %}
+    {% for message in messages %}
         <div class="text-center alert alert-{{ message.tags }}">
             <a class="close" data-dismiss="alert">×</a>
             {{ message|safe }}
             <img src="close.soon" style="display:none;" onerror="(function(el){ setTimeout(function(){ el.parentNode.parentNode.removeChild(el.parentNode); },5000 ); })(this);" />
         </div>
-        {% endfor %}
-        {% endif %}
-        </li>
-        <li>
-            <a href="javascript:window.history.back();"><i class="fa-solid fa-reply"> Назад</i></a>
-        </li>
-    </ul>
+    {% endfor %}
+    {% endif %}
 </div>

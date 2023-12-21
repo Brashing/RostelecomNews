@@ -12,9 +12,15 @@
             <li>
                 <a href="{{ n.get_absolute_url }}">
                     {% for image in n.image_set.all %}
-                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:980px;" alt=""
+                    {% if n.image_set.all|length == 1 %}
+                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:auto;" alt=""
                          title="{{ n.title }}"/>
+                    {% endif %}
                     {% endfor %}
+                    {% if n.image_set.all|length > 1 %}
+                    <img src="{% static 'main/' %}images/cosmo.jpg" style="margin:auto; height:350px; width:auto;" alt=""
+                         title="{{ n.title }}"/>
+                    {% endif %}
                 </a>
             </li>
             {% endif %}

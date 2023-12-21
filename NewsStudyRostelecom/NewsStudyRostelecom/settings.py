@@ -158,9 +158,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
-# GDAL_LIBRARY_PATH = r'C:\Program Files\QGIS 3.10\bin\gdal301.dll'
-# GEOS_LIBRARY_PATH = r'C:\Program Files\QGIS 3.10\bin\geos_c.dll'
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_ALLOWED_TEMPLATES_PACKS = "bootstrap5"

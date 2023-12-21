@@ -9,10 +9,12 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import Group
 from django.core.paginator import Paginator
-from .forms import *
+from django.views.generic import ListView
 
+from .forms import *
 from django.contrib.auth.decorators import login_required
 from news.models import Article
+
 @login_required
 def add_to_favorites(request, id):
     article = Article.objects.get(id=id)
@@ -25,6 +27,13 @@ def add_to_favorites(request, id):
         bookmark = FavoriteArticle.objects.create(user=request.user, article=article)
         messages.success(request,f"Новость '{article.title}' добавлена в избранное")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+# @login_required
+# class FavoritesListView(ListView):
+#     model = FavoriteArticle
+#     template_name = 'favoritearticle_list.html'
+#     context_object_name = "favorites_list"
+
 
 @login_required(login_url="/users/login")
 def users(request):

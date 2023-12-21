@@ -8,7 +8,7 @@
 <head>
     {%bootstrap_css%}
     {%bootstrap_javascript%}
-    <title>Тестировщикам</title>
+    <title>О нас</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/font/font-awesome.min.css"/>
@@ -23,112 +23,58 @@
 
 <div class="body_wrapper">
     <div class="center">
-        {% block header %} {% include 'main/header.html' %} {% endblock %}
+        {% block header %} {% include 'main/header.html' %} {% endblock %}<br>
+        <h6 class="title"></h6>
         <div class="container" style="line-height:1.5;">
             <h1 style="text-align:center">Добро пожаловать на сайт &quot;Новости нашей Галактики&quot;!</h1>
-
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp; Рады приветствовать вас в качестве тестировщика нашего новостного сайта. Ваше участие очень важно для нас, и мы ценим ваше время и усилия. Чтобы помочь вам с тестированием, предоставляем подробную инструкцию ниже:</span>
-            </div>
-
             <hr/>
-            <h2 style="text-align:center">1. Обзор функциональности сайта</h2>
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Мы собираем и публикуем на сайте (обязательно со ссылкой на источник!) все интересные новости и события, произошедшие в космической сфере. Поделитесь новостями о космосе, полученными из других источников: зарегистрируйтесь на сайте, подайте заявку на публикацию заинтересовавшей вас новости (с указанием ссылки на источник). Мы обязательно ее рассмотрим и опубликуем, чтобы другие пользователи сайта могли узнать новое о космосе. Вы всегда можете добавить любую новость в избранное и наслаждаться чтением в любое удобное для вас время, не переходя по бесконечным ссылкам в сети интернет!  </span>
+            </div>
+            <hr/>
+            <h2 style="text-align:center">Обзор функциональности сайта</h2>
 
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Ознакомьтесь с основной функциональностью сайта &quot;Новости нашей Галактики&quot;. Изучите разделы и возможности, предоставляемые сайтом, такие как:</span>
+            <div style="text-align:justify">
             </div>
 
             <ul>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Просмотр изображений на главной странице с переходом на детальное описание новости.</span>
+                    <div><span style="font-size:16px"><a href="{% url 'home' %}" class="link-underline-primary"><b>Фотогалерея</b></a> на главной странице с переходом на детальное описание новости.</span>
                     </div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Просмотр новостей на странице со списком новостей.</span></div>
+                    <div><span style="font-size:16px">Просмотр новостей на странице со <a href="{% url 'news_index' %}" class="link-underline-primary"><b>списком новостей</b></a>.</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Чтение детального описания статей.</span></div>
+                    <div><span style="font-size:16px">Чтение детального описания статей (для этого необходимо кликнуть по фото новости).</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Поиск новостей по заголовку.</span></div>
+                    <div><span style="font-size:16px">Поиск новостей по заголовку (строка поиска расположена в правой верхней части экрана).</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Фильтр новостей по автору, категории.</span></div>
+                    <div><span style="font-size:16px">Фильтр новостей по автору, категории (доступен в <a href="{% url 'news_index' %}" class="link-underline-primary"><b>списке новостей)</b></a>.</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Подписка на рассылку новостей.</span></div>
+                    <div><span style="font-size:16px">Отправка заявки на <a href="{% url 'news_subscribe' %}" class="link-underline-primary"><b>рассылку новостей</b></a>.</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Возможности аутентификации и авторизации.</span></div>
+                    <div><span style="font-size:16px"><a href="{% url 'registration' %}"><b>Регистрация</b></a> и <a href="{% url 'login' %}"><b>вход</b></a> в профиль.</span></div>
                 </li>
                 <li style="text-align:justify">
-                    <div><span style="font-size:16px">Возможность подачи заявки на создание новости после регистрации на сайте.</span>
+                    <div><span style="font-size:16px">Возможность подачи заявки на создание новости и добавление новостей в избранное после регистрации на сайте.</span>
                     </div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Возможность добавления новостей в избранное.</span></div>
-                </li>
             </ul>
 
             <hr/>
-            <h2 style="text-align:center">2. Поиск ошибок и несоответствий</h2>
 
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Пожалуйста, активно ищите любые ошибки, несоответствия и неполадки на сайте. Обратите внимание на следующие аспекты:</span>
+            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Если вы обнаружите ошибку, неправильное отображение или сбой функциональности, пожалуйста, отправьте отчет с описанием каждой найденной проблемы, прикладывая сохраненные снимки экрана. Используйте <a href="{% url 'contact_page' %}" class="link-underline-primary"><b>форму обратной связи</b></a> на сайте.</span>
             </div>
 
-            <ul>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Внешний вид и оформление страниц.</span></div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Функциональность ссылок и кнопок.</span></div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Работа форм и валидация данных.</span></div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Правильность отображения данных, грамматические и орфографические ошибки.</span>
-                    </div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Юзабилити и логика взаимодействия пользователя с сайтом.</span>
-                    </div>
-                </li>
-            </ul>
-
-            <hr/>
-            <h2 style="text-align:center">3. Сбор информации об ошибках</h2>
-
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Если вы обнаружите ошибку, неправильное отображение или сбой функциональности, пожалуйста, следуйте следующим шагам:</span>
-            </div>
-
-            <ul>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Опишите проблему подробно, указав свои действия, которые привели к возникновению ошибки.</span>
-                    </div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Укажите страницу, на которой произошла ошибка.</span></div>
-                </li>
-                <li style="text-align:justify">
-                    <div><span style="font-size:16px">Если возможно, сделайте снимок экрана с описанием проблемы.</span>
-                    </div>
-                </li>
-            </ul>
-
-            <hr/>
-            <h2 style="text-align:center">4. Отправка отчета об ошибках</h2>
-
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;Чтобы помочь нам исправить ошибки, пожалуйста, отправьте отчет с описанием каждой найденной проблемы, прикладывая сохраненные снимки экрана. Используйте форму обратной связи на сайте.</span>
-            </div>
-
-            <hr/>
-            <div style="text-align:justify"><span style="font-size:16px">&nbsp;&nbsp;&nbsp;&nbsp;С вашей помощью мы сможем сделать &quot;Новости нашей Галактики&quot; еще лучше. Благодарим вас за ваше участие и ценный вклад в развитие нашего сайта. Если у вас есть дополнительные вопросы, не стесняйтесь обратиться к нашей команде поддержки. Спасибо и удачи в тестировании!</span>
-            </div>
             <hr/>
         </div>
     </div>
     <br>
     <div class="container"><a class="readmore" href="{% url 'home' %}"><input class="btn btn-danger" type="submit"
-                                                                              value="К тестированию"></a></div>
+                                                                              value="Читать новости"></a></div>
     <div class="content_area">
         <h6 class="title"></h6>
     </div>

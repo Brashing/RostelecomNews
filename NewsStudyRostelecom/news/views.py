@@ -96,7 +96,7 @@ def news(request):
         selected_author = int(request.POST.get('author_filter'))
         selected_category = int(request.POST.get('category_filter'))
         if selected_author == 0:
-            articles= Article.published.all()
+            articles = Article.published.all()
         else:
             articles = Article.published.filter(author=selected_author)
         if selected_category != 0:
@@ -105,6 +105,7 @@ def news(request):
         selected_author = 0
         selected_category = 0
         articles = Article.published.all()
+    articles = articles.order_by('-date')
     total = len(articles)
     p = Paginator(articles, 4)
     page_number = request.GET.get('page')

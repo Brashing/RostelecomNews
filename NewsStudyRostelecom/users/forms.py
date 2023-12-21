@@ -6,18 +6,18 @@ from django.contrib.auth.forms import UserChangeForm
 from django.contrib.auth.models import User
 from django.core.validators import ValidationError
 from django.forms import ModelForm, Textarea, CheckboxSelectMultiple, Select, DateInput, EmailInput, ImageField, \
-    FileInput, TextInput
+    FileInput, TextInput, DateField
 from .models import *
 
-class UserUpdateForm(UserChangeForm):
+class UserUpdateForm(ModelForm):
     class Meta:
         model = User
-        fields = ['username','email','first_name','last_name']
+        fields = ['username', 'last_name', 'first_name', 'email']
         widgets = {
             'username': TextInput(attrs={'class': 'input', 'placeholder': 'Логин'}),
-            'email': EmailInput(attrs={'class': 'input','placeholder': 'Адрес электронной почты'}),
             'first_name': TextInput(attrs={'class': 'input', 'placeholder': 'Имя'}),
             'last_name': TextInput(attrs={'class': 'input', 'placeholder': 'Фамилия'}),
+            'email': EmailInput(attrs={'class': 'input', 'placeholder': 'Адрес электронной почты'}),
         }
 
 class AccountUpdateForm(ModelForm):
@@ -36,11 +36,6 @@ class AccountUpdateForm(ModelForm):
         if len(nickname) < 2:
             raise ValidationError('Имя не может быть меньше 2 знаков')
         return nickname
-
-# class ContactForm(forms.Form):
-#     name = forms.CharField(label='Имя',max_length=100, validators = [MinLengthValidator(2)])
-#     email = forms.EmailField(label='Адрес электронной почты',validators=[russian_email])
-#     message = forms.CharField(label='Сообщение',widget=CKEditorWidget())
 
 class ContactForm(forms.ModelForm):
     class Meta:

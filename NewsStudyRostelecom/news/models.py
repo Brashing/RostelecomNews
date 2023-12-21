@@ -22,7 +22,7 @@ class Article(models.Model):
                   ('K', 'Космонавтика'),
                   ('AF', 'Астрофизика'),
                   ('G', 'Геология'))
-    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, verbose_name='Автор')
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name='Автор')
     title = models.CharField('Название новости', max_length=150, default='', null=False)
     anouncement = models.TextField('Аннотация', max_length=1250, null=False)
     source = models.URLField('Источник', null=True)
@@ -102,7 +102,6 @@ class ViewCount(models.Model):
     view_date = models.DateTimeField(auto_now_add=True, verbose_name='Дата просмотра')
 
     class Meta:
-        verbose_name = 'Счетчик просмотров'
         verbose_name = 'Счетчик просмотров'
         verbose_name_plural = 'Счетчики просмотров'
         ordering=('-view_date',)
