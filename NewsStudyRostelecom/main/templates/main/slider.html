@@ -1,37 +1,43 @@
 {% load static %}
 
-<div class="slider_area">
-    <div class="content_area">
-        <h2 class="title">ФОТОГАЛЕРЕЯ</h2>
-    </div>
-    <div class="slider">
-        <ul class="bxslider">
-        {% for n in articles %}
-            {% if n.image_set.all %}
-            {% if n.status == True %}
-            <li>
-                <a href="{{ n.get_absolute_url }}">
-                    {% for image in n.image_set.all %}
-                    {% if n.image_set.all|length == 1 %}
-                    <img src="{{ image.image.url }}" style="margin:auto; height:350px; width:auto;" alt=""
-                         title="{{ n.title }}"/>
-                    {% endif %}
-                    {% endfor %}
-                    {% if n.image_set.all|length > 1 %}
-                    <img src="{% static 'main/' %}images/cosmo.jpg" style="margin:auto; height:350px; width:auto;" alt=""
-                         title="{{ n.title }}"/>
-                    {% endif %}
-                </a>
-            </li>
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-        </ul>
-    </div>
-    <br>
-    <div class="container"><a class="readmore" href="{% url 'news_index' %}"><input class="btn btn-danger" type="submit"
-                                                             value="К списку новостей"></a></div>
-    <div class="content_area">
+<div class="container-fluid">
+    <div class="slider_area">
+        <div class="content_area">
+            <h2 class="title">ФОТОГАЛЕРЕЯ</h2>
+        </div>
+        <div class="slider">
+            <ul class="bxslider">
+                {% for n in articles %}
+                {% if n.image_set.all %}
+                {% if n.status == True %}
+                <li>
+                    <a href="{{ n.get_absolute_url }}">
+                        {% for image in n.image_set.all %}
+                        {% if n.image_set.all|length == 1 %}
+                        <img src="{{ image.image.url }}"
+                             style="margin:auto; height:520px; width:auto; border-radius:5px;" alt=""
+                             title="{{ n.title }}"/>
+                        {% endif %}
+                        {% endfor %}
+                        {% if n.image_set.all|length > 1 %}
+                        <img src="{{ n.image_set.all.0.image.url }}"
+                             style="margin:auto; height:520px; width:auto; border-radius:5px"
+                             alt="" title="{{ n.title }}"/>
+                        {% endif %}
+                    </a>
+                </li>
+                {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <h6 class="title"></h6>
+        <div class="container">
+            <a class="readmore" href="{% url 'news_index' %}"><input class="btn btn-danger" type="submit"
+                                                                     value="К списку новостей"></a></div>
+        <div class="content_area">
+            <h6 class="title"></h6>
+        </div>
     </div>
 </div>

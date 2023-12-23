@@ -3,6 +3,7 @@
 {% load static %}
 {% load bootstrap5 %}
 {% load crispy_forms_tags %}
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <html lang="ru">
 
@@ -17,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/bootstrap.min.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/style.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/responsive.css" media="screen"/>
-<!--    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>-->
+    <link rel="stylesheet" type="text/css" href="{% static 'main/' %}assets/css/jquery.bxslider.css" media="screen"/>
+    <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,13 +41,15 @@
                                 {% endfor %}
                             </select>
                         </div>
-                         <div class="col-lg-4">
-                        <select class="form-control" name="category_filter">
-                            <option value="0">Все категории</option>
+                        <div class="col-lg-4">
+                            <select class="form-control" name="category_filter">
+                                <option value="0">Все категории</option>
                                 {% for c in categories %}
-                                <option value="{{ forloop.counter }}" {% if selected_category == forloop.counter %} selected {% endif %}>{{ c.1 }}</option>
+                                <option value="{{ forloop.counter }}" {% if selected_category == forloop.counter %}
+                                        selected {% endif %}>{{ c.1 }}
+                                </option>
                                 {% endfor %}
-                        </select>
+                            </select>
                         </div>
                         <div class="col-lg-3">
                             <input type="submit" class="btn btn-danger" value="Применить">
@@ -56,77 +60,66 @@
         </div>
         <br>
         <h6 class="title"></h6>
-<!--pagination-->
-         {% if total > 1 %}
-        <nav aria-label="Навигация по списку новостей" pagination-border-color = 'red'>
+        <!--pagination-->
+        {% if total > 1 %}
+        <nav aria-label="Навигация по списку новостей" pagination-border-color='red'>
             <div class="text-center">
-            <ul class="pagination pagination-lg">
-                {% if articles.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}"><span aria-hidden="true">&laquo;</span></a>
-                </li>
-                {% endif %}
-                {% for p in articles.paginator.page_range %}
-                {% if articles.number == p %}
+                <ul class="pagination pagination-lg">
+                    {% if articles.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}"><span
+                            aria-hidden="true">&laquo;</span></a>
+                    </li>
+                    {% endif %}
+                    {% for p in articles.paginator.page_range %}
+                    {% if articles.number == p %}
                     <li class="page-item"><a class="page-link" style="color:black;"> {{ p }}</a></li>
-                {% else %}
+                    {% else %}
                     <li class="page-item"><a class="page-link" href="?page={{ p }}"> {{ p }}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% if articles.has_next %}
-                    <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}"><span aria-hidden="true">&raquo;</span></a></li>
-                {% endif %}
-            </ul>
+                    {% endif %}
+                    {% endfor %}
+                    {% if articles.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ articles.next_page_number }}"><span
+                            aria-hidden="true">&raquo;</span></a></li>
+                    {% endif %}
+                </ul>
             </div>
         </nav>
         <hr>
         {% endif %}
-<!--end pagination-->
-
+        <!--end pagination-->
         <div class="content_area">
             {% for n in articles %}
-                {% if n.image_set.all %}
-                    <div class="single_cat_left_content floatleft">
-                        <div class="container-fluid">
-                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                        <a href="{{ n.get_absolute_url }}">
-                                        {% for image in n.image_set.all %}
-                                            {% if n.image_set.first %}
-                                            <div class="carousel-item active">
-                                                <img src="{{ image.image.url }}" class="d-block w-100" style="margin:auto; height:150px; width:auto" alt=""/>
-                                            </div>
-                                            {% else %}
-                                            <div class="carousel-item">
-                                                <img src="{{ image.image.url }}" class="d-block w-100" style="margin:auto; height:150px; width:auto" alt=""/>
-                                            </div>
-                                            {% endif %}
-                                        {% endfor %}</a>
-                                </div>
-                                {% if n.image_set.all|length > 1 %}
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                                </button>
-                                {% endif %}
+            {% if n.image_set.all %}
+            <div class="single_cat_left_content floatleft">
+                <div class="container-fluid">
+                    <!--carousel-->
+                    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            {% for image in n.image_set.all %}
+                            <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+                                <a href="{{ n.get_absolute_url }}">
+                                    <img src="{{ image.image.url }}" class="d-block w-100"
+                                         style="margin:auto; height:150px; width:auto; border-radius:5px;" alt=""/>
+                                </a>
                             </div>
-                            <h3>{{ n.title }}</h3><br>
-                            <p align="justify">{{ n.anouncement }}</p>
-                            <hr>
-                            <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
-                            {% if n.status == True %}
-                                <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
-                            {% endif %}
-                            <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
-                            {% if user.is_active == True %}
-                                <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
-                            {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
-                {% endif %}
+                    <!--end carousel-->
+                    <h3>{{ n.title }}</h3><br>
+                    <p align="justify">{{ n.anouncement }}</p>
+                    <hr>
+                    <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
+                    {% if n.status == True %}
+                    <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
+                    {% endif %}
+                    <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
+                    {% if request.user.id %}
+                    <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
             {% endfor %}
         </div>
         <br>
@@ -138,43 +131,44 @@
 <script type="text/javascript" src="{% static 'main/' %}assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="{% static 'main/' %}assets/js/jquery.bxslider.js"></script>
 <script type="text/javascript" src="{% static 'main/' %}assets/js/selectnav.min.js"></script>
-<!--<script type="text/javascript">-->
-<!--    selectnav('nav', {-->
-<!--        label: 'Меню',-->
-<!--        nested: true,-->
-<!--        indent: ''-->
-<!--    });-->
-<!--    selectnav('f_menu', {-->
-<!--        label: 'Меню',-->
-<!--        nested: true,-->
-<!--        indent: ''-->
-<!--    });-->
-<!--    $('.bxslider').bxSlider({-->
-<!--        mode: 'fade',-->
-<!--        captions: true-->
-<!--    });-->
-<!--</script>-->
+<script type="text/javascript">
+    selectnav('nav', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    selectnav('f_menu', {
+        label: 'Меню',
+        nested: true,
+        indent: ''
+    });
+    $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+    });
+</script>
 <script src="https://kit.fontawesome.com/b91fb3443a.js" crossorigin="anonymous"></script>
 <!-- jQuery !-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <!-- jQuery UI !-->
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script>
-        $(function() {
-            $("#search_input").autocomplete({
-                source: "search_auto/",
-                select: function (event, ui) { //item selected
-                    AutoCompleteSelectHandler(event, ui)
-                },
-                minLength: 2,
-            });
+    $(function() {
+        $("#search_input").autocomplete({
+            source: "search_auto/",
+            select: function (event, ui) { //item selected
+                AutoCompleteSelectHandler(event, ui)
+            },
+            minLength: 2,
         });
+    });
 
-      function AutoCompleteSelectHandler(event, ui)
-      {
-        var selectedObj = ui.item;
-      }
+  function AutoCompleteSelectHandler(event, ui)
+  {
+    var selectedObj = ui.item;
+  }
 </script>
+
 </body>
 </html>

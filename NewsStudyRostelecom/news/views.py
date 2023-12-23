@@ -9,6 +9,7 @@ from .forms import *
 from .models import *
 import datetime
 import json
+from users.models import FavoriteArticle
 
 def search_auto(request):
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':

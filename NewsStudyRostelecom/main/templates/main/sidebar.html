@@ -4,6 +4,7 @@
     <ul id="nav">
         <li><a href="{% url 'home' %}"><i class="fa-solid fa-house"> Главная</i></a>
             <ul>
+                <li><a href="{% url 'about' %}"><i class="fa-solid fa-circle-user"> О нас</i></a></li>
                 <li><a href="{% url 'contact_page' %}"><i class="fa-solid fa-envelope"> Страница обратной связи</i></a></li>
                 {% if user.is_staff == True %}
                 <li><a href="/admin/" target="_blank"><i class="fa-solid fa-user-gear"> Панель
@@ -21,7 +22,7 @@
         {% if request.user.id %}
         <li><a href="{% url 'profile_update' %}"><i class="fa-solid fa-user"> Аккаунт_{{ user }}</i></a>
             <ul>
-                <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-heart"> Избранное</i></a></li>
+                <li><a href="{% url 'favorites_list' %}"><i class="fa-solid fa-heart"> Избранное</i></a></li>
                 {% if user.is_staff == True %}
                     <li><a href="{% url 'user_profile' %}"><i class="fa-solid fa-list"> Мои новости</i></a></li>
                     {% else %}

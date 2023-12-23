@@ -28,11 +28,19 @@ def add_to_favorites(request, id):
         messages.success(request,f"Новость '{article.title}' добавлена в избранное")
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-# @login_required
-# class FavoritesListView(ListView):
-#     model = FavoriteArticle
-#     template_name = 'favoritearticle_list.html'
-#     context_object_name = "favorites_list"
+@login_required
+def favorites_list(request):
+    favorite_articles = FavoriteArticle.objects.filter(user=request.user)
+    articles = [favorite_article.article for favorite_article in favorite_articles]
+    total = len(articles)
+    p = Paginator(articles, 4)
+    page_number = request.GET.get('page')
+    page_obj = p.get_page(page_number)
+    context = {
+        'articles': page_obj,
+        'total': total,
+    }
+    return render(request, 'users/favoritearticle_list.html',context)
 
 
 @login_required(login_url="/users/login")
@@ -41,6 +49,7 @@ def users(request):
     articles = Article.objects.filter(author=author)
     if request.method == "POST":
         articles = articles.filter(author=author)
+    articles = articles.order_by('-date')
     total = len(articles)
     p = Paginator(articles, 4)
     page_number = request.GET.get('page')
