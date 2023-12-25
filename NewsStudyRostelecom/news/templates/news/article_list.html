@@ -27,6 +27,7 @@
         <div class="content_area">
             <h2 class="title">РЕЗУЛЬТАТЫ ПОИСКА: {{ articles.count }}</h2>
             <div class="container-fluid">
+                {% if articles|length != 0 %}
                 {% for n in articles %}
                 {% if n.status == True %}
                 {% if n.image_set.all %}
@@ -91,7 +92,11 @@
                 <hr>
                 {% endif %}
                 {% endif %}
-                {% endfor %}<br>
+                {% endfor %}
+                {% else %}
+                <h1>По вашему запросу ничего не найдено!</h1>
+                {% endif %}
+                <br>
             </div>
             <h6 class="title"></h6>
             {% block footer %} {% include 'main/footer.html' %} {% endblock %}

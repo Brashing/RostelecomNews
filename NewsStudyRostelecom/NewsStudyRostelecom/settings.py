@@ -28,7 +28,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 # Для проверки своей страницы 404 конфигурация такая:
 # DEBUG = False
-# ALLOWED_HOSTS = ["Romashka45.pythonanywhere.com"]
+# ALLOWED_HOSTS = ["GalaxyNews.pythonanywhere.com"]
 # В режиме отладки - такая:
 DEBUG = True
 ALLOWED_HOSTS = []
@@ -144,11 +144,11 @@ USE_TZ = True
 
 import os
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "home/static/",
-    ]
-# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     "home/static/",
+#     ]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 
 MEDIA_URL = 'media/'
