@@ -55,7 +55,7 @@
         <div class="text-center alert alert-{{ message.tags }}">
             <a class="close" data-dismiss="alert">×</a>
             {{ message|safe }}
-            <img src="close.soon" style="display:none;" onerror="(function(el){ setTimeout(function(){ el.parentNode.parentNode.removeChild(el.parentNode); },5000 ); })(this);" />
+            <img src="close.soon" style="display:none;" onerror="(function(el){ setTimeout(function(){ el.parentNode.parentNode.removeChild(el.parentNode); },3000 ); })(this);" />
         </div>
     {% endfor %}
     {% endif %}

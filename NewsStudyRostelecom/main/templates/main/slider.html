@@ -10,8 +10,8 @@
                 {% for n in articles %}
                 {% if n.image_set.all %}
                 {% if n.status == True %}
+                <a href="{{ n.get_absolute_url }}">
                 <li>
-                    <a href="{{ n.get_absolute_url }}">
                         {% for image in n.image_set.all %}
                         {% if n.image_set.all|length == 1 %}
                         <img src="{{ image.image.url }}"
@@ -24,8 +24,8 @@
                              style="margin:auto; height:520px; width:auto; border-radius:5px"
                              alt="" title="{{ n.title }}"/>
                         {% endif %}
-                    </a>
                 </li>
+                    </a>
                 {% endif %}
                 {% endif %}
                 {% endfor %}

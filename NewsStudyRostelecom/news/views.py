@@ -10,6 +10,8 @@ from .models import *
 import datetime
 import json
 from users.models import FavoriteArticle
+from django.db.models import Count
+
 
 def search_auto(request):
     if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -29,6 +31,7 @@ class ArticleListView(ListView):
     model = Article
     template_name = 'article_list.html'
     context_object_name = "articles"
+    paginate_by = 5
 
     def get_queryset(self):
         query = self.request.GET.get('search_input')
@@ -47,15 +50,15 @@ class ArticleDetailView(ViewCountMixin, DetailView):
         context['images'] = images
         return context
 
-
 class ArticleUpdateView(UpdateView):
     model = Article
+    success_url = reverse_lazy('user_profile')
     template_name = 'news/news_input.html'
     fields = ['categories','title','anouncement','text','source','sourcename','tags']
 
 class ArticleDeleteView(DeleteView):
     model = Article
-    success_url = reverse_lazy('news_index')
+    success_url = reverse_lazy('user_profile')
     template_name = 'news/news_delete.html'
 
 @login_required(login_url="/")
@@ -91,11 +94,14 @@ def news_subscribe(request):
     return render(request,'news/news_subscribe.html', {'form': form})
 
 def news(request):
+    favorite_article = FavoriteArticle.objects.filter(user=request.user)
     categories = Article.categories_list
-    author_list = User.objects.all()
+    author_list = User.objects.filter(article__isnull=False).filter(article__status=True).distinct()
     if request.method == "POST":
         selected_author = int(request.POST.get('author_filter'))
         selected_category = int(request.POST.get('category_filter'))
+        request.session['author_filter'] = selected_author
+        request.session['category_filter'] = selected_category
         if selected_author == 0:
             articles = Article.published.all()
         else:
@@ -103,9 +109,21 @@ def news(request):
         if selected_category != 0:
             articles = articles.filter(categories__icontains=categories[selected_category-1][0])
     else:
-        selected_author = 0
-        selected_category = 0
-        articles = Article.published.all()
+        value = request.session.get('search_input')
+        if value != None:
+            articles = Article.published.filter(title__icontains=value)
+        else:
+            selected_author = request.session.get('author_filter')
+            selected_category = request.session.get('category_filter')
+            articles = Article.published.all()
+            if selected_author != None and int(selected_author) != 0:
+                articles = articles.filter(author=selected_author)
+            else:
+                selected_author = 0
+            if selected_category != None and int(selected_category) != 0:
+                articles = articles.filter(categories__icontains=categories[selected_category - 1][0])
+            else:
+                selected_category = 0
     articles = articles.order_by('-date')
     total = len(articles)
     p = Paginator(articles, 4)
@@ -118,6 +136,7 @@ def news(request):
         'total': total,
         'categories': categories,
         'selected_category': selected_category,
+        'favorite_article': favorite_article,
     }
     return render(request, 'news/news.html', context)
 

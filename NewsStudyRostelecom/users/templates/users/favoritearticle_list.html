@@ -71,7 +71,7 @@
                                 <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
                                     <a href="{{ n.get_absolute_url }}">
                                         <img src="{{ image.image.url }}" class="d-block w-100"
-                                             style="margin:auto; height:150px; width:auto; border-radius:5px;" alt=""/>
+                                             style="margin:auto; max-height:150px; width:auto; border-radius:5px;" alt=""/>
                                     </a>
                                 </div>
                                 {% endfor %}

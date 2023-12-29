@@ -34,17 +34,16 @@
                     {% endif %}</i></p>
                 <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ news.get_views }}</i></p>
             </div>
-            {% if request.user.id %}
-                {% if user.is_superuser == True %}
-                <div class="col-lg-2">
-                    <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>
-                </div>
-                <div class="col-lg-2">
-                    <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>
-                </div>
-                {% endif %}
-            {% endif %}
-
+<!--            {% if request.user.id %}-->
+<!--                {% if user.is_superuser == True %}-->
+<!--                <div class="col-lg-2">-->
+<!--                    <a class="btn btn-danger" href="{% url 'news_update' news.pk %}">Редактировать</a>-->
+<!--                </div>-->
+<!--                <div class="col-lg-2">-->
+<!--                    <a class="btn btn-danger" href="{% url 'news_delete' news.pk %}">Удалить</a>-->
+<!--                </div>-->
+<!--                {% endif %}-->
+<!--            {% endif %}-->
         </div>
         <h6 class="title"></h6>
         <blockquote class="blockquote">

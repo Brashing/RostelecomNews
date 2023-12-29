@@ -60,14 +60,53 @@
         </div>
         <br>
         <h6 class="title"></h6>
+        <div class="content_area">
+            {% for n in articles %}
+            {% if n.image_set.all %}
+            <div class="single_cat_left_content floatleft">
+                        <!--carousel-->
+                        <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for image in n.image_set.all %}
+                                <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+                                    <a href="{{ n.get_absolute_url }}">
+                                        <img src="{{ image.image.url }}" class="d-block w-100"
+                                             style="margin:auto; height:150px; width:auto; border-radius:5px;" alt=""/>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <!--end carousel-->
+                        <h3>{{ n.title }}</h3><br>
+                        <p align="justify">{{ n.anouncement }}</p>
+                        <hr>
+                        <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
+                        {% if n.status == True %}
+                        <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
+                        {% endif %}
+                        <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
+                        {% if request.user.id %}
+                            {% for f in favorite_article %}
+                                {% if f.article_id == n.id %}
+                                    <p><a class="btn btn-outline-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> Удалить из избранного</i></a></p>
+                                {% endif %}
+                            {% endfor %}
+                                <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> Добавить в избранное</i></a></p>
+                        {% endif %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <br>
+        <h6 class="title"></h6>
         <!--pagination-->
         {% if total > 1 %}
         <nav aria-label="Навигация по списку новостей" pagination-border-color='red'>
             <div class="text-center">
                 <ul class="pagination pagination-lg">
                     {% if articles.has_previous %}
-                    <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}"><span
-                            aria-hidden="true">&laquo;</span></a>
+                    <li class="page-item"><a class="page-link" href="?page={{ articles.previous_page_number }}"><span aria-hidden="true">&laquo;</span></a>
                     </li>
                     {% endif %}
                     {% for p in articles.paginator.page_range %}
@@ -84,45 +123,8 @@
                 </ul>
             </div>
         </nav>
-        <hr>
         {% endif %}
         <!--end pagination-->
-        <div class="content_area">
-            {% for n in articles %}
-            {% if n.image_set.all %}
-            <div class="single_cat_left_content floatleft">
-                <div class="container-fluid">
-                    <!--carousel-->
-                    <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            {% for image in n.image_set.all %}
-                            <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-                                <a href="{{ n.get_absolute_url }}">
-                                    <img src="{{ image.image.url }}" class="d-block w-100"
-                                         style="margin:auto; height:150px; width:auto; border-radius:5px;" alt=""/>
-                                </a>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                    <!--end carousel-->
-                    <h3>{{ n.title }}</h3><br>
-                    <p align="justify">{{ n.anouncement }}</p>
-                    <hr>
-                    <p class="readmore" style="color:black"><i class="fa-solid fa-user"> {{ n.author.account.nickname }}</i></p>
-                    {% if n.status == True %}
-                    <p class="readmore"><i class="fa-solid fa-check"> {{ n.date.date }}</i></p>
-                    {% endif %}
-                    <p class="readmore" style="color:black"><i class="fa-solid fa-eye"> {{ n.get_views }}</i></p>
-                    {% if request.user.id %}
-                    <p><a class="btn btn-danger" href="{% url 'favorites' n.pk %}"><i class="fa-solid fa-heart"> В избранное</i></a></p>
-                    {% endif %}
-                </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-        <br>
         <h6 class="title"></h6>
         {% block footer %} {% include 'main/footer.html' %} {% endblock %}
     </div>
@@ -171,4 +173,3 @@
 </script>
 
 </body>
-</html>

@@ -2,6 +2,7 @@ from ckeditor.fields import RichTextField
 from django.db import models
 from django.utils.safestring import mark_safe
 from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
 
 class Tag(models.Model):
     title = models.CharField(max_length=80, verbose_name='Название')
@@ -23,11 +24,11 @@ class Article(models.Model):
                   ('AF', 'Астрофизика'),
                   ('G', 'Геология'))
     author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name='Автор')
-    title = models.CharField('Название новости', max_length=150, default='', null=False)
-    anouncement = models.TextField('Аннотация', max_length=1250, null=False)
+    title = models.CharField('Название новости', max_length=150, default='', validators = [MinLengthValidator(10)], null=False)
+    anouncement = models.TextField('Аннотация', max_length=1250, validators = [MinLengthValidator(10)], null=False)
     source = models.URLField('Источник', null=True)
-    sourcename = models.CharField('Название источника', max_length=150, null=False)
-    text = RichTextField('Текст новости', null=False)
+    sourcename = models.CharField('Название источника', max_length=150, validators = [MinLengthValidator(2)], null=False)
+    text = RichTextField('Текст новости', validators = [MinLengthValidator(50)], null=False)
     date = models.DateTimeField('Дата публикации', auto_created=True)
     categories = models.CharField(choices=categories_list, max_length=20, verbose_name='Категории')
     tags = models.ManyToManyField(to=Tag, blank=True)
